@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3D轮播图</title>
+</head>
+<style>
+    .side {
+        margin: 100px auto;
+        width: 800px;
+        height: 300px;
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
+    }
+
+    .side-box {
+        position: relative;
+        width: 800px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transform: translateZ(-150px) rotateX(0deg);
+        animation: more 10s ease-in-out infinite 2s;
+    }
+
+    .side-content {
+        position: absolute;
+        width: 800px;
+        height: 300px;
+        box-sizing: border-box;
+        background: 0/100%;
+        box-shadow: 8px 14px 38px rgba(0,0,0,.2);
+    }
+    .side-back {
+        transform: translateZ(-150px) rotateX(180deg);
+		background-image: url('https://askd.github.io/codepen/back.jpg');
+    }
+    .side-top {
+        transform: translateY(-150px) rotateX(90deg);
+		background-image: url('https://askd.github.io/codepen/top.jpg');
+    }
+    .side-bottom {
+        transform: translateY(150px) rotateX(270deg);
+		background-image: url('https://askd.github.io/codepen/bottom.jpg');
+    }
+    .side-front {
+        transform: translateZ(150px);
+		background-image: url('https://askd.github.io/codepen/front.jpg');
+    }
+
+    @keyframes more {
+        0% { transform: translateZ(-150px) rotateX(0deg); }
+        5% { transform: translateZ(-150px) rotateX(90deg); }
+        25% { transform: translateZ(-150px) rotateX(90deg); }
+        30% { transform: translateZ(-150px) rotateX(180deg); }
+        50% { transform: translateZ(-150px) rotateX(180deg); }
+        55% { transform: translateZ(-150px) rotateX(270deg); }
+        75% { transform: translateZ(-150px) rotateX(270deg); }
+        80% { transform: translateZ(-150px) rotateX(360deg); }
+        100% { transform: translateZ(-150px) rotateX(360deg); }
+    }
+</style>
+<body>
+<div class="side">
+    <div class="side-box">
+        <div class="side-content side-back" ></div>
+        <div class="side-content side-top" ></div>
+        <div class="side-content side-bottom" ></div>
+        <div class="side-content side-front" ></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>利用display:table实现两列等高</title>
+		<style type="text/css">
+			.service-list-block {
+				margin-top: 15px;
+				width: 600px;
+			}
+
+			.service-list-block .service-item-wrap {
+				padding: 0 15px;
+				display: table;
+				table-layout: fixed;
+				width: 100%;
+				box-sizing: border-box;
+				border-spacing: 20px;
+			}
+
+			.service-list-block .service-item-wrap>li {
+				display: table-cell;
+				border: 1px solid #e6e6e6;
+			}
+
+			.service-item-detail {
+				padding: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h3>两列等高</h3>
+		<div class="service-list-block">
+			<ul class="tc service-item-wrap">
+				<li>
+					<div class="service-item">
+						<div class="service-item-detail">
+							<ol>
+								<li>免费注册机构账户</li>
+								<li>免费授权绑定公众号</li>
+								<li>免费拥有微官网搭建</li>
+								<li>免费使用基础工具</li>
+								<li>营销利器试用半个月</li>
+							</ol>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="service-item">
+						<div class="service-item-detail">
+							<ol>
+								<li>机构微商城系统</li>
+								<li>营销利器插件包</li>
+							</ol>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+
+	</body>
+</html>

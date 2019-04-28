@@ -1,0 +1,168 @@
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: #2f2e2e;
+			}
+			a{
+				color: #666;
+				padding: 0 5px;
+			}
+			.box{
+				background: url(../images/download.png);
+				width: 100%;
+				height: 100vh;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.colorful {
+				width: 320px;
+				height: 144px;
+				box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+				background: linear-gradient( to right, rgba(47, 171, 225,1), rgba(253, 221, 16,1), rgba(255, 108, 44, 1), rgba(238, 85, 238, 1));
+				background-size: 1000%;
+				animation: bgcolor 5s alternate ease-in-out;
+				animation-iteration-count: infinite;
+				margin: -50px auto 20px;
+				border-radius: 6px;
+				text-align: center;
+			}
+			.colorful>img{
+				animation: move 2s alternate ease-in-out;
+				animation-iteration-count: infinite;
+			}
+			@keyframes bgcolor {
+				0% {
+					background-position: left
+				}
+				100% {
+					background-position: right
+				}
+			}
+			@keyframes move {
+				0% {
+					opacity: 0.5;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			.login {
+				position: absolute;
+				width: 370px;
+				height: 550px;
+				background:#fff;
+				margin: 150px 40% 0;
+				box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+				animation: fadeInLeft 1s;
+			}
+
+			@keyframes fadeInLeft {
+				from {
+					opacity: 0;
+					-webkit-transform: translate3d(-10%, 0, 0);
+					transform: translate3d(-10%, 0, 0);
+				}
+				to {
+					opacity: 1;
+					-webkit-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+				}
+			}
+			h4{
+				padding-top: 20px;
+				text-align: center;
+				font-size: 16px;
+				font-family: "幼圆";
+				color: #fff;
+				letter-spacing: 2px;
+			}
+			.colorful>img{
+				width: 150px;
+				padding-top: 20px;
+			}
+			h1{
+				text-align: center;
+				font-size: 24px;
+				color: #333;
+				font-weight: bold;
+				font-family: "等线";
+				margin-bottom: 20px;
+			}
+			h2{
+				text-align: center;
+				font-size: 15px;
+				color: #999;
+				font-family: "等线";
+				font-weight: 400;
+			}
+			.content{
+				margin-top: 20px;
+				width: 330px;
+				height: 220px;
+				padding: 5px 20px;
+			}
+			form>input{
+				width: 300px;
+				margin-bottom: 20px;
+				height: 30px;
+				padding: 8px;
+				font-size: 14px;
+				color: #666;
+				border: none;
+				border-bottom: solid 1px #ccc;
+			}
+			input[type=submit]{
+				background: #03a9f4;
+				border-radius: 2px;
+				width: 95px;
+				height: 45px;
+				color: #fff;
+				margin-top: 30px;
+				float: left;
+				margin-left: 120px;
+				cursor: pointer;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+				transition: all .2s ease-in;
+				margin-bottom: 10px;
+			}
+			input[type=submit]:hover{
+				box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+			}
+
+			#bottom{
+				width: 50px;
+				color: brown;
+				font-size: 12px;
+				opacity: .8;
+				margin-left: 20px;
+				margin-top: 10px;
+				transition: all .3s ease-out;
+			}
+			#bottom:hover{
+				opacity: 1;
+			}
+			.login>p{
+				font-size: 12px;
+				margin: 20px;
+				color: #999;
+			}
+			#foot{
+				margin-top: 100px;
+				color: #fff;
+				text-align: center;
+				font-family: "等线";
+				font-size: 15px;
+			}
+			#foot2{
+				text-align: center;
+			}
+			#foot2>a{
+				text-decoration: none;
+				color: cornflowerblue;
+				font-family: "等线";
+				font-size: 14px;
+			}
