@@ -8,4 +8,4 @@
 - static文件夹为css、js、ico
 - index.html是入口文件
 
-在线预览地址：https://binylu.github.io/binyweb/
+在线预览地址：http://binylu.cn/binyweb/
