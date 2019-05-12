@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>生态攻坚</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/move.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css" />
+	<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../js/style.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/tab.css" />
+	<link rel="stylesheet" type="text/css" href="../css/rotate4.css" />
+	<link rel="stylesheet" type="text/css" href="../css/lunbo.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/media.css"/>
+	<script src="../js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.right1_1 {
+			animation: bounceIn .8s linear 1;
+		}
+
+		.right2_1 {
+			background: url(../images/zj.png) no-repeat;
+			background-position: 200px 80px;
+		}
+
+		.left1 {
+			animation: bounceInLeft .5s linear 1;
+		}
+
+		.botline1 {
+			top: 420px !important;
+		}
+
+		.rightline1 {
+			top: 350px !important;
+		}
+
+		.bg2solid {
+			height: 50px;
+			background: url(../images/fly.png) 100%;
+		}
+
+		.wgyp-left2 {
+			float: left;
+			width: 30%;
+			margin-left: -100px;
+			margin-top: 150px;
+			height: 220px;
+			background: none;
+			animation: bounceInLeft 1s linear 1;
+		}
+
+		.wgyp {
+			width: 100%;
+		}
+
+		.litt {
+			font-weight: 600;
+			padding: 10px;
+			border-radius: 10px;
+			margin: 0 auto;
+			box-shadow: 4px 4px 10px #666666;
+			margin-left: 120px;
+		}
+
+		.wgyp-right2 {
+			width: 75%;
+			height: auto;
+			text-align: center;
+			margin-left: 0px;
+		}
+
+		.wgyp-right2 p {
+			padding: 20px;
+			margin-top: 60px;
+			line-height: 200%;
+			font-size: 1.1em;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="all">
+		<div class="line"></div>
+				<span class="opennav" id="opennav">
+					<a href="#" onclick="opennav()">
+						<svg width="30" height="30">
+							<path d="M0,5 30,5" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,14 30,14" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,23 30,23" stroke="#C8605E" stroke-width="4" />
+						</svg>
+					</a>
+				</span>
+				<div class="smnav" id="smnav">
+					<a href="#" class="btn-close" onclick="closenav()">
+						<img src="data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiDnn6Lph4/lm77moIfkuIvovb0gOiBodHRwOi8vd3d3LnNmb250LmNuLyA8L21ldGFkYXRhPjxnPjxwYXRoIGQ9Ik0xMCw3OS4zTDc5LjMsMTBMOTkwLDkyMC43TDkyMC43LDk5MEwxMCw3OS4zTDEwLDc5LjN6IiBzdHlsZT0iZmlsbDojRkZGRkZGIj48L3BhdGg+PHBhdGggZD0iTTc5LjMsOTkwTDEwLDkyMC43TDkyMC43LDEwTDk5MCw3OS4zTDc5LjMsOTkweiIgc3R5bGU9ImZpbGw6I0ZGRkZGRiI+PC9wYXRoPjwvZz48L3N2Zz4gIA==" width="10" height="10">
+					</a>
+					<li class="smnvatop">
+						<img src="../images/yd7.png" style="width: 100%;">
+						<img src="../images/yd1.png" style="width: 90%;margin:-70px 0 20px 10px">
+					</li>
+					<li>
+						<a href="jdbg-c.html">解读报告</a>
+					</li>
+					<li>
+						<a href="jcrw-c.html">杰出人物</a>
+					</li>
+					<li>
+						<a href="kjgj-c.html">科技攻坚</a>
+					</li>
+					<li>
+						<a href="tpgj-c.html">脱贫攻坚</a>
+					</li>
+					<li>
+						<a href="yggj-c.html">医改攻坚</a>
+					</li>
+					<li class="activeli">
+						<a href="stgj-c.html">生态攻坚</a>
+					</li>
+					<li>
+						<a href="qmsg-c.html">全面深改</a>
+					</li>
+					<li class="activeli">
+						<a href="../english/e.html" style="padding: 0;">
+							<p id="lgg">切换英文</p>
+							<img src="../images/EN.png" style="height: 50px;float: right;">
+						</a>
+					</li>
+				</div>
+		<script type="text/javascript">
+			function opennav() {
+				document.getElementById('smnav').style.left = '0';
+				document.getElementById('smnav').style.opacity = '1';
+			}
+
+			function closenav() {
+				document.getElementById('smnav').style.left = '-250px';
+				document.getElementById('smnav').style.opacity = '0';
+			}
+		</script>
+		<div class="tops">
+			<div class="top">
+				<div class="logo">
+					<img src="../images/yd1.png">
+				</div>
+				<div class="nav">
+					<ul>
+						<li>
+							<a href="../index.html" style="animation: lightSpeedIn .4s linear 1;">首页</a>
+						</li>
+						<li>
+							<a href="jdbg-c.html" style="animation: lightSpeedIn .5s linear 1;">解读报告</a>
+						</li>
+						<li>
+							<a href="jcrw-c.html" style="animation: lightSpeedIn .6s linear 1;">杰出人物</a>
+						</li>
+						<li>
+							<a href="kjgj-c.html" style="animation: lightSpeedIn .7s linear 1;">科技攻坚</a>
+						</li>
+						<li>
+							<a href="tpgj-c.html" style="animation: lightSpeedIn .8s linear 1;">脱贫攻坚</a>
+						</li>
+						<li>
+							<a href="yggj-c.html" style="animation: lightSpeedIn .9s linear 1;">医改攻坚</a>
+						</li>
+						<li id="corlored">
+							<a href="stgj-c.html" style="animation: lightSpeedIn 1s linear 1;">生态攻坚</a>
+						</li>
+						<li>
+							<a href="qmsg-c.html" style="animation: lightSpeedIn 1.1s linear 1;">全面深改</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="change">
+				<a href="../english/stgj-e.html">
+					<img src="../images/EN.png">
+				</a>
+			</div>
+		</div>
+		<!-- banner -->
+		<div class="container">
+			<div class="dowebok" style="width: 1000px;margin: 0 auto;">
+				<div class="pogoSlider" id="dowebok">
+					<div class="pogoSlider-slide" data-transition="slide" style="background-image:url(../images/1.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="fade" style="background-image:url(../images/2.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="verticalSlide" style="background-image:url(../images/3.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealLeft" style="background-image:url(../images/4.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealRight" style="background-image:url(../images/5.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$('#dowebok').pogoSlider();
+			});
+		</script>
+		<div class="content_1">
+			<div class="con">
+				<div class="sml1"></div>
+				<div class="sml2"></div>
+				<div class="sml3"></div>
+				<div class="sml4"></div>
+				<div class="left1">
+					<img src="../images/left6.png" id="moveimg">
+				</div>
+				<div class="right1">
+					<div class="right1_1">
+						<div class="topline1"></div>
+						<div class="leftline1"></div>
+						<div class="botline1"></div>
+						<div class="rightline1"></div>
+						<p id="p1"> 党的十八大以来，以习近平同志为总书记的党中央高度重视生态文明建设和环境保护工作，提出了一系列新思想、新要求，作出了一系列重大部署。在党中央、国务院的坚强领导下，各单位、各部门和社会各界共同努力，从容应对挑战，奋力攻坚克难，紧紧围绕建设美丽中国深化生态文明体制改革，以大气、水、土壤污染治理为重点坚决向污染宣战，我国生态环境保护取得明显成效。环境治理工作全面推进，环境质量有所改善；科学制定环保标准，环评审批严格把关；淘汰、化解落后产能力度加大，产业结构转型升级速度加快；生态系统保护与修复成效显著，生物多样性得到有效保护；生态文明示范建设有序开展，经济社会与生态环境协调发展；环境法治化水平显著提升，新环保法威慑力日益彰显；改革举措陆续推出，绿色发展活力不断增强；信息公开力度持续加大，全社会生态文明意识明显提升。面对新形势新任务，环境保护工作将继续以改善环境质量为核心，坚决打好污染防治三大战役，大力推进技术创新，倡导全民参与，推动绿色消费革命，统筹谋划好“十三五”生态环境保护规划，为建设美丽中国和实现中华民族伟大复兴的中国梦增光添彩。
+						</p>
+					</div>
+					<div class="right2_1">
+						<div style="width:100%;height: 450px;margin: 0 auto;position: relative;border-bottom: #8B0000 dashed 1px;margin-bottom: 50px;" id="r81">
+							<a href="javascript:void(0)" class="slow1-2-text">
+								<span></span>绿水青山就是金山银山
+							</a>
+							<a href="javascript:void(0)" class="slow2-2-text">
+								生态攻坚关键词
+							</a>
+							<a href="javascript:void(0)" class="slow3-2-text">
+								<span></span>生态兴则文明兴
+								<br>
+								<br>生态衰则文明衰</a>
+							<a href="javascript:void(0)" class="slow4-2-text">
+								<span></span>推进生态文明
+								<br>
+								<br>建设美丽家园</a>
+							<a href="javascript:void(0)" class="slow5-2-text">
+								<span></span>深化生态文明建设
+								<br>
+								<br>强化环境污染攻坚</a>
+							<a href="javascript:void(0)" class="slow6-2-text">
+								<span></span>改善空气环境质量
+								<br>
+								<br>保障公众身体健康</a>
+							<a href="javascript:void(0)" class="slow7-2-text">
+								<span></span>千方百计治理环境
+								<br>
+								<br>众志成城合力攻坚</a>
+							<a href="javascript:void(0)" class="slow8-2-text">
+								<span></span>发展生态经济</a>
+							<a href="javascript:void(0)" class="slow9-2-text">
+								<span></span>保护生态环境</a>
+							<a href="javascript:void(0)" class="slow10-2-text">
+								<span></span>培育生态文化</a>
+						</div>
+					</div>
+					<h5>各地典范环境保护实例</h5>
+					<div style="margin-bottom: 150px;">
+						<div style="margin-bottom: 50px;">
+							<div style="width: 100%;margin-left: -80px;" id="r91">
+								<div class="wgyp">
+									<div class="wgyp-left2">
+										<img src="../images/stdq.png" alt="">
+									</div>
+									<p class="wgyp-left2-text"> 环境保护为 新疆跨越跨越式 发展保驾护航
+									</p>
+									<div class="wgyp-right2" id="p1" style="margin-bottom: 50px;">
+										<div class="litt" style="float: left;"> 大美新疆，开发与保护并行</div>
+										<p>近年来，自治区全面贯彻中央决策部署，坚持以人为本、民生优先，着力解决了一批危害群众健康、影响可持续发展的水污染、大气污染等突出环境问题，各项环保工作均取得显著成效。 据了解，2008年以来，新疆城市环境空气质量略有好转，好于二级的天数由“十五”末的73.9％提高到85.5％，10个城市空气质量达到国家二级以上标准。乌鲁木齐市空气质量好于二级天数达到71.8％，比“十五”末增加1.7个百分点。全区地表水环境质量有所改善，监测河流Ⅰ～Ⅲ类优良水质断面比例由80.3％提高到88.3％，城市集中式饮用水水源地总体水质良好，水质达标率为84.6％。实施主要污染物总量控制，完成减排项目208个。实施了乌鲁木齐市大气污染防治及伊犁河、额尔齐斯河、博斯腾湖、吐曼河流域综合整治等工程，区域环境质量得到一定改善。
+										</p>
+										<img src="../images/st1.png">
+										<img src="../images/st2.png">
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div style="margin-bottom: 50px;">
+							<div style="width: 100%;margin-left: -80px;" id="r91">
+								<div class="wgyp">
+									<div class="wgyp-right2 r91" id="p1" style="margin-left: -100px;margin-bottom: 50px;" >
+										<div class="litt" style="float: left;"> 大气水土壤污染防治三大战役</div>
+										<p> 2016年我国深入实施“大气十条”，多项大气质量改善措施齐头并进。截至当年11月底，全国燃煤机组累计完成超低排放改造4.25亿千瓦，占煤电总装机容量的47%，河北、河南等省基本完成改造任务;散煤替代、燃煤小锅炉淘汰、工业企业提标改造等治理任务加快推进;全国累计淘汰黄标车和老旧车404.58万辆，完成全年淘汰任务的106.5%。同时，全面完成1436个国控环境空气质量监测城市站监测事权上收任务。
+											2016年我国全面推动落实“水十条”，建成了由3186个监测断面组成的国家地表水监测网。落实长江经济带大保护工作，完成11省(市)126个地级以上城市全部319个集中式饮用水水源保护区划定;同时启动上下游横向生态补偿试点，组织排查城市黑臭水体，开展农村环境综合整治。
+										</p>
+										<img src="../images/st3.png">
+										<img src="../images/st4.png">
+									</div>
+									<div class="wgyp-left2" style="margin-left: 17px;">
+										<img src="../images/stdq.png" alt="">
+									</div>
+									<p class="wgyp-left2-text2" style="right: 100px;"> 加快污染防治法 立法，推动土壤 污染治理
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div style="margin-bottom: 50px;">
+							<div style="width: 100%;margin-left: -80px;" id="r91">
+								<div class="wgyp">
+									<div class="wgyp-left2">
+										<img src="../images/stdq.png" alt="">
+									</div>
+									<p class="wgyp-left2-text"> 生态保护和 发展需求中 求双赢
+									</p>
+									<div class="wgyp-right2" id="p1" style="margin-bottom: 50px;">
+										<div class="litt" style="float: left;"> 溧阳进位赶超推动绿色崛起</div>
+										<p> 针对全市工业结构偏重现状，全市围绕绿色崛起，高举结构调整大旗，出台工业经济3年跃升计划，通过高新计划推进引领调整、优势产业集聚推动调整、创新扶持政策激励调整、资源优化整合倒逼调整等手段，培植形成了输变电设备、冶金和金属加工、机械装备制造、风电配件、新型建材、食品医药等支柱产业和产业集群。目前，全市4000多家制造业企业中，拥有年纳税销售收入超百亿元企业有1家，超50亿企业有3家，超10亿元企业有7家。　　结构调整让溧阳市工业从注重速度转变成崇尚质量，正因为如此，一大批企业在市场搏战中成为称雄行业的巨头。新出炉的“中国民营企业500家”名录上，溧阳有4家企业同登荣榜，创造了产业发展新奇迹。
+										</p>
+										<img src="../images/st5.png">
+										<img src="../images/st6.png">
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+			<button class="back_to_top"><img src="../images/backtop.gif" ></button>
+		<div class="footer">
+			<p>版权所有：广西工商职业技术学院</p>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

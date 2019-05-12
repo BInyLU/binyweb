@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>订单详情</title>
+		<link rel="icon" type="image/x-icon" href="../lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../lib/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../lib/css/app.css" />
+		<script src="../lib/js/mui.min.js "></script>
+		<script src="../lib/js/jq.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-left-nav" href="javascript:history.back(-1)"></a>
+					<h1 class="mui-title">订单详情</h1>
+				</header>
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<p class="heads">订单号：<span>1465416565</span></p>
+						<table class="lottery_detail" style="width:100%;">
+							<tbody>
+								<tr>
+									<td class="bttd">帐号</td>
+									<td>guest70340</td>
+								</tr>
+								<tr>
+									<td class="bttd">单注金额</td>
+									<td class="last4">1000.00</td>
+								</tr>
+								<tr>
+									<td class="bttd">下注时间</td>
+									<td>2018-11-20 15:19:53</td>
+								</tr>
+								<tr>
+									<td class="bttd">投注注数</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="bttd">彩种</td>
+									<td>北京赛车</td>
+								</tr>
+								<tr>
+									<td class="bttd">倍数</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="bttd">期号</td>
+									<td>715863</td>
+								</tr>
+								<tr>
+									<td class="bttd">投注总额</td>
+									<td>1000.00</td>
+								</tr>
+								<tr>
+									<td class="bttd">玩法</td>
+									<td>双面盘</td>
+								</tr>
+								<tr>
+									<td class="bttd">赔率</td>
+									<td>1.99/1.99</td>
+								</tr>
+								<tr>
+									<td class="bttd">开奖号码</td>
+									<td>03,07,09,08,05,10,04,02,06,01</td>
+								</tr>
+								<tr>
+									<td class="bttd">中奖注数</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="bttd">状态</td>
+									<td>
+										<font class="green">已中奖</font>
+									</td>
+								</tr>
+								<tr>
+									<td class="bttd">中奖金额</td>
+									<td>1990.00</td>
+								</tr>
+								<tr>
+
+									<td class="bttd">盈亏</td>
+									<td colspan="3">990.00</td>
+
+								</tr>
+								<tr>
+									<td class="bttd">投注号码</td>
+									<td class="" colspan="3">
+										<div style="width: 100%;font-size: .8rem; padding: .5rem;">季军--大</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+	</body>
+	<style type="text/css">
+		.mui-card {
+			display: block;
+			overflow: auto;
+			_zoom: 1;
+		}
+
+		.mui-card p {
+			margin-bottom: 0;
+		}
+
+		.green {
+			color: #008000;
+		}
+
+		.red {
+			color: red;
+		}
+
+		.heads {
+			width: 100%;
+			padding: 12px;
+			background: #fff;
+			text-align: center;
+			color: #333;
+			font-size: .9em;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.heads span {
+			color: darkred;
+		}
+		table {
+			border-spacing: 0;
+			border-collapse: collapse;
+		}
+		.lottery_detail td {
+			border: none;
+			border-bottom: 1px solid #e0e0dc;
+			background: #fff;
+			line-height: 2.2rem;
+			text-align: center;
+			font-size: .9rem;
+		}
+		.lottery_detail td.bttd {
+			background: #f2f2f0;
+		}
+		td, th {
+			padding: 0;
+		}
+		.lottery_detail td.last4 {
+			width: 15%;
+		}
+		td:first-child{
+			width: 20%;
+		}
+		p{
+			margin-bottom: 0;
+		}
+	</style>
+	<script type="text/javascript">
+		mui.init();
+		//内容允许滚动
+		(function($) {
+			$(".mui-scroll-wrapper").scroll({
+				bounce: true, //滚动条是否有弹力默认是true
+				indicators: true, //是否显示滚动条,默认是true
+			});
+		})(mui);
+	</script>
+	<!-- tap方法等于click -->
+	<script type="text/javascript">
+		$("body").on('tap', 'a', function(event) {
+			this.click();
+		});
+	</script>
+</html>
+

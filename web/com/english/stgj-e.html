@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Eology</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/move.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css" />
+	<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../js/style.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/tab.css" />
+	<link rel="stylesheet" type="text/css" href="../css/rotate4.css" />
+	<link rel="stylesheet" type="text/css" href="../css/media.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/lunbo.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/media.css" />
+	<script src="../js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.right1_1 {
+			animation: bounceIn .8s linear 1;
+		}
+
+		.right2_1 {
+			background: url(../images/zj.png) no-repeat;
+			background-position: 200px 80px;
+		}
+
+		.left1 {
+			animation: bounceInLeft .5s linear 1;
+		}
+
+		.botline1 {
+			top: 370px !important;
+		}
+
+		.rightline1 {
+			top: 300px !important;
+		}
+
+		.bg2solid {
+			height: 50px;
+			background: url(../images/fly.png) 100%;
+		}
+		.slow4-2-text{
+			left: 67px;
+		}
+		.wgyp-left2 {
+			float: left;
+			width: 30%;
+			margin-left: -100px;
+			margin-top: 150px;
+			height: 220px;
+			background: none;
+		}
+		.wgyp-left2 img {
+				animation: myfirst 10s alternate ease-in-out infinite;
+			}
+		.wgyp {
+			width: 100%;
+		}
+
+		.litt {
+			padding: 10px;
+			border-radius: 10px;
+			margin: 0 auto;
+			box-shadow: 4px 4px 10px #666666;
+			margin-left: 120px;
+		}
+
+		.wgyp-right2 {
+			width: 75%;
+			height: auto;
+			text-align: center;
+			margin-left: 0px;
+		}
+
+		.wgyp-right2 p {
+			padding: 20px;
+			margin-top: 60px;
+		}
+		.tab3-sml-1 active{
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div class="all">
+		<div class="line"></div>
+				<span class="opennav" id="opennav">
+					<a href="#" onclick="opennav()">
+						<svg width="30" height="30">
+							<path d="M0,5 30,5" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,14 30,14" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,23 30,23" stroke="#C8605E" stroke-width="4" />
+						</svg>
+					</a>
+				</span>
+				<div class="smnav" id="smnav">
+					<a href="#" class="btn-close" onclick="closenav()">
+						<img src="data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiDnn6Lph4/lm77moIfkuIvovb0gOiBodHRwOi8vd3d3LnNmb250LmNuLyA8L21ldGFkYXRhPjxnPjxwYXRoIGQ9Ik0xMCw3OS4zTDc5LjMsMTBMOTkwLDkyMC43TDkyMC43LDk5MEwxMCw3OS4zTDEwLDc5LjN6IiBzdHlsZT0iZmlsbDojRkZGRkZGIj48L3BhdGg+PHBhdGggZD0iTTc5LjMsOTkwTDEwLDkyMC43TDkyMC43LDEwTDk5MCw3OS4zTDc5LjMsOTkweiIgc3R5bGU9ImZpbGw6I0ZGRkZGRiI+PC9wYXRoPjwvZz48L3N2Zz4gIA=="
+						    width="10" height="10">
+					</a>
+					<li class="smnvatop">
+						<img src="../images/yd7.png" style="width: 100%;">
+						<img src="../images/yd1.png" style="width: 90%;margin:-70px 0 20px 10px">
+					</li>
+					<li>
+						<a href="jdbg-e.html">Report</a>
+					</li>
+					<li >
+						<a href="jcrw-e.html">Character</a>
+					</li>
+					<li>
+						<a href="kjgj-e.html">Science</a>
+					</li>
+					<li>
+						<a href="tpgj-e.html">Poverty</a>
+					</li>
+					<li>
+						<a href="yggj-e.html">Medical</a>
+					</li>
+					<li>
+						<a href="stgj-e.html">Ecology</a>
+					</li>
+					<li>
+						<a href="qmsg-e.html">Reform</a>
+					</li>
+					<li class="activeli">
+						<a href="../index.html" style="padding: 0;">
+							<p id="lgg">切换中文</p>
+							<img src="../images/CN.png" style="height: 50px;float: right;">
+						</a>
+					</li>
+				</div>
+				<script type="text/javascript">
+					function opennav() {
+						document.getElementById('smnav').style.left = '0';
+						document.getElementById('smnav').style.opacity = '1';
+					}
+		
+					function closenav() {
+						document.getElementById('smnav').style.left = '-250px';
+						document.getElementById('smnav').style.opacity = '0';
+					}
+				</script>
+		<div class="tops">
+			<div class="top">
+				<div class="logo">
+					<img src="../images/yd1.png">
+				</div>
+				<div class="nav">
+					<ul>
+						<li>
+							<a href="e.html" style="animation: lightSpeedIn .4s linear 1;">Home</a>
+						</li>
+						<li>
+							<a href="jdbg-e.html" style="animation: lightSpeedIn .5s linear 1;">Report</a>
+						</li>
+						<li>
+							<a href="jcrw-e.html" style="animation: lightSpeedIn .6s linear 1;">Character</a>
+						</li>
+						<li>
+							<a href="kjgj-e.html" style="animation: lightSpeedIn .7s linear 1;">Science</a>
+						</li>
+						<li>
+							<a href="tpgj-e.html" style="animation: lightSpeedIn .8s linear 1;">Poverty</a>
+						</li>
+						<li>
+							<a href="yggj-e.html" style="animation: lightSpeedIn .9s linear 1;">Medical</a>
+						</li>
+						<li id="corlored">
+							<a href="stgj-e.html" style="animation: lightSpeedIn 1s linear 1;">Eology</a>
+						</li>
+						<li>
+							<a href="qmsg-e.html" style="animation: lightSpeedIn 1.1s linear 1;">Reform</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="change">
+				<a href="../chinese/stgj-c.html">
+					<img src="../images/CN.png">
+				</a>
+			</div>
+		</div>
+		<!-- banner -->
+		<div class="container">
+			<div class="dowebok" style="width: 1000px;margin: 0 auto;">
+				<div class="pogoSlider" id="dowebok">
+					<div class="pogoSlider-slide" data-transition="slide" style="background-image:url(../images/banner4-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="fade" style="background-image:url(../images/banner2-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="verticalSlide" style="background-image:url(../images/banner1-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealLeft" style="background-image:url(../images/banner5-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealRight" style="background-image:url(../images/banner3-e.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$('#dowebok').pogoSlider();
+			});
+		</script>
+		<div class="content_1">
+			<div class="con">
+				<div class="sml1"></div>
+				<div class="sml2"></div>
+				<div class="sml3"></div>
+				<div class="sml4"></div>
+				<div class="left1">
+					<img src="../images/left6-e.png" id="moveimg">
+				</div>
+				<div class="right1">
+					<div class="right1_1">
+						<div class="topline1"></div>
+						<div class="leftline1"></div>
+						<div class="botline1"></div>
+						<div class="rightline1"></div>
+						<p id="p1"> Since the 18th CPC National Congress, the CPC Central Committee, with Comrade Xi Jinping as General Secretary, has attached great importance to ecological civilization and environmental protection, put forward a series of new ideas and requirements, and made a series of major arrangements. Under the strong leadership of the Central Committee of the Party and the State Council, all units, departments and all sectors of society have made concerted efforts to calmly meet the challenges, struggle to overcome difficulties, and deepen the reform of the ecological and cultural system with a strong focus on building a beautiful China. We resolutely declared war on pollution, focusing on the control of air, water and soil pollution, and achieved remarkable results in ecological and environmental protection in China. Environmental 
+						</p>
+					</div>
+					<div class="right2_1">
+						<div style="width:100%;height: 450px;margin: 0 auto;position: relative;border-bottom: #8B0000 dashed 1px;margin-bottom: 50px;">
+							<a href="#" class="slow1-2-text">
+								<span></span>Green water green Hill
+							</a>
+							<a href="#" class="slow2-2-text">
+								Ecological Key Words
+							</a>
+							<a href="#" class="slow3-2-text">
+								<span></span>Ecological prosperity
+								<br>
+								<br>Ecological decline</a>
+							<a href="#" class="slow4-2-text">
+								<span></span>Promoting ecological
+								<br>
+								<br>Building a Beautiful</a>
+							<a href="#" class="slow5-2-text">
+								<span></span>Deepening Ecological
+								<br>
+							<a href="#" class="slow6-2-text">
+								<span></span>Improving the quality
+								<br>
+								<br>Protection of public</a>
+							<a href="#" class="slow7-2-text">
+								<span></span>Make every effort
+								<br>
+								<br>All Chengcheng City</a>
+							<a href="#" class="slow8-2-text">
+								<span></span>Development </a>
+							<a href="#" class="slow9-2-text">
+								<span></span>Protecting </a>
+							<a href="#" class="slow10-2-text">
+								<span></span>Fostering </a>
+						</div>
+					</div>
+					<h5>Examples of exemplary environmental</h5>
+					<div style="margin-bottom: 150px;">
+						<div style="margin-bottom: 50px;">
+							<div style="width: 100%;margin-left: -80px;">
+								<div class="wgyp">
+									<div class="wgyp-left2"><img src="../images/stdq.png" alt=""></div>
+									<p class="wgyp-left2-text"> Environmental protection protects</p>
+									<div class="wgyp-right2" id="p1" style="margin-bottom: 50px;">
+										<div class="litt" style="float: left;"> Greater America Xinjiang</div>
+										<p>In recent years, the autonomous region has fully implemented the central government's decision-making and deployment, put people first and put people's livelihood first, and made great efforts to solve a number of outstanding environmental problems, such as water pollution and atmospheric pollution, which are harmful to the health of the people and affect sustainable development. It is understood that since 2008, the air quality in Xinjiang's urban environment has improved slightly. The number of days better than the second grade has increased from 73.9 at the end of the "Tenth Five-Year Plan" to 85.5.
+										</p>
+										<img src="../images/st1.png">
+										<img src="../images/st2.png">
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div style="margin-bottom: 50px;">
+							<div style="width: 100%;margin-left: -80px;">
+								<div class="wgyp">
+
+									<div class="wgyp-right2" id="p1" style="margin-left: -100px;margin-bottom: 50px;">
+										<div class="litt" style="float: left;"> Three major campaigns </div>
+										<p> In 2016, China implemented the "Ten Atmosphere Rules", and a number of measures to improve the quality of the atmosphere went hand in hand. As of the end of November of that year, the country's coal combustion units had completed a total of 425 million kilowatts of ultra-low emissions, accounting for 47 % of the total coal power installed capacity, and Hebei, Henan and other provinces have basically completed the reconstruction task; Scattered coal replacement, small coal boiler elimination, industrial enterprise bid improvement and other governance tasks accelerated; A total of 4.058 million yellow standard vehicles and old vehicles were eliminated nationwide, completing 106.5 % of the total annual elimination tasks. At the same time, it has fully completed the task of monitoring the monitoring rights of 1,436 state-controlled air quality monitoring cities.
+										</p>
+										<img src="../images/st3.png">
+										<img src="../images/st4.png">
+									</div>
+									<div class="wgyp-left2" style="margin-left: 0px;"><img src="../images/stdq.png" alt="" style="margin-left: 50px;"></div>
+									<p class="wgyp-left2-text2"> Accelerating Legislation on Pollution
+									</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div style="margin-bottom: 50px;">
+							<div style="width: 100%;margin-left: -80px;">
+								<div class="wgyp">
+									<div class="wgyp-left2"><img src="../images/stdq.png" alt=""></div>
+									<p class="wgyp-left2-text"> Accelerating Legislation on Pollution
+									</p>
+									<div class="wgyp-right2" id="p1" style="margin-bottom: 50px;">
+										<div class="litt" style="float: left;"> Liyang carries out the</div>
+										<p> In view of the fact that the city's industrial structure emphasizes the status quo, the city has surrounded the rise of green, held high the banner of structural adjustment, and launched a three-year jump plan for the industrial economy. We will promote the leading adjustment through new and high-tech programs, promote adjustment through the concentration of advantageous industries, encourage and adjust policies for innovation and support, and force adjustment by optimizing and integrating resources. The cultivation has formed pillar industries and industrial clusters such as power transmission and transformation. 
+										</p>
+										<img src="../images/st5.png">
+										<img src="../images/st6.png">
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>Guangxi industrial and commercial Career Technical College</p>
+		</div>
+			<button class="back_to_top"><img src="../images/backtop.gif" ></button>
+
+	</div>
+	<!-- 背景特效 -->
+	<script src="../js/bg.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+/* 全局 */
+*{margin:0;padding:0}
+li,ul{list-style:none}
+a{border:0;text-decoration:none}
+body{min-width:980px;color:#666}
+.clear{clear:both}
+.content{margin:0 auto;width:980px}
+.red{color:#8B0000!important}
+
+
+/* 头部内容 */
+.header{padding:20px 0;width:100%;background-color:#8d1516}
+.header-left{float:left;width:400px}
+.header-right{float:right}
+.header-link{display:block;padding:10px 0 10px 0}
+.header-link ul{float:right}
+.header-link ul li{float:left}
+.header-link ul li a{display:inline-block;padding:0 4px 0 4px;color:#fff;font-size:12px}
+.search{float:right}
+.search [type=text]{padding:2px 5px;border:0}
+.search [type=submit]{padding:2px 5px;border:0;background:#333;color:#fff;cursor:pointer}
+
+
+/* 菜单导航 */
+.nav{width:100%;background:#333;box-shadow:inset rgba(255,255,255,.2) 0 1px 1px}
+.big-nav li{position:relative;float:left;padding:5px 0 5px 0;transform-style: preserve-3d;perspective:550;-webkit-perspective:550;}
+.big-nav li a{display:inline-block;padding:5px 24px;border-top:solid 1px rgba(255,255,255,0);border-left:solid 1px rgba(255,255,255,.1);border-radius:2px;color:#eee;letter-spacing:5px;font-size:14px;transition:all .2s}
+.big-nav li a:hover{border-top:solid 1px rgba(255,255,255,.1);box-shadow:inset rgba(255,255,255,.2) 0 15px 10px}
+
+
+/* 子菜单 */
+.sml-nav{position:absolute;top:40px;padding:0 0 10px 0;width:140px;background-color:#666;opacity:0;transition:all .5s;transform:rotateX(-90deg);transform-origin:50% 0;z-index: 99999;}
+.sml-nav li{padding:0;width:100%;border:none;text-align:center}
+.sml-nav li a{display:inline-block;border-bottom:#ddd dotted 1px;border-left:none}
+.sml-nav li a:hover{background-color:rgba(0,0,0,.3);box-shadow:none}
+.xygs:hover .sml-nav{opacity:1;transform:rotateX(0);transform-origin:50% 0}
+.xwzx:hover .sml-nav{opacity:1;transform:rotateX(0);transform-origin:50% 0}
+.szdw:hover .sml-nav{opacity:1;transform:rotateX(0);transform-origin:50% 0}
+.jxky:hover .sml-nav{opacity:1;transform:rotateX(0);transform-origin:50% 0}
+.zsjy:hover .sml-nav{opacity:1;transform:rotateX(0);transform-origin:50% 0}
+.xsgz:hover .sml-nav{opacity:1;transform:rotateX(0);transform-origin:50% 0}
+.jgsz:hover .sml-nav{opacity:1;transform:rotateX(0);transform-origin:50% 0}
+
+
+/* 主体内容 */
+.box{width:100%}
+
+
+/* banner */
+.banner{width: 100%;margin: 5px 0;}
+
+
+/* 新闻主体内容 */
+.main{width:100%;border:solid 1px #ccc}
+.main a:hover{text-decoration:underline}
+.main-con,.main-left,.main-right{float:left;box-sizing:border-box;padding:8px}
+.main-left{width:25%}
+h5{display:inline-block;padding:5px 10px;background:#ddd}
+h5 a{color:#777}
+.h5-active{background:#8b0000}
+.h5-active a{color:#fff}
+.main-left-new{margin:10px 0;width:100%}
+.main-left-new .time{float:left;overflow:hidden;width:25%}
+.main-left-new .date{background:#eee;font-weight:600}
+.main-left-new .year{background:#cacaca}
+.main-left-new .date,.main-left-new .year{padding:3px 0;width:100%;text-align:center;font-size:12px}
+.main-left-new .news{float:right;overflow:hidden;width:70%}
+.main-left-new .news a{display:inline-block;color:#666;font-size:14px;line-height:150%}
+.main-con{width:45%}
+.main-con-new .news{padding:4px 0 0 4px}
+.main-con-new .news a{position:relative;display:inline-block;width:100%;color:#666;font-size:14px;line-height:200%}
+.main-con-new .news a span{position:absolute;right:0;font-size:12px}
+.main-right{width:30%}
+h3{color:#8B0000;letter-spacing:5px}
+.bg1{background:url(../img/q_bg.jpg) no-repeat;background-position:right bottom}
+.bg2{background:url(../img/q_bg2.jpg) no-repeat;background-position:right bottom}
+.bg3{background:url(../img/q_bg3.jpg) no-repeat;background-position:right bottom}
+.main-link{box-sizing:border-box;padding:5px}
+.main-left .main-link{padding:10px 0 0 4px}
+.main-con .main-link a,.main-left .main-link a,.main-right .main-link a{float:left;display:inline-block;color:#666;font-size:14px;line-height:200%}
+.main-left .main-link a,.main-right .main-link a{width:50%}
+.main-con .main-link a{width:25%}
+
+
+/* 脚部内容 */
+.footer{margin-top:30px;padding:20px 0;width:100%;border-top:5px solid rgba(0,0,0,.2);background:#eee}
+.footer p{font-size:15px;line-height:200%}
+.footer .content{position:relative}
+.footer img{position:absolute;top:0;right:0;}
+
+
+
+	

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PC蛋蛋</title>
+		<link rel="icon" type="image/x-icon" href="lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../lib/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../lib/css/app.css" />
+		<script src="../lib/js/mui.min.js "></script>
+		<script src="../lib/js/jq.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-left-nav" href="../game.html"></a>
+					<h1 class="mui-title">PC蛋蛋</h1>
+					<!-- 顶部固定导航菜单 -->
+					<div style="float: right;">
+						<a class="mui-icon mui-icon-bars mui-pull-right" href="#Popover_0" style="padding: 12px 10px 0 0;"></a>
+					</div>
+					<div class="select">
+						<select id="selectid" onchange="role()" class="mui-btn" style="width: 80%;">
+							<option value="1">主势盘</option>
+						</select>
+					</div>
+				</header>
+
+				<!-- 表单 -->
+				<form action="" method="">
+
+					<!-- 底部固定菜单 -->
+					<nav class="mui-bar mui-bar-tab">
+						<div class="kjxz"><input type="number" placeholder="请输入快捷金额" /></div>
+						<div class="navfoot1">
+							<!-- <p>共<span>0</span>注</p> -->
+							<p>共<input id="zj" value="0">元</p>
+						</div>
+						<div class="navfoot2">
+							<button type="reset" class="mui-btn mui-btn-warning" id="empty">清空</button>
+							<button type="button" id="tzbtn" class="mui-btn mui-btn-danger">投注</button>
+						</div>
+					</nav>
+					<!-- 下注结算窗口 -->
+					<div id="tzbtns" class="tzbtns" style="display: none;">
+						<p>下注金额共<input id="tzp" value="" disabled="disabled" />元</p>
+						<div style="width: 90%;text-align: center;position: absolute;bottom: 20px;">
+							<button type="button" class="mui-btn mui-btn-danger close">取消</button>
+							<button type="button" class="mui-btn mui-btn-danger quedin">确定</button>
+						</div>
+					</div>
+					<!-- 主页面内容容器 -->
+					<div class="mui-content mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<!-- 主界面具体展示内容 -->
+							<div class="play-title">
+								<div class="play-title-left">
+									<p><span>715807</span>期：</p>
+									<div>
+										<i class="ball3 iii2">2</i><i>+</i>
+										<i class="ball3 iii4">4</i><i>+</i>
+										<i class="ball3 iii5">5</i><i>=</i>
+										<i class="ball3 iii11">11</i>
+									</div>
+								</div>
+								<div class="play-title-right">
+									<p>距离下一期截止：</p>
+									<div class="time-item">
+										<!-- <span id="day_show">0天</span> -->
+										<strong id="hour_show">0时</strong>
+										<strong id="minute_show">0分</strong>
+										<strong id="second_show">0秒</strong>
+									</div>
+								</div>
+							</div>
+							<div class="balance">
+								<p style="margin-top: 10px;">余额：<span>999999.99</span>元</p>
+								<div style="float: right;">
+									<button id="alertBtn" type="button" class="mui-btn mui-btn-block mui-btn-outlined shuying">今日输赢</button>
+								</div>
+							</div>
+							<div class="mui-content">
+								<div class="closenav">
+									<p>点击显示/隐藏信息</p>
+								</div>
+								<div style="padding: 10px 10px;">
+									<div id="segmentedControl" class="mui-segmented-control">
+										<a class="mui-control-item mui-active" href="javascript:void(0)" id="ptxz">普通下注</a>
+										<a class="mui-control-item" href="javascript:void(0)" id="kjxz">快捷下注</a>
+									</div>
+								</div>
+								<!--------------------------------------------------------------------------------------------- 彩种分界线 ------------------------------------------------------------------------------------------------------>
+								<div style="padding: 10px;">
+									<!-- 以下为一般投注 -->
+									<div id="item" class="mui-control-content mui-active">
+										<div id="lm">
+											<div id="xingyun28_12219">
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">混合</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="0" class="name"><span>大</span></td>
+															<td data-current="0" class="odds">1.96</td>
+															<td data-current="0" class="amount"><input type="text" odds="1.96" data-id="25750" num="大" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="1" class="name"><span>小</span></td>
+															<td data-current="1" class="odds">1.96</td>
+															<td data-current="1" class="amount"><input type="text" odds="1.96" data-id="25751" num="小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="4" class="name"><span>单</span></td>
+															<td data-current="4" class="odds">1.96</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.96" data-id="25752" num="单" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="6" class="name"><span>双</span></td>
+															<td data-current="6" class="odds">1.96</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.96" data-id="25753" num="双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="12" class="name"><span>大单</span></td>
+															<td data-current="12" class="odds">3.94</td>
+															<td data-current="12" class="amount"><input type="text" odds="3.94" data-id="25754" num="大单" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="15" class="name"><span>小单</span></td>
+															<td data-current="15" class="odds">3.94</td>
+															<td data-current="15" class="amount"><input type="text" odds="3.94" data-id="25755" num="小单" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="24" class="name"><span>大双</span></td>
+															<td data-current="24" class="odds">3.94</td>
+															<td data-current="24" class="amount"><input type="text" odds="3.94" data-id="25756" num="大双" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="28" class="name"><span>小双</span></td>
+															<td data-current="28" class="odds">3.94</td>
+															<td data-current="28" class="amount"><input type="text" odds="3.94" data-id="25757" num="小双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="40" class="name"><span>极大</span></td>
+															<td data-current="40" class="odds">10</td>
+															<td data-current="40" class="amount"><input type="text" odds="10" data-id="25758" num="极大" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="45" class="name"><span>极小</span></td>
+															<td data-current="45" class="odds">10</td>
+															<td data-current="45" class="amount"><input type="text" odds="10" data-id="25759" num="极小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">波色/豹子</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="10" class="name"><span>红波</span></td>
+															<td data-current="10" class="odds">2.94</td>
+															<td data-current="10" class="amount"><input type="text" odds="2.94" data-id="25760" num="红波" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="11" class="name"><span>绿波</span></td>
+															<td data-current="11" class="odds">2.94</td>
+															<td data-current="11" class="amount"><input type="text" odds="2.94" data-id="25761" num="绿波" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="24" class="name"><span>蓝波</span></td>
+															<td data-current="24" class="odds">2.94</td>
+															<td data-current="24" class="amount"><input type="text" odds="2.94" data-id="25762" num="蓝波" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="26" class="name"><span>豹子</span></td>
+															<td data-current="26" class="odds">90</td>
+															<td data-current="26" class="amount"><input type="text" odds="90" data-id="25763" num="豹子" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">特码</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="14" class="name"><span class="pcegg_img pcegg_bj_00">0</span></td>
+															<td data-current="14" class="odds">840</td>
+															<td data-current="14" class="amount"><input type="text" odds="840" data-id="25764" num="0" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="15" class="name"><span class="pcegg_img pcegg_bj_01">1</span></td>
+															<td data-current="15" class="odds">313</td>
+															<td data-current="15" class="amount"><input type="text" odds="313" data-id="25765" num="1" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="32" class="name"><span class="pcegg_img pcegg_bj_02">2</span></td>
+															<td data-current="32" class="odds">156</td>
+															<td data-current="32" class="amount"><input type="text" odds="156" data-id="25766" num="2" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="34" class="name"><span class="pcegg_img pcegg_bj_03">3</span></td>
+															<td data-current="34" class="odds">94</td>
+															<td data-current="34" class="amount"><input type="text" odds="94" data-id="25767" num="3" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="54" class="name"><span class="pcegg_img pcegg_bj_04">4</span></td>
+															<td data-current="54" class="odds">62</td>
+															<td data-current="54" class="amount"><input type="text" odds="62" data-id="25768" num="4" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="57" class="name"><span class="pcegg_img pcegg_bj_05">5</span></td>
+															<td data-current="57" class="odds">44</td>
+															<td data-current="57" class="amount"><input type="text" odds="44" data-id="25769" num="5" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="80" class="name"><span class="pcegg_img pcegg_bj_06">6</span></td>
+															<td data-current="80" class="odds">33</td>
+															<td data-current="80" class="amount"><input type="text" odds="33" data-id="25770" num="6" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="84" class="name"><span class="pcegg_img pcegg_bj_07">7</span></td>
+															<td data-current="84" class="odds">26</td>
+															<td data-current="84" class="amount"><input type="text" odds="26" data-id="25771" num="7" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="110" class="name"><span class="pcegg_img pcegg_bj_08">8</span></td>
+															<td data-current="110" class="odds">20.9</td>
+															<td data-current="110" class="amount"><input type="text" odds="20.9" data-id="25772" num="8" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="115" class="name"><span class="pcegg_img pcegg_bj_09">9</span></td>
+															<td data-current="115" class="odds">17.1</td>
+															<td data-current="115" class="amount"><input type="text" odds="17.1" data-id="25773" num="9" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="144" class="name"><span class="pcegg_img pcegg_bj_10">10</span></td>
+															<td data-current="144" class="odds">14.9</td>
+															<td data-current="144" class="amount"><input type="text" odds="14.9" data-id="25774" num="10" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="150" class="name"><span class="pcegg_img pcegg_bj_11">11</span></td>
+															<td data-current="150" class="odds">13.5</td>
+															<td data-current="150" class="amount"><input type="text" odds="13.5" data-id="25775" num="11" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="182" class="name"><span class="pcegg_img pcegg_bj_12">12</span></td>
+															<td data-current="182" class="odds">12.8</td>
+															<td data-current="182" class="amount"><input type="text" odds="12.8" data-id="25776" num="12" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="189" class="name"><span class="pcegg_img pcegg_bj_13">13</span></td>
+															<td data-current="189" class="odds">12.5</td>
+															<td data-current="189" class="amount"><input type="text" odds="12.5" data-id="25777" num="13" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="224" class="name"><span class="pcegg_img pcegg_bj_14">14</span></td>
+															<td data-current="224" class="odds">12.5</td>
+															<td data-current="224" class="amount"><input type="text" odds="12.5" data-id="25778" num="14" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="232" class="name"><span class="pcegg_img pcegg_bj_15">15</span></td>
+															<td data-current="232" class="odds">12.8</td>
+															<td data-current="232" class="amount"><input type="text" odds="12.8" data-id="25779" num="15" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="270" class="name"><span class="pcegg_img pcegg_bj_16">16</span></td>
+															<td data-current="270" class="odds">13.5</td>
+															<td data-current="270" class="amount"><input type="text" odds="13.5" data-id="25780" num="16" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="279" class="name"><span class="pcegg_img pcegg_bj_17">17</span></td>
+															<td data-current="279" class="odds">14.9</td>
+															<td data-current="279" class="amount"><input type="text" odds="14.9" data-id="25781" num="17" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="320" class="name"><span class="pcegg_img pcegg_bj_18">18</span></td>
+															<td data-current="320" class="odds">17.1</td>
+															<td data-current="320" class="amount"><input type="text" odds="17.1" data-id="25782" num="18" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="330" class="name"><span class="pcegg_img pcegg_bj_19">19</span></td>
+															<td data-current="330" class="odds">20.9</td>
+															<td data-current="330" class="amount"><input type="text" odds="20.9" data-id="25783" num="19" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="374" class="name"><span class="pcegg_img pcegg_bj_20">20</span></td>
+															<td data-current="374" class="odds">26</td>
+															<td data-current="374" class="amount"><input type="text" odds="26" data-id="25784" num="20" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="385" class="name"><span class="pcegg_img pcegg_bj_21">21</span></td>
+															<td data-current="385" class="odds">33</td>
+															<td data-current="385" class="amount"><input type="text" odds="33" data-id="25785" num="21" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="432" class="name"><span class="pcegg_img pcegg_bj_22">22</span></td>
+															<td data-current="432" class="odds">44</td>
+															<td data-current="432" class="amount"><input type="text" odds="44" data-id="25786" num="22" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="444" class="name"><span class="pcegg_img pcegg_bj_23">23</span></td>
+															<td data-current="444" class="odds">62</td>
+															<td data-current="444" class="amount"><input type="text" odds="62" data-id="25787" num="23" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="494" class="name"><span class="pcegg_img pcegg_bj_24">24</span></td>
+															<td data-current="494" class="odds">94</td>
+															<td data-current="494" class="amount"><input type="text" odds="94" data-id="25788" num="24" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="507" class="name"><span class="pcegg_img pcegg_bj_25">25</span></td>
+															<td data-current="507" class="odds">156</td>
+															<td data-current="507" class="amount"><input type="text" odds="156" data-id="25789" num="25" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="560" class="name"><span class="pcegg_img pcegg_bj_26">26</span></td>
+															<td data-current="560" class="odds">313</td>
+															<td data-current="560" class="amount"><input type="text" odds="313" data-id="25790" num="26" max="50000"
+																 min="1" value="">
+															</td></tr>
+														<tr>
+															<td data-current="574" class="name"><span class="pcegg_img pcegg_bj_27">27</span></td>
+															<td data-current="574" class="odds">840</td>
+															<td data-current="574" class="amount"><input type="text" odds="840" data-id="25791" num="27" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--------------------------------------------------------------------------------------------- 彩种分界线 ------------------------------------------------------------------------------------------------------>
+						</div>
+					</div>
+			</div>
+			</form>
+			<div class="mui-off-canvas-backdrop"></div>
+		</div>
+		</div>
+		<!-- 顶部固定导航内容 -->
+		<div id="Popover_0" class="mui-popover mui-bar-popover" style="width: 100px;">
+			<div class="mui-popover-arrow"></div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell"><a href="../betting/touzhu.html">投注记录</a></li>
+				<li class="mui-table-view-cell"><a href="../prizes/pcdd.html">历史开奖</a></li>
+				<!-- <li class="mui-table-view-cell"><a href="#">游戏玩法</a></li> -->
+			</ul>
+		</div>
+
+		<div style="display: none;">
+			<style type="text/css">
+				.select {
+					width: 50%;
+					float: right;
+					position: relative;
+				}
+
+				.mui-btn {
+					font-size: 14px;
+					padding: 8px;
+					border: #eee 1px solid !important;
+				}
+
+				.mui-title {
+					font-size: 14px;
+					text-align: left;
+				}
+
+				input[type=text] {
+					margin-bottom: 0;
+					font-size: 12px;
+					border-radius: 0;
+				}
+
+				.mui-scroll-wrapper {
+					top: 40px;
+				}
+
+				.tzbtns {
+					position: fixed;
+					z-index: 99999;
+					width: 200px;
+					height: 200px;
+					background: #fff;
+					border: 1px solid darkred;
+					margin: 40% 25%;
+					border-radius: 10px;
+					box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+					padding: 10px;
+				}
+
+				#tzp {
+					outline: none;
+					border: 0;
+					background: none;
+					width: 50%;
+					color: darkred;
+					text-align: center;
+				}
+
+				.tzbtns p {
+					color: #333;
+				}
+
+				.blocks {
+					display: block;
+				}
+			</style>
+			<!-- tap方法等于click -->
+			<script type="text/javascript">
+				$("body").on('tap', 'a', function(event) {
+					this.click();
+				});
+			</script>
+			<!-- 初始化MUI框架 -->
+			<script type="text/javascript">
+				mui.init();
+				//内容允许滚动
+				(function($) {
+					$(".mui-scroll-wrapper").scroll({
+						bounce: true, //滚动条是否有弹力默认是true
+						indicators: true, //是否显示滚动条,默认是true
+					});
+				})(mui);
+			</script>
+
+			<!-- 加载自定义JS -->
+			<script src="../lib/js/app.js" type="text/javascript" charset="utf-8"></script>
+			<!-- 今日输赢 -->
+			<script>
+				document.getElementById("alertBtn").addEventListener('tap', function() {
+					mui.alert('今日消费：0.00</br>今日中奖：0.00</br>今日盈亏：0.00', '今日输赢<hr>');
+				})
+			</script>
+		</div>
+
+	</body>
+</html>

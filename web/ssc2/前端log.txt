@@ -1,0 +1,247 @@
+|—— 本套前端采用MUI原生APP框架。
+|
+|—— 整理页面：
+|_________________________________________________________________
+ |
+ |—— lib js,css,font,img文件存放
+ |
+ |—— app.css 这是自定义CSS
+ |
+ |—— app.js 这是自定义JS
+ |
+ |—— game 所有单个彩种投注页面文件
+ |
+ |—— prizes 所有单个彩种开奖页面文件
+ |
+ |—— activity 最新优惠活动页面文件
+ |
+ |—— betting 投注记录页面和投注详情页面文件
+ |
+ |—— login 登录、注册、忘记密码页面文件
+ |
+ |—— pay 充值、提款、转账页面文件
+ |
+ |—— prizes 所有单个彩种开奖页面文件
+ |
+ |—— user 用户修改信息页面文件
+ |
+ |—— public 所有公共页面文件
+ | |
+ | |—— 脚部固定菜单 --> footernav.html
+ | |
+ | |—— 侧边滑动菜单（预留，没用到，有小BUG） --> nav.html --> 放在</header>之后就能用
+ 
+——————————————————————————————————————————————————————————————————
+ |
+ |—— game.html 购彩大厅页面 --> 点击单个彩种跳转此彩种的投注页面
+ |
+ |—— prize.html 开奖大厅页面 --> 点击单个彩种跳转此彩种的开奖历史 --> prizes文件夹
+ |
+ |—— touzhu.html 投注记录页面 --> 点击单个记录跳转此彩种的详细投注信息 --> touzhus.html 
+ |
+ |—— touzhus.html 详情的投注记录页面 
+ |
+ |—— record.html 充值记录页面
+ |
+ |—— records.html 充值记录详情页面
+ |
+ |—— index.html 首页
+ |
+ |—— user.html 个人中心页面
+ | |
+ | |—— 修改信息跳转页面 --> user.html
+ | |
+ | |—— 安全中心跳转页面 --> safe.html
+ | |
+ | |—— 消息中心跳转页面 --> message.html
+ | |
+ | |—— 代理中心跳转页面 --> agency.html
+ | |
+ | |—— APP下载跳转页面 --> 外链
+ | |
+ | |—— 充值跳转页面 --> recharge.html
+ | |
+ | |—— 提款跳转页面 --> drawing.html
+ | |
+ | |—— 转账跳转页面 --> giro.html
+ | |
+ |
+ |—— looks.html 用户协议页面
+ |
+ |—— login.html 用户登录页面
+ |
+ |—— register.html 用户注册页面
+ |
+ |—— forgetpwd.html 忘记密码第一步页面
+ |
+ |—— forgetpwd2.html 忘记密码第二步页面
+ |
+ |——
+ |
+ |——
+ |
+ |——
+ |
+ 
+ MUI官网实例：http://www.dcloud.io/hellomui/
+ 
+ 初始化模板：
+ 
+ <!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<title>xx</title>
+ 		<link rel="icon" type="image/x-icon" href="lib/img/favicon.ico" />
+ 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+ 		<meta name="apple-mobile-web-app-capable" content="yes">
+ 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 		<link rel="stylesheet" href="lib/css/mui.min.css">
+ 		<link rel="stylesheet" type="text/css" href="lib/css/app.css" />
+		<script src="lib/js/mui.min.js "></script>
+		<script src="lib/js/jq.js" type="text/javascript" charset="utf-8"></script>
+ 	</head>
+ 	<body>
+ 		<div class="mui-off-canvas-wrap mui-draggable">
+ 			<!-- 主页面容器 -->
+ 			<div class="mui-inner-wrap">
+ 				<!-- 主页面标题 -->
+ 				<header class="mui-bar mui-bar-nav">
+ 					<h1 class="mui-title">xx</h1>
+ 				</header>
+ 				<!-- 主页面内容容器 -->
+ 				<div class="mui-content mui-scroll-wrapper">
+ 					<div class="mui-scroll">
+ 						<!-- 内容写在这里！！！主界面具体展示内容 -->
+ 					</div>
+ 				</div>
+ 				<div class="mui-off-canvas-backdrop"></div>
+ 			</div>
+ 		</div>
+ 	</body>
+	<script type="text/javascript">
+		mui.init();
+		//内容允许滚动
+		(function($) {
+			$(".mui-scroll-wrapper").scroll({
+				bounce: true, //滚动条是否有弹力默认是true
+				indicators: true, //是否显示滚动条,默认是true
+			});
+		})(mui);
+	</script>
+	<!-- tap方法等于click -->
+	<script type="text/javascript">
+		$("body").on('tap', 'a', function(event) {
+			this.click();
+		});
+	</script>
+ </html>
+ 
+ 页面滑动不了解决方案：
+ 
+ <script type="text/javascript">
+ 	mui.init();
+ 	//内容允许滚动
+ 	(function($) {
+ 		$(".mui-scroll-wrapper").scroll({
+ 			bounce: true, //滚动条是否有弹力默认是true
+ 			indicators: true, //是否显示滚动条,默认是true
+ 		});
+ 	})(mui);
+ </script>
+ 
+ 
+ onclick和a标签跳转/点击事件用不了解决方案：onclick就是tap！！onclick被MUI封装成tap！！
+ 
+ <!-- tap方法等于click -->
+ <script type="text/javascript">
+ 	$("你的id/class").on('tap', 'a', function(event) {
+ 		this.click();
+ 	});
+ </script>
+ <script type="text/javascript">
+ 	mui('你的id/class').on('a',function(){
+ 		window.top.location.href=this.href;
+ 	});
+ </script>
+ 
+ 
+ 返回上一层：
+ 
+ <!-- 返回上一层 -->
+ <a class="mui-icon mui-icon-left-nav" href="javascript:history.back(-1)"></a>
+ 
+ 
+
+ 
+ 选项卡：
+ 
+ <div class="mui-content">
+ 	<div style="padding: 10px 10px;">
+ 		<div id="segmentedControl" class="mui-segmented-control">
+ 			<a class="mui-control-item mui-active" href="#item1">普通下注</a>
+ 			<a class="mui-control-item" href="#item2">快捷下注</a>
+ 		</div>
+ 	</div>
+	<div>
+ 		<div id="item1" class="mui-control-content mui-active">
+ 			<ul class="mui-table-view">
+ 				<li class="mui-table-view-cell">
+ 					第1个选项卡子项-1
+ 				</li>
+ 				<li class="mui-table-view-cell">
+ 					第1个选项卡子项-2
+ 				</li>
+ 				<li class="mui-table-view-cell">
+ 					第1个选项卡子项-3
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		<div id="item2" class="mui-control-content">
+ 			<ul class="mui-table-view">
+ 				<li class="mui-table-view-cell">
+ 					第二个选项卡子项-1
+ 				</li>
+ 				<li class="mui-table-view-cell">
+ 					第二个选项卡子项-2
+ 				</li>
+ 				<li class="mui-table-view-cell">
+ 					第二个选项卡子项-3
+ 				</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </div>
+ <script>
+ 	(function($) {
+ 		$('#scroll').scroll({
+ 			indicators: true //是否显示滚动条
+ 		});
+ 		var segmentedControl = document.getElementById('segmentedControl');
+ 		$('.mui-input-group').on('change', 'input', function() {
+ 			if (this.checked) {
+ 				var styleEl = document.querySelector('input[name="style"]:checked');
+ 				var colorEl = document.querySelector('input[name="color"]:checked');
+ 				if (styleEl && colorEl) {
+ 					var style = styleEl.value;
+ 					var color = colorEl.value;
+ 					segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+ 				}
+ 			}
+ 		});
+ 	})(mui);
+ </script>
+ 
+ 
+确定取消提示框：
+
+<button id="tzbtn" type="button">提示框</button>
+<script type="text/javascript">
+	document.getElementById("tzbtn").addEventListener('tap', function(e) {
+	e.detail.gesture.preventDefault(); //修复iOS 8.x平台存在的bug，使用plus.nativeUI.prompt会造成输入法闪一下又没了
+	var btnArray = ['确定', '取消'];
+	// mui.alert('当前值: ' + document.getElementById("zj").value, null, "提示");
+	mui.prompt('当前值：', ' '+document.getElementById("zj").value, 'Hello MUI', )
+});
+</script>
+

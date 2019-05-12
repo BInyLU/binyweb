@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Reform</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/move.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css" />
+	<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../js/style.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/tab.css" />
+	<link rel="stylesheet" type="text/css" href="../css/rotate2.css" />
+	<link rel="stylesheet" type="text/css" href="../css/media.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/rotate3.css" />
+	<link rel="stylesheet" type="text/css" href="../css/lunbo.css" />
+	<link rel="stylesheet" type="text/css" href="../css/media.css" />
+	<script src="../js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.right1_1,
+		#playBox {
+			animation: bounceIn .8s linear 1;
+		}
+
+		.right1_1 img {
+			margin-top: 50px;
+		}
+
+		.right2_1 {
+			background: none;
+		}
+
+		.left1 {
+			animation: bounceInLeft .5s linear 1;
+		}
+
+		.botline1 {
+			top: 450px !important;
+		}
+
+		.rightline1 {
+			top: 380px !important;
+		}
+
+		.bg2solid {
+			height: 50px;
+			background: url(../images/fly.png) 100%;
+		}
+
+		#p1 {
+			border: #8B0000 2px solid;
+		}
+
+		.litt {
+			padding: 10px;
+			margin-bottom: 20px;
+		}
+
+		.wgypss-lbt {
+			margin: 25px 0 50px -80px;
+		}
+
+		#lunbobox {
+			width: 620px;
+			border: none;
+		}
+
+		.lunbo {
+			width: 620px;
+			height: 300px;
+		}
+
+		.lunbo img {
+			width: 620px;
+			height: 300px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+
+		#lunbobox ul {
+			width: 400px;
+		}
+
+		.tab3-sml-1 {
+			width: calc(100% / 3 - 5px);
+		}
+
+		#sml1-1 {
+			background: url(../images/11e.png) no-repeat;
+			background-size: 40%;
+			background-position: 70px 0;
+			text-align: center;
+		}
+
+		#sml2-1 {
+			background: url(../images/22e.png) no-repeat;
+			background-size: 40%;
+			background-position: 70px 0;
+			text-align: center;
+		}
+
+		#sml3-1 {
+			background: url(../images/33e.png) no-repeat;
+			background-size: 40%;
+			background-position: 70px 0;
+			text-align: center;
+		}
+
+		.tab3-sml-1 {
+			height: 170px;
+		}
+
+		.tb img {
+			margin-top: 50px;
+		}
+
+		#p1 {
+			padding: 20px;
+		}
+
+		#p1 p {
+			line-height: 180%;
+		}
+
+		h5 {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			border-bottom: #888888 solid 1px;
+		}
+		.tb img {
+			width: 180px;
+		}
+		#sml1-1,#sml2-1,#sml3-1{
+			background-size: 45%;
+		}
+		#playBox{
+			margin-left: 160px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="all">
+		<div class="line"></div>
+				<span class="opennav" id="opennav">
+					<a href="#" onclick="opennav()">
+						<svg width="30" height="30">
+							<path d="M0,5 30,5" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,14 30,14" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,23 30,23" stroke="#C8605E" stroke-width="4" />
+						</svg>
+					</a>
+				</span>
+				<div class="smnav" id="smnav">
+					<a href="#" class="btn-close" onclick="closenav()">
+						<img src="data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiDnn6Lph4/lm77moIfkuIvovb0gOiBodHRwOi8vd3d3LnNmb250LmNuLyA8L21ldGFkYXRhPjxnPjxwYXRoIGQ9Ik0xMCw3OS4zTDc5LjMsMTBMOTkwLDkyMC43TDkyMC43LDk5MEwxMCw3OS4zTDEwLDc5LjN6IiBzdHlsZT0iZmlsbDojRkZGRkZGIj48L3BhdGg+PHBhdGggZD0iTTc5LjMsOTkwTDEwLDkyMC43TDkyMC43LDEwTDk5MCw3OS4zTDc5LjMsOTkweiIgc3R5bGU9ImZpbGw6I0ZGRkZGRiI+PC9wYXRoPjwvZz48L3N2Zz4gIA=="
+						    width="10" height="10">
+					</a>
+					<li class="smnvatop">
+						<img src="../images/yd7.png" style="width: 100%;">
+						<img src="../images/yd1.png" style="width: 90%;margin:-70px 0 20px 10px">
+					</li>
+					<li>
+						<a href="jdbg-e.html">Report</a>
+					</li>
+					<li >
+						<a href="jcrw-e.html">Character</a>
+					</li>
+					<li>
+						<a href="kjgj-e.html">Science</a>
+					</li>
+					<li>
+						<a href="tpgj-e.html">Poverty</a>
+					</li>
+					<li>
+						<a href="yggj-e.html">Medical</a>
+					</li>
+					<li>
+						<a href="stgj-e.html">Ecology</a>
+					</li>
+					<li>
+						<a href="qmsg-e.html">Reform</a>
+					</li>
+					<li class="activeli">
+						<a href="../index.html" style="padding: 0;">
+							<p id="lgg">切换中文</p>
+							<img src="../images/CN.png" style="height: 50px;float: right;">
+						</a>
+					</li>
+				</div>
+				<script type="text/javascript">
+					function opennav() {
+						document.getElementById('smnav').style.left = '0';
+						document.getElementById('smnav').style.opacity = '1';
+					}
+		
+					function closenav() {
+						document.getElementById('smnav').style.left = '-250px';
+						document.getElementById('smnav').style.opacity = '0';
+					}
+				</script>
+		<div class="tops">
+			<div class="top">
+				<div class="logo">
+					<img src="../images/yd1.png">
+				</div>
+				<div class="nav">
+					<ul>
+						<li>
+							<a href="e.html" style="animation: lightSpeedIn .4s linear 1;">Home</a>
+						</li>
+						<li>
+							<a href="jdbg-e.html" style="animation: lightSpeedIn .5s linear 1;">Report</a>
+						</li>
+						<li>
+							<a href="jcrw-e.html" style="animation: lightSpeedIn .6s linear 1;">Character</a>
+						</li>
+						<li>
+							<a href="kjgj-e.html" style="animation: lightSpeedIn .7s linear 1;">Science</a>
+						</li>
+						<li>
+							<a href="tpgj-e.html" style="animation: lightSpeedIn .8s linear 1;">Poverty</a>
+						</li>
+						<li>
+							<a href="yggj-e.html" style="animation: lightSpeedIn .9s linear 1;">Medical</a>
+						</li>
+						<li>
+							<a href="stgj-e.html" style="animation: lightSpeedIn 1s linear 1;">Ecology</a>
+						</li>
+						<li id="corlored">
+							<a href="qmsg-e.html" style="animation: lightSpeedIn 1.1s linear 1;">Reform</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="change">
+				<a href="../chinese/qmsg-c.html">
+					<img src="../images/CN.png">
+				</a>
+			</div>
+		</div>
+		<!-- banner -->
+		<div class="container">
+			<div class="dowebok" style="width: 1000px;margin: 0 auto;">
+				<div class="pogoSlider" id="dowebok">
+					<div class="pogoSlider-slide" data-transition="slide" style="background-image:url(../images/banner4-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="fade" style="background-image:url(../images/banner2-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="verticalSlide" style="background-image:url(../images/banner1-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealLeft" style="background-image:url(../images/banner5-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealRight" style="background-image:url(../images/banner3-e.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function () {
+				$('#dowebok').pogoSlider();
+			});
+		</script>
+		<div class="content_1">
+			<div class="con">
+				<div class="sml1"></div>
+				<div class="sml2"></div>
+				<div class="sml3"></div>
+				<div class="sml4"></div>
+				<div class="left1">
+					<img src="../images/left7-e.png" id="moveimg">
+				</div>
+				<div class="right1">
+					<div class="right1_1">
+						<div class="topline1"></div>
+						<div class="leftline1"></div>
+						<div class="botline1"></div>
+						<div class="rightline1"></div>
+						<p id="p1"> On December 30, 2013, the CPC Central Committee's comprehensive reform leading group was announced. Over the past two
+							years, the central leadership group for deepening reform has earnestly fulfilled its responsibilities of "overall
+							design, overall coordination, overall promotion, and supervision and implementation", holding 19 meetings
+							<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The overall goal of comprehensively deepening reform is to improve
+							and develop the socialist system with Chinese characteristics and to advance the modernization of the country's governance
+							system and governance capabilities. It is not advancing reform in one area, nor in several areas, but involves reform
+							in all areas of economy, politics, culture, society, ecological civilization, national defense and the armed forces,
+							and opening up to foreign countries. It is not a matter of one or more sectors alone, but of coordination. To realize
+							the comprehensive deepening of reform, we need to further emancipate our minds, rely on the people
+						</p>
+					</div>
+					<div class="right2_1">
+						<div style="width:100%;margin:50px auto;position: relative;">
+							<h5>Illustrating Xi Jinping's opinions 
+								<span> comprehensively deepening reform</span>
+							</h5>
+							<div class="right1_1" style="text-align: center;">
+								<img src="../images/rmdht.png" alt="">
+								<div class="redline"></div>
+								<p id="p1">Reform is a powerful driving force for development and a key measure to determine the destiny of contemporary China. Since the 18th National Congress of the CPC, the CPC Central Committee, with Comrade Xi Jinping as the core, has pushed forward the comprehensive and deepening reform, and the main framework of the reform has been basically established. General Secretary Xi Jinping has made many important remarks on deepening the reform in an all-round way. Here are ten drawings to learn from.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div style="margin-bottom: 50px;">
+						<div class="wgypss-lbt">
+							<div id="playBox">
+								<div class="pre" style="top: 300px;width: auto;font-size: 16px; background: darkred;height: auto;color: #fff;"> Last</div>
+								<div class="next" style="top: 300px;width: auto;font-size: 16px; background: darkred;height: auto;color: #fff;">Next</div>
+								<div class="smalltitle" style="display: none;">
+									<ul>
+										<li class="thistitle"></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</div>
+								<ul class="oUlplay">
+									<li>
+										<img src="../images/s1-e.png">
+									</li>
+									<li>
+										<img src="../images/s2-e.png">
+									</li>
+									<li>
+										<img src="../images/s3-e.png">
+									</li>
+									<li>
+										<img src="../images/s4-e.png">
+									</li>
+									<li>
+										<img src="../images/s5-e.png">
+									</li>
+									<li>
+										<img src="../images/s6-e.png">
+									</li>
+									<li>
+										<img src="../images/s7-e.png">
+									</li>
+									<li>
+										<img src="../images/s8-e.png">
+									</li>
+									<li>
+										<img src="../images/s9-e.png">
+									</li>
+									<li>
+										<img src="../images/s10-e.png">
+									</li>
+								</ul>
+							</div>
+							<script src="../js/qmsg1.js" type="text/javascript" charset="utf-8"></script>
+						</div>
+					</div>
+				</div>
+
+				<div style="margin:0 0 50px 0; ">
+					<h5>Focus on social 
+						<span>hot issues</span>
+					</h5>
+					<div class="tab3">
+						<div class="tab3-top" style="height: 188px;">
+							<div class="tab3-sml-1 active" id="sml1-1"></div>
+							<div class="tab3-sml-1" id="sml2-1"></div>
+							<div class="tab3-sml-1" id="sml3-1"></div>
+						</div>
+						<div class="tab3-content selected" style="display: block;">
+
+							<div id="p1">
+								<h1>Household registration reform</h1>
+								<p>Accelerating the reform of household registration system is a key reform deployed at the 18th National Congress and the Third Plenary Session of the 18th Central Committee of the CPC. It is a major task to promote the new urbanization with Chinese characteristics and a major measure to realize the dream of hundreds of millions of agricultural migrants. The reform of the household registration system and the reform of related fields will be coordinated and coordinated, involving a wide range of personnel and efforts, will be unprecedented.
+<br><br>
+Accelerating the reform of household registration system is indeed a hard nut to crack. We are confident that under the strong leadership of the Party Central Committee and the State Council, we will rely closely on the Party committees and governments at all levels, work together with relevant departments to overcome difficulties and solve difficult reform problems and achieve reform goals in practice. <br><br>
+								</p>
+								<p>Although the integration of commercial insurance into the social security system has a long way to go, but the "Zhanjiang model" has taken the first step with demonstrative effect. This new cooperative mode of "unified policy, unified accounting, unified management" is of great significance to the improvement of the social basic medical insurance system.
+								</p>
+							</div>
+							<div class="tb" style="margin-top: 50px;">
+								<h1>Household registration reform continues to deepen: delimit "red line", refuse "water", and fall down.</h1>
+								<p> In February 2017, the Ministry of Public Security held a special video training meeting on the reform of the household registration system. The meeting reported the achievements made in the reform of the household registration system, and made a prospect for the next step. Up to now, all provinces, autonomous regions and municipalities have studied and formulated suggestions on the implementation of the reform of the household registration system, and 25 provinces, autonomous regions and municipalities have issued Measures for the implementation of residential certification. In 2016, the urbanization rate of the registered population in China reached 41.2%. Since the implementation of the "three systems" of resident identity cards, more than 5 million resident identity cards have been issued to other places. In 2016, another 1.435 million non-registered persons have registered as registered residents.
+								</p>
+								<p>The current household registration reform has entered a "new historical stage". Reform has entered a deep-water area and a critical period. How to overcome difficulties and overcome difficulties, fully implement the good policies given by the central government, and further translate them into practical results benefiting hundreds of millions of people through local governments, this meeting also revealed a new signal - draw a "red line", refuse "water", can be settled.</p>
+								<p>In settling down, the bonus is lifted for some specific population. For example, the graduates of colleges and universities such as netizens, as well as technical workers, Vocational College graduates, returnees from abroad, in addition to a very small number of mega-cities, they should be completely liberalized. It is also necessary to further tilt the key groups, such as the population of rural students entering schools and joining the army, the population of agricultural migrants who have been employed and resided in cities for more than five years, and the whole family migration, as well as the new generation of migrant workers, so as to make every effort to achieve the end.</p>
+								<p>On the system of setting up integral settlements, we should strictly follow the central policy to establish a sound, scientific and reasonable set of points, more benefits to ordinary workers. In particular, the meeting mentioned that cities with a permanent population of less than 3 million in urban areas should not implement the system of integral settlements, and those groups whose policies have made it clear that they can settle directly should not be included in the scope of the policy of integral settlements. While strictly controlling the total population of megacities and megacities, we should, in accordance with the needs of urban economic and social development, guide the population to move in and out, optimize the structural layout, and further increase the proportion of the registered population.</p>
+
+								<p>Good policies need to be resolutely implemented. In the process of landing, the attitude of seeking truth from facts and preciseness is not less. We should sort out relevant policies in an all-round way, promote reform on the basis of voluntary, classified and orderly principles, resolutely eliminate and correct those who do not meet the requirements of the Central Committee, do not make false reports and leave no "moisture", and strive to provide convenient, high-quality and efficient services to the masses so that everyone can settle down happily.
+								</p>
+								<img src="../images/1-1.png">
+								<img src="../images/1-2.png">
+								<img src="../images/1-3.png">
+								<img src="../images/1-4.png">
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="tab3-content" style="display: none;">
+							<div id="p1">
+								<h1>Streamlining government </h1>
+								<p> In this year's report on the work of the government, Premier Li Keqiang pointed out that the reform of "release uniform" is a profound revolution of the government itself. We should continue to advance resolutely through thorns and thorns with the courage of the strong men to break their wrists. The strategic deployment of the reform and the general requirements of the State Council to promote the simplification and decentralization of government power, the combination of decentralization and optimization of services, as a "first-hand chess" to clarify the boundaries between the government and the market, the reform of China's administrative examination and approval system has been carried forward in depth and achieved remarkable results, and has continued to release vitality and set up a platform for entrepreneurship and innovation of the masses.
+								</p>
+							</div>
+							<div class="tb" style="margin-top: 50px;">
+								<p> During the State Council executive meeting to discuss and determine the categories of further simplification and decentralization and the cancellation of non-administrative licensing, Premier Li Keqiang told three stories in a row, denouncing some government offices. He puzzled and asked: how hard is it for ordinary people to do something? Why should the government set up so many obstacles for the people?</p>
+								<p>At the meeting, Premier Li Keqiang cited a seemingly comic example: a citizen who wrote his mother's name on the "Emergency Contact" column while traveling abroad was asked to provide material to prove that "your mother is your mother". How to prove it? The premier thought it was a big joke and puzzled to ask: why is it so hard for ordinary people to do something? Why should the government set up so many obstacles for the people? For those who encounter "obstacles" in the process of handling affairs, the helplessness and bitterness are also deeply touched. Therefore, the task of reforming the government to serve the people is arduous, and decentralization is a long way to go.</p>
+								<p>Decentralization and decentralization need to be targeted. Premier Li repeatedly stressed that the ultimate goal of decentralization is to serve the masses. When implementing the reform of simplifying and decentralizing the central government, the local government should "find out the family background" pertinently, which administrative examination and approval procedures should be "simplified" and "convenient service" principle, to give the greatest channels of passage. All organs and departments should seriously sort out these processes, give convenience to the people and relax themselves.</p>
+								<p>Decentralization and decentralization require "overall planning". The simplification and decentralization of government is the first practice of the reform of government functions, and is a big chess game. It needs the cooperation of all departments to form a joint effort to overcome difficulties. To simplify and decentralize the government is to break through the barriers between various organs and departments, strengthen and widen the channels of information circulation, effectively reduce the risk of trust, and establish a strong comprehensive service center for the people. It has effectively supervised and made the people convenient.</p>
+								<p>Jane's administration and decentralization are only four simple words, but we have to do a lot of work on these four words. In the process of government reform, we have come to realize clearly that simplifying government and decentralizing power need more scientific and feasible policies and mechanisms to support it, and we need our cadres to take this road of reform conscientiously.</p>
+									<p>Being in the big family of the motherland society, each of us has the obligation and responsibility to complete or help to complete. The historical mission of transforming government functions is not only for others, but also for ourselves.
+									</p>
+									<img src="../images/2-1.png" alt="">
+									<img src="../images/2-2.png" alt="">
+									<img src="../images/2-3.png" alt="">
+									<img src="../images/2-4.png" alt="">
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="tab3-content" style="display: none;">
+							<div id="p1">
+								<h1>solve the problem.</h1>
+								<p> In this year's report on the work of the government, Premier Li Keqiang pointed out that the reform of "release uniform" is a profound revolution of the government itself. We should continue to advance resolutely through thorns and thorns with the courage of the strong men to break their wrists. The strategic deployment of the reform and the general requirements of the State Council to promote the simplification and decentralization of government power, the combination of decentralization and optimization of services, as a "first-hand chess" to clarify the boundaries between the government and the market, the reform of China's administrative examination and approval system has been carried forward in depth and achieved remarkable results, and has continued to release vitality and set up a platform for entrepreneurship and innovation of the masses.
+								</p>
+							</div>
+							<div class="tb" style="margin-top: 50px;">
+
+								<p>In this year's report on the work of the government, Premier Li Keqiang pointed out that the reform of "release uniform" is a profound revolution of the government itself. We should continue to advance resolutely through thorns and thorns with the courage of the strong men to break their wrists. The strategic deployment of the reform and the general requirements of the State Council to promote the simplification and decentralization of government power, the combination of decentralization and optimization of services, as a "first-hand chess" to clarify the boundaries between the government and the market, the reform of China's administrative examination and approval system has been carried forward in depth and achieved remarkable results, and has continued to release vitality and set up a platform for entrepreneurship and innovation of the masses.
+								</p>
+								<p>
+									Decentralization and decentralization need to be targeted. Premier Li repeatedly stressed that the ultimate goal of decentralization is to serve the masses. When implementing the reform of simplifying and decentralizing the central government, the local government should "find out the family background" pertinently, which administrative examination and approval procedures should be "simplified" and "convenient service" principle, to give the greatest channels of passage. All organs and departments should seriously sort out these processes, give convenience to the people and relax themselves.</p>
+									<p>Decentralization and decentralization require "overall planning". The simplification and decentralization of government is the first practice of the reform of government functions, and is a big chess game. It needs the cooperation of all departments to form a joint effort to overcome difficulties. To simplify and decentralize the government is to break through the barriers between various organs and departments, strengthen and widen the channels of information circulation, effectively reduce the risk of trust, and establish a strong comprehensive service center for the people. It has effectively supervised and made the people convenient.</p>
+									
+										<p>Jane's administration and decentralization are only four simple words, but we have to do a lot of work on these four words. In the process of government reform, we have come to realize clearly that simplifying government and decentralizing power need more scientific and feasible policies and mechanisms to support it, and that cadres of our government organs should take this road of reform with great care.。</p>
+										<p>Being in the big family of the motherland society, each of us has the obligation and responsibility to complete or help to complete. The historical mission of transforming government functions is not only for others, but also for ourselves.</p>
+										<img src="../images/3-1.png">
+										<img src="../images/3-2.png">
+										<img src="../images/3-3.png">
+										<img src="../images/3-4.png">
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div style="margin:100px 0 50px 0; ">
+					<h5>Comprehensive
+						<span> case study</span>
+					</h5>
+					<div class="middle_right">
+						<div class="slideshow-container" id="p1">
+							<div class="mySlidesss fade" style="display: block;">
+								<div class="numbertext">1 / 9</div>
+								<img src="../images/8-0-e.jpg" style="width: 100%;">
+							</div>
+
+							<div class="mySlidesss fade">
+								<div class="numbertext">2 / 9</div>
+								<img src="../images/8-1-e.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlidesss fade">
+								<div class="numbertext">3 / 9</div>
+								<img src="../images/8-2-e.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlidesss fade">
+								<div class="numbertext">4 / 9</div>
+								<img src="../images/8-3-e.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlidesss fade">
+								<div class="numbertext">5 / 9</div>
+								<img src="../images/8-4-e.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlidesss fade">
+								<div class="numbertext">6 / 9</div>
+								<img src="../images/8-5-e.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlidesss fade">
+								<div class="numbertext">7 / 9</div>
+								<img src="../images/8-6-e.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlidesss fade">
+								<div class="numbertext">8 / 9</div>
+								<img src="../images/8-7-e.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlidesss fade">
+								<div class="numbertext">9 / 9</div>
+								<img src="../images/8-8-e.jpg" style="width:100%">
+							</div>
+
+							<a class="prev" onclick="plusSlides(-1)">❮</a>
+							<a class="next" onclick="plusSlides(1)">❯</a>
+						</div>
+						<script src="../js/qmsg2.js" type="text/javascript" charset="utf-8"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>Guangxi industrial and commercial Career Technical College</p>
+		</div>
+			<button class="back_to_top"><img src="../images/backtop.gif" ></button>
+
+	</div>
+	<!-- 背景特效 -->
+	<script src="../js/bg.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>幸运飞艇</title>
+		<link rel="icon" type="image/x-icon" href="lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../lib/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../lib/css/app.css" />
+		<script src="../lib/js/mui.min.js "></script>
+		<script src="../lib/js/jq.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-left-nav" href="../game.html"></a>
+					<h1 class="mui-title">幸运飞艇</h1>
+					<!-- 顶部固定导航菜单 -->
+					<div style="float: right;">
+						<a class="mui-icon mui-icon-bars mui-pull-right" href="#Popover_0" style="padding: 12px 10px 0 0;"></a>
+					</div>
+					<div class="select">
+						<select id="selectid" onchange="role()" class="mui-btn" style="width: 80%;">
+							<option value="1">两面盘</option>
+							<option value="2">单号1-10</option>
+							<option value="3">冠亚军组合</option>
+						</select>
+					</div>
+				</header>
+				
+				<!-- 表单 -->
+				<form action="" method="">
+
+					<!-- 底部固定菜单 -->
+					<nav class="mui-bar mui-bar-tab">
+						<div class="kjxz"><input type="number" placeholder="请输入快捷金额" /></div>
+						<div class="navfoot1">
+							<!-- <p>共<span>0</span>注</p> -->
+							<p>共<input id="zj" value="0">元</p>
+						</div>
+						<div class="navfoot2">
+							<button type="reset" class="mui-btn mui-btn-warning" id="empty">清空</button>
+							<button type="button" id="tzbtn" class="mui-btn mui-btn-danger">投注</button>
+						</div>
+					</nav>
+					<!-- 下注结算窗口 -->
+					<div id="tzbtns" class="tzbtns" style="display: none;">
+						<p>下注金额共<input id="tzp" value="" disabled="disabled" />元</p>
+						<div style="width: 90%;text-align: center;position: absolute;bottom: 20px;">
+							<button type="button" class="mui-btn mui-btn-danger close">取消</button>
+							<button type="button" class="mui-btn mui-btn-danger quedin">确定</button>
+						</div>
+					</div>
+					<!-- 主页面内容容器 -->
+					<div class="mui-content mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<!-- 主界面具体展示内容 -->
+							<div class="play-title">
+								<div class="play-title-left">
+									<p><span>715807</span>期：</p>
+									<div>
+										<i class="ball i01">01</i>
+										<i class="ball i06">06</i>
+										<i class="ball i04">04</i>
+										<i class="ball i02">02</i>
+										<i class="ball i05">05</i>
+										<i class="ball i07">07</i>
+										<i class="ball i09">09</i>
+										<i class="ball i10">10</i>
+										<i class="ball i08">08</i>
+										<i class="ball i03">03</i>
+									</div>
+								</div>
+								<div class="play-title-right">
+									<p>距离下一期截止：</p>
+									<div class="time-item">
+										<!-- <span id="day_show">0天</span> -->
+										<strong id="hour_show">0时</strong>
+										<strong id="minute_show">0分</strong>
+										<strong id="second_show">0秒</strong>
+									</div>
+								</div>
+							</div>
+							<div class="balance">
+								<p style="margin-top: 10px;">余额：<span>999999.99</span>元</p>
+								<div style="float: right;">
+									<button id="alertBtn" type="button" class="mui-btn mui-btn-block mui-btn-outlined shuying">今日输赢</button>
+								</div>
+							</div>
+							<div class="mui-content">
+								<div class="closenav"><p>点击显示/隐藏信息</p></div>
+								<div style="padding: 10px 10px;">
+									<div id="segmentedControl" class="mui-segmented-control">
+										<a class="mui-control-item mui-active" href="javascript:void(0)" id="ptxz">普通下注</a>
+										<a class="mui-control-item" href="javascript:void(0)" id="kjxz">快捷下注</a>
+									</div>
+								</div>
+<!--------------------------------------------------------------------------------------------- 彩种分界线 ------------------------------------------------------------------------------------------------------>								
+								<div style="padding: 10px;">
+									<!-- 以下为投注 -->
+									<div id="item" class="mui-control-content mui-active">
+										<div id="lm">
+											<div>
+												<table class="table_ball">
+													<thead>
+														<tr class="head">
+															<th colspan="6">冠亚和</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="0" class="name"><span>和大</span></td>
+															<td data-current="0" class="odds">2.19</td>
+															<td data-current="0" class="amount"><input type="text" odds="2.19" data-id="24619" num="和大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="1" class="name"><span>和小</span></td>
+															<td data-current="1" class="odds">1.78</td>
+															<td data-current="1" class="amount"><input type="text" odds="1.78" data-id="24620" num="和小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="2" class="name"><span>和单</span></td>
+															<td data-current="2" class="odds">1.78</td>
+															<td data-current="2" class="amount"><input type="text" odds="1.78" data-id="24621" num="和单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="3" class="name"><span>和双</span></td>
+															<td data-current="3" class="odds">2.19</td>
+															<td data-current="3" class="amount"><input type="text" odds="2.19" data-id="24622" num="和双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">冠军</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="冠军--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="冠军--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="冠军--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="冠军--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="8" class="name"><span>龙</span></td>
+															<td data-current="8" class="odds">1.99</td>
+															<td data-current="8" class="amount"><input type="text" odds="1.99" data-id="24627" num="冠军--龙" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="9" class="name"><span>虎</span></td>
+															<td data-current="9" class="odds">1.99</td>
+															<td data-current="9" class="amount"><input type="text" odds="1.99" data-id="24628" num="冠军--虎" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">亚军</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="亚军--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="亚军--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="亚军--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="亚军--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="8" class="name"><span>龙</span></td>
+															<td data-current="8" class="odds">1.99</td>
+															<td data-current="8" class="amount"><input type="text" odds="1.99" data-id="24627" num="亚军--龙" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="9" class="name"><span>虎</span></td>
+															<td data-current="9" class="odds">1.99</td>
+															<td data-current="9" class="amount"><input type="text" odds="1.99" data-id="24628" num="亚军--虎" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">季军</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="季军--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="季军--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="季军--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="季军--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="8" class="name"><span>龙</span></td>
+															<td data-current="8" class="odds">1.99</td>
+															<td data-current="8" class="amount"><input type="text" odds="1.99" data-id="24627" num="季军--龙" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="9" class="name"><span>虎</span></td>
+															<td data-current="9" class="odds">1.99</td>
+															<td data-current="9" class="amount"><input type="text" odds="1.99" data-id="24628" num="季军--虎" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第四名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="第四名--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="第四名--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="第四名--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="第四名--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="8" class="name"><span>龙</span></td>
+															<td data-current="8" class="odds">1.99</td>
+															<td data-current="8" class="amount"><input type="text" odds="1.99" data-id="24627" num="第四名--龙" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="9" class="name"><span>虎</span></td>
+															<td data-current="9" class="odds">1.99</td>
+															<td data-current="9" class="amount"><input type="text" odds="1.99" data-id="24628" num="第四名--虎" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第五名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="第五名--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="第五名--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="第五名--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="第五名--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="8" class="name"><span>龙</span></td>
+															<td data-current="8" class="odds">1.99</td>
+															<td data-current="8" class="amount"><input type="text" odds="1.99" data-id="24627" num="第五名--龙" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="9" class="name"><span>虎</span></td>
+															<td data-current="9" class="odds">1.99</td>
+															<td data-current="9" class="amount"><input type="text" odds="1.99" data-id="24628" num="第五名--虎" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第六名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="第六名--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="第六名--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="第六名--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="第六名--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第七名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="第七名--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="第七名--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="第七名--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="第七名--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第八名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="第八名--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="第八名--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="第八名--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="第八名--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第九名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="第九名--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="第九名--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="第九名--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="第九名--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第十名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="4" class="name"><span>大</span></td>
+															<td data-current="4" class="odds">1.99</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.99" data-id="24623" num="第十名--大" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>小</span></td>
+															<td data-current="5" class="odds">1.99</td>
+															<td data-current="5" class="amount"><input type="text" odds="1.99" data-id="24624" num="第十名--小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>单</span></td>
+															<td data-current="6" class="odds">1.99</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.99" data-id="24625" num="第十名--单" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>双</span></td>
+															<td data-current="7" class="odds">1.99</td>
+															<td data-current="7" class="amount"><input type="text" odds="1.99" data-id="24626" num="第十名--双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div id="dh" style="display: none;">
+											<div id="danhao1-10_12169">
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">冠军</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">亚军</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">季军</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第四名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第五名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第六名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第七名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第八名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第九名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">第十名</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="01" class="name"><i class="ball i01">01</i></td>
+															<td data-current="01" class="odds">9.9</td>
+															<td data-current="01" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--1" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="02" class="name"><i class="ball i02">02</i></td>
+															<td data-current="02" class="odds">9.9</td>
+															<td data-current="02" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--2" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="03" class="name"><i class="ball i03">03</i></td>
+															<td data-current="03" class="odds">9.9</td>
+															<td data-current="03" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--3" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="04" class="name"><i class="ball i04">04</i></td>
+															<td data-current="04" class="odds">9.9</td>
+															<td data-current="04" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--4" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="05" class="name"><i class="ball i05">05</i></td>
+															<td data-current="05" class="odds">9.9</td>
+															<td data-current="05" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--5" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="06" class="name"><i class="ball i06">06</i></td>
+															<td data-current="06" class="odds">9.9</td>
+															<td data-current="06" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--6" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="07" class="name"><i class="ball i07">07</i></td>
+															<td data-current="07" class="odds">9.9</td>
+															<td data-current="07" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--7" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="08" class="name"><i class="ball i08">08</i></td>
+															<td data-current="08" class="odds">9.9</td>
+															<td data-current="08" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--8" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="09" class="name"><i class="ball i09">09</i></td>
+															<td data-current="09" class="odds">9.9</td>
+															<td data-current="09" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--9" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="10" class="name"><i class="ball i10">10</i></td>
+															<td data-current="10" class="odds">9.9</td>
+															<td data-current="10" class="amount"><input type="text" odds="9.9" data-id="24629" num="冠军--10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div id="gyj" style="display: none;">
+											<div>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">冠亚和</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="0" class="name"><span>03</span></td>
+															<td data-current="0" class="odds">42.5</td>
+															<td data-current="0" class="amount"><input type="text" odds="42.5" data-id="24630" num="03" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="1" class="name"><span>04</span></td>
+															<td data-current="1" class="odds">42.5</td>
+															<td data-current="1" class="amount"><input type="text" odds="42.5" data-id="24631" num="04" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="2" class="name"><span>05</span></td>
+															<td data-current="2" class="odds">21.5</td>
+															<td data-current="2" class="amount"><input type="text" odds="21.5" data-id="24632" num="05" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="3" class="name"><span>06</span></td>
+															<td data-current="3" class="odds">21.5</td>
+															<td data-current="3" class="amount"><input type="text" odds="21.5" data-id="24633" num="06" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="4" class="name"><span>07</span></td>
+															<td data-current="4" class="odds">13.5</td>
+															<td data-current="4" class="amount"><input type="text" odds="13.5" data-id="24634" num="07" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="5" class="name"><span>08</span></td>
+															<td data-current="5" class="odds">13.5</td>
+															<td data-current="5" class="amount"><input type="text" odds="13.5" data-id="24635" num="08" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="6" class="name"><span>09</span></td>
+															<td data-current="6" class="odds">10.5</td>
+															<td data-current="6" class="amount"><input type="text" odds="10.5" data-id="24636" num="09" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="7" class="name"><span>10</span></td>
+															<td data-current="7" class="odds">10.5</td>
+															<td data-current="7" class="amount"><input type="text" odds="10.5" data-id="24637" num="10" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="8" class="name"><span>11</span></td>
+															<td data-current="8" class="odds">8.5</td>
+															<td data-current="8" class="amount"><input type="text" odds="8.5" data-id="24638" num="11" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="9" class="name"><span>12</span></td>
+															<td data-current="9" class="odds">10.5</td>
+															<td data-current="9" class="amount"><input type="text" odds="10.5" data-id="24639" num="12" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="10" class="name"><span>13</span></td>
+															<td data-current="10" class="odds">10.5</td>
+															<td data-current="10" class="amount"><input type="text" odds="10.5" data-id="24640" num="13" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="11" class="name"><span>14</span></td>
+															<td data-current="11" class="odds">13.5</td>
+															<td data-current="11" class="amount"><input type="text" odds="13.5" data-id="24641" num="14" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="12" class="name"><span>15</span></td>
+															<td data-current="12" class="odds">13.5</td>
+															<td data-current="12" class="amount"><input type="text" odds="13.5" data-id="24642" num="15" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="13" class="name"><span>16</span></td>
+															<td data-current="13" class="odds">21.5</td>
+															<td data-current="13" class="amount"><input type="text" odds="21.5" data-id="24643" num="16" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="14" class="name"><span>17</span></td>
+															<td data-current="14" class="odds">21.5</td>
+															<td data-current="14" class="amount"><input type="text" odds="21.5" data-id="24644" num="17" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="15" class="name"><span>18</span></td>
+															<td data-current="15" class="odds">42.5</td>
+															<td data-current="15" class="amount"><input type="text" odds="42.5" data-id="24645" num="18" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="16" class="name"><span>19</span></td>
+															<td data-current="16" class="odds">42.5</td>
+															<td data-current="16" class="amount"><input type="text" odds="42.5" data-id="24646" num="19" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="17" class="name"><span>和大</span></td>
+															<td data-current="17" class="odds">2.19</td>
+															<td data-current="17" class="amount"><input type="text" odds="2.19" data-id="24647" num="和大" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="18" class="name"><span>和小</span></td>
+															<td data-current="18" class="odds">1.78</td>
+															<td data-current="18" class="amount"><input type="text" odds="1.78" data-id="24648" num="和小" max="50000"
+																 min="1" value="">
+															</td>
+															</tr>
+															<tr>
+															<td data-current="19" class="name"><span>和单</span></td>
+															<td data-current="19" class="odds">1.78</td>
+															<td data-current="19" class="amount"><input type="text" odds="1.78" data-id="24649" num="和单" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="20" class="name"><span>和双</span></td>
+															<td data-current="20" class="odds">2.19</td>
+															<td data-current="20" class="amount"><input type="text" odds="2.19" data-id="24650" num="和双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+<!--------------------------------------------------------------------------------------------- 彩种分界线 ------------------------------------------------------------------------------------------------------>								
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<!-- 顶部固定导航内容 -->
+		<div id="Popover_0" class="mui-popover mui-bar-popover" style="width: 100px;">
+			<div class="mui-popover-arrow"></div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell"><a href="../betting/touzhu.html">投注记录</a></li>
+				<li class="mui-table-view-cell"><a href="../prizes/xyft.html">历史开奖</a></li>
+				<!-- <li class="mui-table-view-cell"><a href="#">游戏玩法</a></li> -->
+			</ul>
+		</div>
+
+		<div style="display: none;">
+			<style type="text/css">
+				.select {
+					width: 50%;
+					float: right;
+					position: relative;
+				}
+
+				.mui-btn {
+					font-size: 14px;
+					padding: 8px;
+					border: #eee 1px solid !important;
+				}
+
+				.mui-title {
+					font-size: 14px;
+					text-align: left;
+				}
+
+				input[type=text] {
+					margin-bottom: 0;
+					font-size: 12px;
+					border-radius: 0;
+				}
+
+				.mui-scroll-wrapper {
+					top: 40px;
+				}
+				.tzbtns{
+					position: fixed;
+					z-index: 99999;
+					width: 200px;
+					height: 200px;
+					background: #fff;
+					border: 1px solid darkred;
+					margin: 40% 25%;
+					border-radius: 10px;
+					box-shadow: 2px 2px 20px rgba(0,0,0,.5);
+					padding: 10px;
+				}
+				#tzp{
+					outline: none;
+					border: 0;
+					background: none;
+					width: 50%;
+					color: darkred;
+					text-align: center;
+				}
+				.tzbtns p{
+					color: #333;
+				}
+				.blocks{
+					display: block;
+				}
+
+			</style>
+			<!-- tap方法等于click -->
+			<script type="text/javascript">
+				$("body").on('tap', 'a', function(event) {
+					this.click();
+				});
+			</script>
+			<!-- 初始化MUI框架 -->
+			<script type="text/javascript">
+				mui.init();
+				//内容允许滚动
+				(function($) {
+					$(".mui-scroll-wrapper").scroll({
+						bounce: true, //滚动条是否有弹力默认是true
+						indicators: true, //是否显示滚动条,默认是true
+					});
+				})(mui);
+			</script>
+
+			<!-- 加载自定义JS -->
+			<script src="../lib/js/app.js" type="text/javascript" charset="utf-8"></script>
+			<!-- 今日输赢 -->
+			<script>
+				document.getElementById("alertBtn").addEventListener('tap', function() {
+					mui.alert('今日消费：0.00</br>今日中奖：0.00</br>今日盈亏：0.00', '今日输赢<hr>');
+				})
+			</script>
+			<!-- 北京PK10和幸运飞艇切换盘 -->
+			<script src="../lib/js/game/bjpk10xyft.js" type="text/javascript" charset="utf-8"></script>
+		</div>
+
+	</body>
+</html>

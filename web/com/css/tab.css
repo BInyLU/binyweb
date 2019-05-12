@@ -1,0 +1,135 @@
+.tab {
+	width: 680px;
+	border: solid 1px #ddd;
+	bottom: 50px;
+	overflow: hidden;
+	background: #fff;
+	margin: 0 auto;
+	font-family: 'Microsoft Yahei', sans-serif;
+	line-height: 1.5;
+	font-weight: 300;
+	float: left;
+	color: #888;
+	-webkit-font-smoothing: antialiased;
+	padding-right: 20px;
+	margin-left: 20px;
+	animation: jackInTheBox 1.5s linear 1;
+	-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.tabs {
+	display: table;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	width: 110%;
+	background: rgb(240, 240, 240);
+}
+
+.tabs li {
+	float: left;
+	line-height: 38px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+}
+
+.tabs a {
+	background-color: #eff0f2;
+	border-bottom: 1px solid #fff;
+	color: #888;
+	font-weight: 500;
+	display: block;
+	letter-spacing: 0;
+	outline: none;
+	padding: 0 20px;
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	border-bottom: 2px solid rgb(139, 0, 0);
+}
+
+.tabs_item {
+	position: relative;
+	display: none;
+	height: 350px;
+	padding: 30px;
+	margin-top: 50px;
+}
+
+.tabs_item h4 {
+	font-weight: bold;
+	color: darkred;
+	font-size: 20px;
+}
+
+.tabs_item img {
+	width: 150px;
+	height: 201px;
+	float: left;
+	margin-right: 30px;
+}
+
+.tabs_item p {
+	line-height: 180%;
+	text-indent: 30px;
+}
+
+.tab_text {
+	position: absolute;
+	top: 270px;
+}
+
+.tabs_item:first-child {
+	display: block;
+}
+
+.current a {
+	color: #fff;
+	background: rgb(139, 0, 0);
+}
+
+h4 {
+	margin-top: -70px;
+	text-align: center;
+	padding: 20px;
+}
+
+.topline {
+	position: absolute;
+	top: 20px;
+	width: 60px;
+	height: 5px;
+	left: 25px;
+	background: #8B0000;
+}
+
+.leftline {
+	position: absolute;
+	top: 20px;
+	width: 5px;
+	height: 80px;
+	left: 20px;
+	background: #8B0000;
+}
+
+.rightline {
+	position: absolute;
+	top: 160px;
+	width: 5px;
+	height: 70px;
+	left: 180px;
+	background: #8B0000;
+}
+
+.botline {
+	position: absolute;
+	top: 230px;
+	width: 60px;
+	height: 5px;
+	left: 125px;
+	background: #8B0000;
+}

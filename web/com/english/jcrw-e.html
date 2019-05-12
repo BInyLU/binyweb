@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Character</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/move.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css" />
+	<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../js/style.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/media.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/tab.css" />
+	<link rel="stylesheet" type="text/css" href="../css/lunbo.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/media.css" />
+	<script src="../js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.right1_1 {
+			animation: jackInTheBox .8s linear 1;
+		}
+
+		.left1 {
+			animation: fadeInLeft .5s linear 1;
+		}
+
+		.botline1 {
+			top: 280px !important;
+		}
+
+		.rightline1 {
+			top: 210px !important;
+		}
+		.slow1-text{
+			left:67px ;
+		}
+		.slow4-text{
+			left: 160px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="all">
+		<div class="line"></div>
+				<span class="opennav" id="opennav">
+					<a href="#" onclick="opennav()">
+						<svg width="30" height="30">
+							<path d="M0,5 30,5" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,14 30,14" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,23 30,23" stroke="#C8605E" stroke-width="4" />
+						</svg>
+					</a>
+				</span>
+				<div class="smnav" id="smnav">
+					<a href="#" class="btn-close" onclick="closenav()">
+						<img src="data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiDnn6Lph4/lm77moIfkuIvovb0gOiBodHRwOi8vd3d3LnNmb250LmNuLyA8L21ldGFkYXRhPjxnPjxwYXRoIGQ9Ik0xMCw3OS4zTDc5LjMsMTBMOTkwLDkyMC43TDkyMC43LDk5MEwxMCw3OS4zTDEwLDc5LjN6IiBzdHlsZT0iZmlsbDojRkZGRkZGIj48L3BhdGg+PHBhdGggZD0iTTc5LjMsOTkwTDEwLDkyMC43TDkyMC43LDEwTDk5MCw3OS4zTDc5LjMsOTkweiIgc3R5bGU9ImZpbGw6I0ZGRkZGRiI+PC9wYXRoPjwvZz48L3N2Zz4gIA=="
+						    width="10" height="10">
+					</a>
+					<li class="smnvatop">
+						<img src="../images/yd7.png" style="width: 100%;">
+						<img src="../images/yd1.png" style="width: 90%;margin:-70px 0 20px 10px">
+					</li>
+					<li>
+						<a href="jdbg-e.html">Report</a>
+					</li>
+					<li >
+						<a href="jcrw-e.html">Character</a>
+					</li>
+					<li>
+						<a href="kjgj-e.html">Science</a>
+					</li>
+					<li>
+						<a href="tpgj-e.html">Poverty</a>
+					</li>
+					<li>
+						<a href="yggj-e.html">Medical</a>
+					</li>
+					<li>
+						<a href="stgj-e.html">Ecology</a>
+					</li>
+					<li>
+						<a href="qmsg-e.html">Reform</a>
+					</li>
+					<li class="activeli">
+						<a href="../index.html" style="padding: 0;">
+							<p id="lgg">chinese</p>
+							<img src="../images/CN.png" style="height: 50px;float: right;">
+						</a>
+					</li>
+				</div>
+				<script type="text/javascript">
+					function opennav() {
+						document.getElementById('smnav').style.left = '0';
+						document.getElementById('smnav').style.opacity = '1';
+					}
+		
+					function closenav() {
+						document.getElementById('smnav').style.left = '-250px';
+						document.getElementById('smnav').style.opacity = '0';
+					}
+				</script>
+		<div class="tops">
+			<div class="top">
+				<div class="logo">
+					<img src="../images/yd1.png">
+				</div>
+				<div class="nav">
+					<ul>
+						<li>
+							<a href="e.html" style="animation: lightSpeedIn .4s linear 1;">Home</a>
+						</li>
+						<li>
+							<a href="jdbg-e.html" style="animation: lightSpeedIn .5s linear 1;">Report</a>
+						</li>
+						<li id="corlored">
+							<a href="jcrw-e.html" style="animation: lightSpeedIn .6s linear 1;">Character</a>
+						</li>
+						<li>
+							<a href="kjgj-e.html" style="animation: lightSpeedIn .7s linear 1;">Science</a>
+						</li>
+						<li>
+							<a href="tpgj-e.html" style="animation: lightSpeedIn .8s linear 1;">Poverty</a>
+						</li>
+						<li>
+							<a href="yggj-e.html" style="animation: lightSpeedIn .9s linear 1;">Medical</a>
+						</li>
+						<li>
+							<a href="stgj-e.html" style="animation: lightSpeedIn 1s linear 1;">Ecology</a>
+						</li>
+						<li>
+							<a href="qmsg-e.html" style="animation: lightSpeedIn 1.1s linear 1;">Reform</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="change">
+				<a href="../chinese/jcrw-c.html">
+					<img src="../images/CN.png">
+				</a>
+			</div>
+		</div>
+<!-- banner -->
+		<div class="container">
+			<div class="dowebok" style="width: 1000px;margin: 0 auto;">
+				<div class="pogoSlider" id="dowebok">
+					<div class="pogoSlider-slide" data-transition="slide" style="background-image:url(../images/banner4-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="fade" style="background-image:url(../images/banner2-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="verticalSlide" style="background-image:url(../images/banner1-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealLeft" style="background-image:url(../images/banner5-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealRight" style="background-image:url(../images/banner3-e.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$('#dowebok').pogoSlider();
+			});
+		</script>
+		<div class="content_1">
+			<div class="con">
+				<div class="sml1"></div>
+				<div class="sml2"></div>
+				<div class="sml3"></div>
+				<div class="sml4"></div>
+				<div class="left1">
+					<img src="../images/left2-e.png" id="moveimg">
+				</div>
+				<div class="right1">
+					<div class="right1_1">
+						<div class="topline1"></div>
+						<div class="leftline1"></div>
+						<div class="botline1"></div>
+						<div class="rightline1"></div>
+						<p id="p1"> The National Conference on science and technology awards is held annually in Beijing, and new and old members are welcome.
+							Since the "Eighteen big", Xi Jinping's image has never been absent from the national science and Technology Awards
+							Conference. In order to be ahead of the world in scientific and technological innovation, China must put the development
+							of human resources in the highest priority of scientific and technological innovation, never forget the original intention,
+							remember the mission, pioneer and innovate, create a scientific miracle leading the world, and realize the dream.</p>
+					</div>
+					<div class="right2_1">
+						<div style="width:360px;height: 300px;margin: 0 auto;position: relative;">
+							<div class="slow1">
+								<div class="ttp">
+									<img src="../images/ttp4.png" alt="">
+								</div>
+							</div>
+							<div class="slow2">
+								<div class="ttp">
+									<img src="../images/ttp5.png" alt="">
+								</div>
+							</div>
+							<div class="slow3">
+								<div class="ttp">
+									<img src="../images/ttp3.png" alt="">
+								</div>
+							</div>
+							<div class="slow4">
+								<div class="ttp">
+									<img src="../images/ttp1.png" alt="">
+								</div>
+							</div>
+							<div class="slow5">
+								<div class="ttp">
+									<img src="../images/ttp2.png" alt="">
+								</div>
+							</div>
+							<div class="slow6">
+								<div class="ttp">
+									<p style="font-size: 12px;left: 22px;">character</p>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="slow1-text">Nan Rendong</a>
+						<a href="#" class="slow2-text">Wang Shuqun</a>
+						<a href="#" class="slow3-text">Qian Xuesen</a>
+						<a href="#" class="slow4-text">Tu Youyou</a>
+						<a href="#" class="slow5-text">Yuan Longping</a>
+						<div class="bg2">
+							<div class="bg2solid"></div>
+							<img src="../images/yuan.png" class="moveyuan">
+						</div>
+					</div>
+					<div style="height: 600px;overflow: hidden;">
+						<div class="tab">
+							<ul class="tabs">
+								<li>
+									<a href="#">Longping</a>
+								</li>
+								<li>
+									<a href="#">Youyou</a>
+								</li>
+								<li>
+									<a href="#">Xuesen</a>
+								</li>
+								<li>
+									<a href="#">Shuqun</a>
+								</li>
+								<li>
+									<a href="#">Rendong</a>
+								</li>
+							</ul>
+
+							<div class="tab_content">
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/ylp.png">
+									<h4>Break the difficulty</h4>
+									<p>Yuan Longping is a pioneer and leader in the field of hybrid rice research. He devoted himself to the study of hybrid
+										rice.</p>
+									<p>At the same time, Yuan Longping put forward and implemented the project of "three yields and four abundances" by
+										utilizing the technical achievements of super hybrid rice.</p>
+									<p class="tab_text">His remarkable achievements not only contribute to solving the problem of the Chinese people's temperature saturation
+										and ensuring national food security, but also set a monument to world peace and social progress.</p>
+								</div>
+
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/tyy.png">
+									<h4>nitial heart</h4>
+									<p>In 1968, Tu youyo served as the group leader of the project.</p>
+									<P>After two years of research, the project team focused on the research of Artemisia annua.</P>
+									<P>In 1971, artemisinin and artemisinin were successfully extracted to inhibit malaria by 100%.</P>
+									<p class="tab_text">In the future, Tu hopes to use artemisinin in more places and bring good news to more people through research.</p>
+								</div>
+
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/qxs.png">
+									<h4>Report the country</h4>
+									<p>Qian Xuesen put forward a number of concepts in the field of rocket and aerospace, presided over the completion
+										of the "establishment of jet and rocket technology" planning.</p>
+									<p>Tsien Hsueshen has become one of the most outstanding representatives in the field of aviation and aerospace in
+										1940s.</p>
+									<p class="tab_text">Qian Xuesen is also one of the older generation of scientists who have made immeasurable contributions to the growth
+										of New China. He is the most influential and outstanding representative of the people's scientists in the history
+										of New China.</p>
+								</div>
+
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/wsq.png">
+									<h4>Stick to creation</h4>
+									<p>In 1995, the outstanding performance, so that the docking mechanism is being set up product development team to
+										open the door to him.</p>
+									<P>Without any technology and experience to draw lessons from, it took Wang Shuqun nine years to build China's first
+										engineering docking mechanism.</P>
+									<p class="tab_text">On November 3, 2011, Tiangong-1 and Shenzhou-8 spacecraft made China the third country in the world to master space
+										rendezvous and docking technology.</p>
+								</div>
+
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/nrd.png">
+									<h4>Keep in mind the mission</h4>
+									<p>Nan Rendong was born in 1945 and has a legendary life.</p>
+									<p>After graduating from Tsinghua University, he worked in a northeastern power plant for ten years.</p>
+									<p>After the reform and opening up, he served as visiting professor and scholar in famous foreign universities. He
+										also participated in the Ten National Congress radio telescope program.</p>
+									<p class="tab_text">In 23 years, he has gone from his prime to his twilight years, turning a simple idea into a national weapon and
+										accomplishing a unique project in the world for China.。</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+			<button class="back_to_top"><img src="../images/backtop.gif" ></button>
+		<div class="footer">
+			<p>Guangxi industrial and commercial Career Technical College</p>
+		</div>
+
+	</div>
+		<!-- 背景特效 -->
+		<script src="../js/bg.js" type="text/javascript" charset="utf-8"></script>
+	
+</body>
+
+</html>

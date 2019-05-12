@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>消息中心</title>
+		<link rel="icon" type="image/x-icon" href="lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="lib/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/app.css" />
+	</head>
+
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<button type="button" class="mui-left mui-action-back mui-btn mui-btn-link mui-btn-nav mui-pull-left">
+						<span class="mui-icon mui-icon-left-nav"></span>
+					</button>
+					<h1 class="mui-title">消息中心</h1>
+				</header>
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<div class="mui-card">
+							<div class="mui-card-header">我是消息标题啊啊啊！！！</div>
+							<div class="mui-card-content">
+								<div class="mui-card-content-inner">
+									我是消息内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容！！！
+								</div>
+							</div>
+							<div class="mui-card-footer">2018-11-17</div>
+						</div>
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+
+	</body>
+	<script src="lib/js/mui.min.js "></script>
+
+	<div style="display: none;">
+		<!-- 初始化MUI框架 -->
+		<script type="text/javascript">
+			mui.init();
+			//内容允许滚动
+			(function($) {
+				$(".mui-scroll-wrapper").scroll({
+					bounce: true, //滚动条是否有弹力默认是true
+					indicators: true, //是否显示滚动条,默认是true
+				});
+			})(mui);
+		</script>
+		<!-- 跳转起效 -->
+		<script type="text/javascript">
+			mui('body').on('tap', 'a', function() {
+				window.top.location.href = this.href;
+			});
+		</script>
+	</div>
+</html>

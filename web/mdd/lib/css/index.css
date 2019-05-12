@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+a:hover{}
+.btn-qlv{ background:#35b883;padding: 12px 23px;border-radius: 3px;margin-right: 10px; color:#fff;}
+.btn-qlv:hover{ color:#fff;background:#2aa070;}
+.btn-index:hover { color: #fff;}
+.btn-index a:hover { color: #fff;}
+
+
+
+
+
+
+
+
+@media only screen and (min-width:320px){
+
+}
+/* 大于768像素 */
+@media (min-width:768px){
+
+}
+/* 大于960像素 */
+@media (min-width:992px){
+
+}
+/* 大于1200像素 */
+@media (min-width:1200px){
+	
+}
+@media \0screen\,screen\9{/*只对IE6/7/8有效*/
+.m-service{ padding-top:18px;}
+.m-serch{ padding-top:15px;}
+.i-tel img{ margin-left:10px;}
+.i-tel font{ font-size:22px;}
+.slide-main .item{ bottom:30px;}
+.can-ss{background-color:#35b883;}
+
+.m_pro .p_item{ width:390px; float:left;}
+svg:not(:root) {overflow: hidden;}
+.m-plan {padding: 40px 0 60px 0;margin-top: 80px;background: url("../img/bg-plan.jpg") top center no-repeat;}
+.www-home-product-sale .module-wrap .ali-main-product .ali-main-head h1 {font-size: 30px;text-align: center;color: #FFF;line-height: 42px;}
+.www-home-product-sale .module-wrap .ali-main-product .ali-main-head p {color: #FFF;font-size: 20px;text-align: center;margin-top: 20px;}
+.y-row {min-width: 1000px;max-width: 1200px;margin-left: auto;margin-right: auto;zoom: 1;}
+.www-home-product-sale .module-wrap .ali-main-product-list li.list-item {display: block;width: 20%;float: left;height: 396px;position: relative;background-color: rgba(0,0,0,0.4);-webkit-transition: all 0.3s;-moz-transition: all 0.3s;-o-transition: all 0.3s;transition: all 0.3s;}
+.ali-main-product-list li.list-item .inner {height: 100%;width: 100%;position: absolute;top: 0;overflow: hidden;}
+.www-home-product-sale .module-wrap .ali-main-product .ali-main-head a {display: none;}
+.m-choose {text-align: center;height: 500px;margin-top: 80px;display: block;overflow: hidden;}
+.m-choose h4 {font-size: 30px;text-align: center;}
+.carousel-inner .col-md-3{ width:292.5px; float:left;}
+.flip-container .front{ display:block;}
+.flip-container .back{ display:none;}
+.flip-container:hover .front{display:none;}
+.flip-container:hover .back{display:block;}
+.carousel-control.left{ background:none;}
+
+
+
+
+
+/*之后*/
+.m-service.phone_none .m-word .col-md-4{ width:400px; float:left;}
+.IE_index_new_li{ width:400px; float:left;}
+.m-media .col-md-2{ width:195px; float:left;}
+.m-media {
+    text-align: center;
+    margin-top: 100px;
+    height: 300px;
+    padding-top: 40px;
+    display: block;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+.m-parter {
+    text-align: center;
+    margin-top: 100px;
+    height: 460px;
+    display: block;
+    overflow: hidden;
+    background: url("../img/p-img.jpg") center 72px no-repeat;
+}
+.m-service {
+    clear: both;
+    margin-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+	height:425px !important;
+	width:100% !important;
+    background: url("../img/bg-service.jpg") no-repeat ;
+	background-size:100% 100%;
+	sizingMethod:scale;
+}
+.carousel-control.right{ background-image:none !important; background:#fff !important; background-color:none !important;}
+.carousel-control{ background:none !important; background-image:none !important; background-color:none;}
+.arousel-control.left{ background-image:none !important; background:#fff !important; background-color:none !important;}
+.foot-link .col-md-2{ width:195px; float:left;}
+.m-custom .col-md-4{ width:390px; float:left;}
+.IE_index_top_img1{ width:222px; height:217px !important; margin:auto; background:url("../img/index_ie_i1.png") no-repeat; background-size:auto;}
+.IE_index_top_img2{ width:222px; height:217px !important; margin:auto; background:url("../img/index_ie_i2.png") no-repeat; background-size:auto;}
+.IE_index_top_img3{ width:222px; height:217px !important; margin:auto; background:url("../img/index_ie_i3.png") no-repeat; background-size:auto;}
+.m_pro .p_item .btn-index{ display:inline-block; background:#fff; margin:auto; text-align:center; width:138px; height:54px; line-height:54px; margin:30px 20px;}
+}
+
+@media screen\9{/*只对IE6/7生效*/
+
+}
+@media screen and (min-width:0\0) {
+	
+	.flip-container{}
+	.flip-container .front{ display:block;}
+	.flip-container .back{ display:none;}
+	.flip-container:hover .back{ display:block;}
+	.flip-container:hover .front{ display:none;}
+	.About_us .AB_btm .link_ab{ width:550px;}
+	.btn-index:hover{ background:#6794c0;}
+	.carousel-control.right{ background-image:none !important; background:#fff !important; background-color:none !important;}
+.carousel-control{ background:none !important; background-image:none !important; background-color:none;}
+.arousel-control.left{ background-image:none !important; background:#fff !important; background-color:none !important;}
+}
+

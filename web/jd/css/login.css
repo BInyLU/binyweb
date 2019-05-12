@@ -1,0 +1,278 @@
+.Wlogin{
+	width: 100%;
+	height: 80px;
+	/*	background: black;*/
+}
+.logopic{
+	margin-left: 300px;
+}
+.loginbg{
+	height:472px;
+	background: #CD1C1F url(../images/login_bg.gif) left center no-repeat;
+}
+.loginbg .login{
+	width:300px;
+	height:310px;
+	padding:20px;
+	background: #FFF;
+	float: right;
+	margin-top: 50px;
+	position: relative;
+	right: 100px;
+}
+.login h2{
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.login h2 a{
+	font-weight: 400;
+	font-size: 90%;
+	float: right;
+	padding-left: 20px;
+	color: red;
+	background: url(../images/login_reg.gif) left center no-repeat;
+}
+.tip{
+	padding:3px 2px;
+	background: #FFF6D2;
+	border:1px solid orange;
+	text-align: center;
+	color:#666;
+}
+/*登陆框*/
+.form form li{
+	margin-top: 15px;
+}
+.uid,.pwd{
+	display: inline-block;
+	width:39px;
+	height:38px;
+	background: #ededed;
+	border:1px solid #CCC;
+	border-right: 0;
+	float: left;
+}
+.form input{
+	width:238px;
+	height:20px;
+	border:1px solid #CCC;
+	font-size:14px;
+	padding:9px 10px;
+}
+.form input:focus{
+	outline: 0;
+}
+.form input[type=checkbox]{
+	width:16px;
+	vertical-align: middle;
+}
+.form input[type=submit]{
+	width:100%;
+	height:35px;
+	padding:5px 0;
+	border:0;
+	background:#E4393C;
+	font-size: 18px;
+	letter-spacing: 10px;
+	color:#FFF;
+	font-weight:600;
+	cursor: pointer;
+}
+
+/*其它方式登录*/
+.otherLogin{
+	position: absolute;
+	bottom: 20px;
+	font-size: 13px;
+}
+.otherLogin p{
+	color:#888;
+}
+.otherLogin ul li{
+	float: left;
+	margin-right: 10px;
+}
+
+
+
+/*注册页面CSS*/
+
+/*注册表单项*/
+.regForm{
+	width:700px;
+	margin: 0 auto;
+	padding: 20px;
+	background: #fff;
+}
+.regForm li{
+	height:40px;
+	line-height: 40px;
+	margin-top: 20px;
+	color: #888;
+}
+.regForm li label{
+	width:160px;
+	text-align: right;
+	margin-right: 10px;
+	display: inline-block;
+}
+.regForm li label i.red{
+	color:red;
+	margin-right: 5px;
+}
+.regForm input[type=text],.regForm input[type=password]{
+	width: 240px;
+	height:25px;
+	padding:4px 5px;
+	border: 1px solid #888;
+}
+.regForm input:focus{
+	outline: 0;
+}
+.regForm input.yzm{
+	width:80px;
+}
+.regForm .yzm+span img{
+	vertical-align: middle;
+	margin-top: -2px;
+}
+.regForm .btn{
+	background: #EDEDED;
+	padding:8px 15px;
+	border:1px solid #AAA;
+	color:#888;
+	cursor:pointer;
+}
+.regForm input[type=checkbox]{
+	margin:0;
+	padding:0;
+	vertical-align: middle;
+	margin-left: 170px;
+}
+.regForm input[type=submit]{
+	width:240px;
+	text-align: center;
+	padding:10px;
+	background: #E03639;
+	margin-left: 170px;
+	border:0;
+	border-radius: 2px;
+	color:#FFF;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+
+
+
+
+
+/*底部*/
+#footer{
+	width:100%;
+	height:auto;
+	clear: both;
+}
+#footer .slogon{
+	width:100%;
+	height: 54px;
+	padding: 20px 0;
+	margin-bottom: 14px;
+	background: #F5F5F5;
+}
+#footer .w1210{
+	width: 1210px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#footer .mb20{
+	margin-bottom: 20px;
+}
+#footer .bdt{
+	border-top: 1px solid #e5e5e5;
+	padding: 20px 0;
+}
+#footer .slogon .w1210{
+	background: #F5F5F5;
+}
+#footer .slogon li{
+	width:25%;
+	height: 54px;
+	float: left;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+#footer .slogon1{
+	background-image: url(../images/footer/footer1.png);
+}
+#footer .slogon2{
+	background-image: url(../images/footer/footer2.png);
+}
+#footer .slogon3{
+	background-image: url(../images/footer/footer3.png);
+}
+#footer .slogon4{
+	background-image: url(../images/footer/footer4.png);
+}
+#footer dl{
+	float: left;
+}
+#footer .dl1,#footer .dl2,#footer .dl3,#footer .dl4{
+	width: 199px;
+}
+#footer .dl5{
+	width: 100px;
+}
+#footer dt{
+	 padding: 6px 0;
+	 font-size: 16px;
+	 height: 24px;
+	 line-height: 24px;
+}
+#footer dd a{
+	line-height: 20px;
+	display: block;
+}
+.foot_cover{
+	float: right;
+	width: 310px;
+	height: 168px;
+	background: url(../images/footer/footermap.png) no-repeat 60px -8px;
+}
+.foot_cover .dt{
+	padding: 6px 40px 15px 80px;
+	font-size: 16px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+.foot_cover .dd{
+	padding: 0 40px 15px 80px;
+	color:#666;
+}
+.foot_cover .dd .tar{
+	text-align: right;
+}
+#footer .links{
+	text-align: center;
+	color:#666;
+}
+#footer .links a{
+	padding: 0 10px;
+}
+#footer .copyright{
+	text-align: center;
+	line-height: 22px;
+	padding: 10px 0;
+	color:#666;
+}
+#footer .foot_msg{
+	text-align: center;
+}
+#footer .foot_msg li{
+	display: inline-block;
+	padding: 0 6px;
+	width: 103px;
+	height: 32px;
+}

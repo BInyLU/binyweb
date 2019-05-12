@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>PC蛋蛋 - 开奖历史</title>
+		<link rel="icon" type="image/x-icon" href="../lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../lib/css/mui.min.css" rel="stylesheet" />
+		<link href="../lib/css/app.css" rel="stylesheet" />
+		<script src="../lib/js/mui.min.js"></script>
+		<script src="../lib/js/jq.js"></script>
+	</head>
+
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-left-nav" href="javascript:history.back(-1)"></a>
+					<h1 class="mui-title">PC蛋蛋 - 开奖历史</h1>
+				</header>
+
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<ul class="mui-table-view selects">
+							<li class="mui-table-view-cell mui-media filtr-item">
+								<a href="javascript:;">
+									<div class="mui-media-body">
+										<p>第1期</p>
+										<div>
+											<i class="ball3 iii2">2</i>+
+											<i class="ball3 iii4">4</i>+
+											<i class="ball3 iii5">5</i>=
+											<i class="ball3 iii11">11</i>
+										</div>
+										<!-- <p class="mui-ellipsis span">正在开奖...</p> -->
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<style type="text/css">
+			.mui-media-body span {
+				color: darkred;
+				float: right;
+				font-size: 12px;
+			}
+		</style>
+		<div style="display: none;">
+			<!-- 初始化MUI框架 -->
+			<script type="text/javascript">
+				mui.init();
+				//内容允许滚动
+				(function($) {
+					$(".mui-scroll-wrapper").scroll({
+						bounce: true, //滚动条是否有弹力默认是true
+						indicators: true, //是否显示滚动条,默认是true
+					});
+				})(mui);
+			</script>
+
+			<!-- 跳转起效 -->
+			<script type="text/javascript">
+				mui('body').on('tap', 'a', function() {
+					window.top.location.href = this.href;
+				});
+			</script>
+
+			<!-- tap方法等于click -->
+			<script type="text/javascript">
+				$(".nav li").on('tap', 'a', function(event) {
+					this.click();
+				});
+			</script>
+		</div>
+
+	</body>
+
+</html>

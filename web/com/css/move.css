@@ -1,0 +1,381 @@
+body {
+	animation: fadeIn .5s linear 1;
+	-webkit-animation: fadeIn .5s linear 1;
+	-moz-animation: fadeIn .5s linear 1;
+	-o-animation: fadeIn .5s linear 1;
+	-ms-animation: fadeIn .5s linear 1;
+}
+
+.right1_1,.wgyp-left,.wgyp-right,.wgyp-left2,.wgyp-right2{
+	animation: bounceInRight 1.2s linear 1;
+	-webkit-animation: bounceInRight 1.2s linear 1;
+	-moz-animation: bounceInRight 1.2s linear 1;
+	-o-animation: bounceInRight 1.2s linear 1;
+	-ms-animation: bounceInRight 1.2s linear 1;
+}
+p,.litt {
+	opacity: 0;
+	animation: flipInX .6s .2s linear 1 forwards;
+	-webkit-animation: flipInX .6s .2s linear 1 forwards;
+	-moz-animation: flipInX .6s .2s linear 1 forwards;
+	-o-animation: flipInX .6s .2s linear 1 forwards;
+	-ms-animation:flipInX .6s .2s linear 1 forwards;
+}
+
+.slow1,
+.slow2,
+.slow3,
+.slow4,
+.slow5 {
+	transition: all 1s;
+	cursor: pointer;
+	animation: gogogo 20s infinite linear;
+	-webkit-animation: gogogo 20s infinite linear;
+	-moz-animation: gogogo 20s infinite linear;
+	-o-animation: gogogo 20s infinite linear;
+	-ms-animation: gogogo 20s infinite linear;
+}
+
+.tab3,h5,.tab3-content{
+	margin-top: 50px;
+	opacity: 0;
+	animation: fadeIn .5s linear forwards;
+	-webkit-animation: fadeIn .5s linear forwards;
+	-moz-animation: fadeIn .5s linear forwards;
+	-o-animation: fadeIn .5s linear forwards;
+	-ms-animation: fadeIn .5s linear forwards;
+}
+
+.line {
+	animation: width 1s linear 1 forwards;
+	-webkit-animation: width 1s linear 1 forwards;
+	-moz-animation: width 1s linear 1 forwards;
+	-o-animation: width 1s linear 1 forwards;
+	-ms-animation: width 1s linear 1 forwards;
+}
+
+#vv1 {
+	opacity: 0;
+	animation: flipInY 1s .6s linear 1 forwards;
+	-webkit-animation: flipInY 1s .6s linear 1 forwards;
+	-moz-animation: flipInY 1s .6s linear 1 forwards;
+	-o-animation: flipInY 1s .6s linear 1 forwards;
+	-ms-animation: flipInY 1s .6s linear 1 forwards;
+}
+
+#vv2 {
+	opacity: 0;
+	animation: flipInY 1s .8s linear 1 forwards;
+	-webkit-animation: flipInY 1s .8s linear 1 forwards;
+	-moz-animation: flipInY 1s .8s linear 1 forwards;
+	-o-animation: flipInY 1s .8s linear 1 forwards;
+	-ms-animation: flipInY 1s .8s linear 1 forwards;
+}
+
+#vv3 {
+	opacity: 0;
+	animation: flipInY 1s 1s linear 1 forwards;
+	-webkit-animation: flipInY 1s 1s linear 1 forwards;
+	-moz-animation: flipInY 1s 1s linear 1 forwards;
+	-o-animation: flipInY 1s 1s linear 1 forwards;
+	-ms-animation: flipInY 1s 1s linear 1 forwards;
+}
+
+#vv4 {
+	opacity: 0;
+	animation: flipInY 1s 1.2s linear 1 forwards;
+	-webkit-animation:  flipInY 1s 1.2s linear 1 forwards;
+	-moz-animation:  flipInY 1s 1.2s linear 1 forwards;
+	-o-animation:  flipInY 1s 1.2s linear 1 forwards;
+	-ms-animation:  flipInY 1s 1.2s linear 1 forwards;
+}
+
+.slow1:hover {
+	animation: pulse .5s linear 1;
+	-webkit-animation: pulse .5s linear 1;
+	-moz-animation: pulse .5s linear 1;
+	-o-animation: pulse .5s linear 1;
+	-ms-animation: pulse .5s linear 1;
+}
+
+.slow2:hover {
+	animation: pulse .5s linear 1;
+	-webkitanimation: pulse .5s linear 1;
+	-moz-animation: pulse .5s linear 1;
+	-o-animation: pulse .5s linear 1;
+	-ms-animation: pulse .5s linear 1;
+}
+
+.slow3:hover {
+	animation: pulse .5s linear 1;
+	-webkitanimation: pulse .5s linear 1;
+	-moz-animation: pulse .5s linear 1;
+	-o-animation: pulse .5s linear 1;
+	-ms-animation: pulse .5s linear 1;
+}
+
+.slow4:hover {
+	animation: pulse .5s linear 1;
+	-webkitanimation: pulse .5s linear 1;
+	-moz-animation: pulse .5s linear 1;
+	-o-animation: pulse .5s linear 1;
+	-ms-animation: pulse .5s linear 1;
+}
+
+.slow5:hover {
+	animation: pulse .5s linear 1;
+	-webkitanimation: pulse .5s linear 1;
+	-moz-animation: pulse .5s linear 1;
+	-o-animation: pulse .5s linear 1;
+	-ms-animation: pulse .5s linear 1;
+}
+
+.slow6:hover {
+	animation: pulse .5s linear 1;
+	-webkitanimation: pulse .5s linear 1;
+	-moz-animation: pulse .5s linear 1;
+	-o-animation: pulse .5s linear 1;
+	-ms-animation: pulse .5s linear 1;
+}
+
+
+/* 动画跳转实现 */
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/* gogogo */
+
+@keyframes gogogo {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes gogogo {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes gogogo {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes gogogo {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes gogogo {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+/* width */
+
+@keyframes width {
+	0% {
+		width: 0px;
+	}
+	20% {
+		width: 40%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@-webkit-keyframes width {
+	0% {
+		width: 0px;
+	}
+	20% {
+		width: 40%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@-moz-keyframes width {
+	0% {
+		width: 0px;
+	}
+	20% {
+		width: 40%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@-o-keyframes width {
+	0% {
+		width: 0px;
+	}
+	20% {
+		width: 40%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@-ms-keyframes width {
+	0% {
+		width: 0px;
+	}
+	20% {
+		width: 40%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+
+/* tran */
+
+@keyframes tran {
+	0% {
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(340deg);
+	}
+}
+
+@-webkit-keyframes tran {
+	0% {
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(340deg);
+	}
+}
+
+@-moz-keyframes tran {
+	0% {
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(340deg);
+	}
+}
+
+@-o-keyframes tran {
+	0% {
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(340deg);
+	}
+}
+
+@-ms-keyframes tran {
+	0% {
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(340deg);
+	}
+}
+/* 旋转 */
+@keyframes myfirst {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes myfirst {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}

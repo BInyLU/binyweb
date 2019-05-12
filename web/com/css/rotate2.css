@@ -1,0 +1,288 @@
+.right2_1{
+	background:url(../images/yq.png) no-repeat 100%;
+	background-position: 250px 150px;
+	transition: all 1s;
+	cursor: pointer;
+}
+
+.slow1-1{
+	transition: all 1s;
+	cursor: pointer;
+	opacity: 0;
+	animation: fadeIn 1s 1s linear 1 forwards;
+	-webkit-animation: fadeIn 1s 1s linear 1 forwards;
+	-moz-animation: fadeIn 1s 1s linear 1 forwards;
+	-o-animation: fadeIn 1s 1s linear 1 forwards;
+	-ms-animation: fadeIn 1s 1s linear 1 forwards;
+}
+.slow2-1{
+	transition: all 1s;
+	cursor: pointer;
+	opacity: 0;
+	animation: fadeIn 1s 1.1s linear 1 forwards;
+	-webkit-animation: fadeIn 1s 1.1s linear 1 forwards;
+	-moz-animation: fadeIn 1s 1.1s linear 1 forwards;
+	-o-animation: fadeIn 1s 1.1s linear 1 forwards;
+	-ms-animation: fadeIn 1s 1.1s linear 1 forwards;
+}
+.slow3-1{
+	transition: all 1s;
+	cursor: pointer;
+	opacity: 0;
+	animation: fadeIn 1s 1.2s linear 1 forwards;
+	-webkit-animation: fadeIn 1s 1.2s linear 1 forwards;
+	-moz-animation: fadeIn 1s 1.2s linear 1 forwards;
+	-o-animation: fadeIn 1s 1.2s linear 1 forwards;
+	-ms-animation: fadeIn 1s 1.2s linear 1 forwards;
+}
+.slow4-1{
+	transition: all 1s;
+	cursor: pointer;
+	opacity: 0;
+	animation: fadeIn 1s 1.3s linear 1 forwards;
+	-webkit-animation: fadeIn 1s 1.3s linear 1 forwards;
+	-moz-animation: fadeIn 1s 1.3s linear 1 forwards;
+	-o-animation: fadeIn 1s 1.3s linear 1 forwards;
+	-ms-animation: fadeIn 1s 1.3s linear 1 forwards;
+}
+.slow5-1{
+	transition: all 1s;
+	cursor: pointer;
+	opacity: 0;
+	animation: fadeIn 1s 1.4s linear 1 forwards;
+	-webkit-animation: fadeIn 1s 1.4s linear 1 forwards;
+	-moz-animation: fadeIn 1s 1.4s linear 1 forwards;
+	-o-animation: fadeIn 1s 1.4s linear 1 forwards;
+	-ms-animation: fadeIn 1s 1.4s linear 1 forwards;
+}
+.slow6-1{
+	transition: all 1s;
+	cursor: pointer;
+	opacity: 0;
+	animation: fadeIn 1s 1.5s linear 1 forwards;
+	-webkit-animation: fadeIn 1s 1.5s linear 1 forwards;
+	-moz-animation: fadeIn 1s 1.5s linear 1 forwards;
+	-o-animation: fadeIn 1s 1.5s linear 1 forwards;
+	-ms-animation: fadeIn 1s 1.5s linear 1 forwards;
+}
+.slow7-1{
+	transition: all 1s;
+	cursor: pointer;
+	opacity: 0;
+	animation: fadeIn 1s .8s linear 1 forwards;
+	-webkit-animation: fadeIn 1s .8s linear 1 forwards;
+	-moz-animation: fadeIn 1s .8s linear 1 forwards;
+	-o-animation: fadeIn 1s .8s linear 1 forwards;
+	-ms-animation: fadeIn 1s .8s linear 1 forwards;
+}
+.slow1-1-text span,.slow2-1-text span,.slow3-1-text span,.slow4-1-text span,.slow5-1-text span,.slow6-1-text span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #8B0000;
+	margin-right: 20px;
+	text-indent: 32px;
+}
+.slow1-1-text:hover {
+	color: #8B0000;
+}
+
+.slow2-1-text:hover {
+	color: #8B0000;
+}
+
+.slow3-1-text:hover {
+	color: #8B0000;
+}
+
+.slow4-1-text:hover {
+	color: #8B0000;
+}
+
+.slow5-1-text:hover {
+	color: #8B0000;
+}
+
+.slow6-1-text:hover {
+	color: #8B0000;
+}
+.slow1-1-text {
+	position: absolute;
+	left: -20px;
+	top: 180px;
+	opacity: 0;
+	font-size: .8em;
+	animation: fadeInUp 1s 2s linear 1 forwards;
+}
+
+.slow2-1-text {
+	position: absolute;
+	list-style: disc;
+	left: 270px;
+	top: -10px;
+	opacity: 0;
+	font-size: .8em;
+	animation: fadeInUp 1s 2.1s linear 1 forwards;
+}
+
+
+.slow3-1-text {
+	position: absolute;
+	left: 540px;
+	top: 170px;
+	opacity: 0;
+	font-size: .8em;
+	animation: fadeInUp 1s 2.2s linear 1 forwards;
+}
+
+.slow4-1-text {
+	position: absolute;
+	left: 50px;
+	top: 380px;
+	opacity: 0;
+	font-size: .8em;
+	animation: fadeInUp 1s 2.3s linear 1 forwards;
+}
+
+.slow5-1-text {
+	position: absolute;
+	left: 480px;
+	top: 380px;
+	opacity: 0;
+	font-size: .8em;
+	animation: fadeInUp 1s 2.4s linear 1 forwards;
+}
+.slow6-1-text {
+	position: absolute;
+	left: 280px;
+    top: 460px;
+	opacity: 0;
+	font-size: .8em;
+	animation: fadeInUp 1s 2.5s linear 1 forwards;
+}
+.slow1-1,
+.slow2-1,
+.slow3-1,
+.slow4-1,
+.slow5-1,
+.slow6-1,
+.slow7-1{
+	position: relative;
+}
+
+.ttp img{
+	width: 140%;
+}
+
+.slow1-1 {
+	margin-left: 160px;
+	margin-top: 110px;
+}
+
+.slow2-1 {
+	margin-left: -60px;
+	margin-top: 40px;
+
+}
+
+.slow3-1 {
+	margin-left: 10px;
+	margin-top: -10px;
+
+}
+
+.slow1-1,
+.slow2-1,
+.slow3-1 {
+	width: 90px;
+	height: 90px;
+	float: left;
+	margin-right: 120px;
+	background-size: 100%;
+}
+
+.slow5-1 {
+	margin-left: 120px;
+	width: 90px;
+	height: 90px;
+	float: left;
+	background-size: 100%;
+	margin-top: 40px;
+}
+
+.slow4-1 {
+	width: 90px;
+	height: 90px;
+	float: left;
+	margin-left: 160px;
+	background-size: 100%;
+	margin-top: 40px;
+}
+
+.slow6-1 {
+	width: 90px;
+	height: 90px;
+	float: left;
+	margin-left: 310px;
+	background-size: 100%;
+	margin-top: -60px;
+}
+.slow7-1 {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 290px;
+	background-size: 100%;
+	margin-top: -185px;
+}
+
+/* gogogo */
+
+/* @keyframes gogogos {
+	0% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(-20deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes gogogos {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes gogogos {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes gogogos {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes gogogos {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+} */

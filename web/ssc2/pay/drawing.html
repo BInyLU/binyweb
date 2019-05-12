@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<title>提款</title>
+ 		<link rel="icon" type="image/x-icon" href="../lib/img/favicon.ico" />
+ 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+ 		<meta name="apple-mobile-web-app-capable" content="yes">
+ 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 		<link rel="stylesheet" href="../lib/css/mui.min.css">
+ 		<link rel="stylesheet" type="text/css" href="../lib/css/app.css" />
+		<script src="../lib/js/mui.min.js "></script>
+		<script src="../lib/js/jq.js" type="text/javascript" charset="utf-8"></script>
+ 	</head>
+ 	<body>
+ 		<div class="mui-off-canvas-wrap mui-draggable">
+ 			<!-- 主页面容器 -->
+ 			<div class="mui-inner-wrap">
+ 				<!-- 主页面标题 -->
+ 				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-left-nav" href="javascript:history.back(-1)"></a>
+ 					<h1 class="mui-title">提款</h1>
+ 				</header>
+ 				<!-- 主页面内容容器 -->
+ 				<div class="mui-content mui-scroll-wrapper">
+ 					<div class="mui-scroll">
+ 						<!-- 主界面具体展示内容 -->
+						<form action="" method="">
+							<div style="padding: 15px;">
+								<h5>提款卡号：</h5><br>
+								<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+									<li class="mui-table-view-cell">
+										<div class="mui-table">
+											<div class="mui-table-cell mui-col-xs-10">
+												<h4 class="mui-ellipsis" style="font-weight: 500;">中国农业银行</h4>
+												<h5>储蓄卡</h5>
+												<p class="mui-h6 mui-ellipsis">6228482410842133810</p>
+											</div>
+										</div>
+									</li>
+								</ul><br>
+								<h5>请输入提款金额，最低金额100元。</h5><br>
+								<input type="number" required="required" placeholder="填写金额" id="num" >
+								<h5>请输入提款密码</h5><br>
+								<input type="password" required="required" placeholder="请输入提款密码" id="numpsw" >
+								<h5>备注：</h5><br>
+								<textarea  rows="5" cols="5" placeholder="可填写备注或留空" ></textarea>
+								<h5>如有问题，请自行 <a href="">联系客服 </a></h5><br>
+							</div>
+							<div style="padding:0 15px;">
+								<button type="button" id="czbtn" class="mui-btn mui-btn-danger mui-btn-block">提款</button>
+							</div>
+						</form>
+ 					</div>
+ 				</div>
+ 				<div class="mui-off-canvas-backdrop"></div>
+ 			</div>
+ 		</div>
+ 	</body>
+	<style type="text/css">
+		.mui-btn-block{
+			padding: 6px 12px!important;
+		}
+	</style>
+	<script type="text/javascript">
+		mui.init();
+		//内容允许滚动
+		(function($) {
+			$(".mui-scroll-wrapper").scroll({
+				bounce: true, //滚动条是否有弹力默认是true
+				indicators: true, //是否显示滚动条,默认是true
+			});
+		})(mui);
+	</script>
+	<!-- tap方法等于click -->
+	<script type="text/javascript">
+		$("body").on('tap', 'a', function(event) {
+			this.click();
+		});
+	</script>
+	<!-- 提款金额空判断 -->
+	<script type="text/javascript">
+
+		$('#num').blur(function() {
+			if ($('#num').val() == '') {
+				mui.toast('金额不能为空！'); 
+			}
+		})
+		
+		$('#numpsw').blur(function() {
+			if ($('#numpsw').val() == '') {
+				mui.toast('密码不能为空！'); 
+			}
+		})
+		
+		$("#czbtn").on('tap', function(event) {
+			this.click();
+			if($("#num,#numpsw").val() == ''){
+				mui.toast('请填写完整信息！');
+			}else{
+				mui.toast('充值成功！');
+			}
+		})
+	</script>
+	<!-- 提款金额最低/最高判断 -->
+	<script type="text/javascript">
+	$(document).ready(function(){           //判断页面是否加载完毕
+		$("#num").keyup(function(){       //判断输入框是否在输入
+			var shuruzhi=$("#num").val();  //获取输入框的值
+			if(shuruzhi<100){            //判断输入值是否小于100
+				$("#num").css("border","solid 1px darkred");//改变输入框线条
+				mui.toast('提款金额最低100元！');  //设置提示框输入数字必须大于10
+			}
+			if(shuruzhi>20000){            //判断输入值是否大于20000
+				$("#num").css("border","solid 1px darkred");//改变输入框线条
+				mui.toast('输入金额过大！');  //设置提示框输入数字过大
+			}
+		});
+	});
+		$("#num").blur(function(){
+			$("#num").css("border","solid 1px #ccc");//改变输入框线条
+		});
+	</script>
+ </html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Medical</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/move.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css" />
+	<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../js/style.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/tab.css" />
+	<link rel="stylesheet" type="text/css" href="../css/rotate3.css" />
+	<link rel="stylesheet" type="text/css" href="../css/media.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/media.css" />
+	<script src="../js/jdt.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../css/lunbo.css" />
+	<script src="../js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.right1_1 {
+			animation: bounceIn .8s linear 1;
+			margin-top: 40px;
+		}
+
+		.right2_1 {
+			background: url(../images/yg.png) no-repeat;
+			background-position: 250px 70px;
+			animation: jackInTheBox 1s linear 1;
+		}
+
+		.left1 {
+			animation: bounceInLeft .5s linear 1;
+		}
+
+		.botline1 {
+			top: 250px !important;
+		}
+
+		.rightline1 {
+			top: 180px !important;
+		}
+
+		.litt {
+			text-align: center;
+			height: 10px;
+			padding-top: 10px;
+			border-radius: 20px;
+		}
+
+		.right4 h1 {
+			font-size: 26px;
+			font-weight: 600;
+			margin-bottom: 50px;
+		}
+		#sml1-1{
+			background: url(../images/tb3c-1e.png) no-repeat;
+		}
+		#sml2-1{
+			background: url(../images/tb3c-2e.png) no-repeat;
+		}
+		#sml3-1{
+			background: url(../images/tb3c-3e.png) no-repeat;
+		}
+		#sml4-1{
+			background: url(../images/tb3c-4e.png) no-repeat;
+		}
+		#sml5-1{
+			background: url(../images/tb3c-5e.png) no-repeat;
+		}
+		.tab3-sml-1{
+			height: 160px;
+			background-position: 30px 0 !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="all">
+		<div class="line"></div>
+				<span class="opennav" id="opennav">
+					<a href="#" onclick="opennav()">
+						<svg width="30" height="30">
+							<path d="M0,5 30,5" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,14 30,14" stroke="#C8605E" stroke-width="4" />
+							<path d="M0,23 30,23" stroke="#C8605E" stroke-width="4" />
+						</svg>
+					</a>
+				</span>
+				<div class="smnav" id="smnav">
+					<a href="#" class="btn-close" onclick="closenav()">
+						<img src="data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiDnn6Lph4/lm77moIfkuIvovb0gOiBodHRwOi8vd3d3LnNmb250LmNuLyA8L21ldGFkYXRhPjxnPjxwYXRoIGQ9Ik0xMCw3OS4zTDc5LjMsMTBMOTkwLDkyMC43TDkyMC43LDk5MEwxMCw3OS4zTDEwLDc5LjN6IiBzdHlsZT0iZmlsbDojRkZGRkZGIj48L3BhdGg+PHBhdGggZD0iTTc5LjMsOTkwTDEwLDkyMC43TDkyMC43LDEwTDk5MCw3OS4zTDc5LjMsOTkweiIgc3R5bGU9ImZpbGw6I0ZGRkZGRiI+PC9wYXRoPjwvZz48L3N2Zz4gIA=="
+						    width="10" height="10">
+					</a>
+					<li class="smnvatop">
+						<img src="../images/yd7.png" style="width: 100%;">
+						<img src="../images/yd1.png" style="width: 90%;margin:-70px 0 20px 10px">
+					</li>
+					<li>
+						<a href="jdbg-e.html">Report</a>
+					</li>
+					<li >
+						<a href="jcrw-e.html">Character</a>
+					</li>
+					<li>
+						<a href="kjgj-e.html">Science</a>
+					</li>
+					<li>
+						<a href="tpgj-e.html">Poverty</a>
+					</li>
+					<li>
+						<a href="yggj-e.html">Medical</a>
+					</li>
+					<li>
+						<a href="stgj-e.html">Ecology</a>
+					</li>
+					<li>
+						<a href="qmsg-e.html">Reform</a>
+					</li>
+					<li class="activeli">
+						<a href="../index.html" style="padding: 0;">
+							<p id="lgg">切换中文</p>
+							<img src="../images/CN.png" style="height: 50px;float: right;">
+						</a>
+					</li>
+				</div>
+				<script type="text/javascript">
+					function opennav() {
+						document.getElementById('smnav').style.left = '0';
+						document.getElementById('smnav').style.opacity = '1';
+					}
+		
+					function closenav() {
+						document.getElementById('smnav').style.left = '-250px';
+						document.getElementById('smnav').style.opacity = '0';
+					}
+				</script>
+		<div class="tops">
+			<div class="top">
+				<div class="logo">
+					<img src="../images/yd1.png">
+				</div>
+				<div class="nav">
+					<ul>
+						<li>
+							<a href="e.html" style="animation: lightSpeedIn .4s linear 1;">Home</a>
+						</li>
+						<li>
+							<a href="jdbg-e.html" style="animation: lightSpeedIn .5s linear 1;">Report</a>
+						</li>
+						<li>
+							<a href="jcrw-e.html" style="animation: lightSpeedIn .6s linear 1;">Character</a>
+						</li>
+						<li>
+							<a href="kjgj-e.html" style="animation: lightSpeedIn .7s linear 1;">Science</a>
+						</li>
+						<li>
+							<a href="tpgj-e.html" style="animation: lightSpeedIn .8s linear 1;">Poverty</a>
+						</li>
+						<li id="corlored">
+							<a href="yggj-e.html" style="animation: lightSpeedIn .9s linear 1;">Medical</a>
+						</li>
+						<li>
+							<a href="stgj-e.html" style="animation: lightSpeedIn 1s linear 1;">Ecology</a>
+						</li>
+						<li>
+							<a href="qmsg-e.html" style="animation: lightSpeedIn 1.1s linear 1;">Reform</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="change">
+				<a href="../chinese/yggj-c.html">
+					<img src="../images/CN.png">
+				</a>
+			</div>
+		</div>
+		<!-- banner -->
+		<div class="container">
+			<div class="dowebok" style="width: 1000px;margin: 0 auto;">
+				<div class="pogoSlider" id="dowebok">
+					<div class="pogoSlider-slide" data-transition="slide" style="background-image:url(../images/banner4-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="fade" style="background-image:url(../images/banner2-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="verticalSlide" style="background-image:url(../images/banner1-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealLeft" style="background-image:url(../images/banner5-e.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealRight" style="background-image:url(../images/banner3-e.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function () {
+				$('#dowebok').pogoSlider();
+			});
+		</script>
+		<div class="content_1">
+			<div class="con">
+				<div class="sml1"></div>
+				<div class="sml2"></div>
+				<div class="sml3"></div>
+				<div class="sml4"></div>
+				<div class="left1">
+					<img src="../images/left4-e.png" id="moveimg">
+				</div>
+				<div class="right1">
+					<div class="right1_1">
+						<div class="topline1"></div>
+						<div class="leftline1"></div>
+						<div class="botline1"></div>
+						<div class="rightline1"></div>
+						<p id="p1"> The 18 big news centers held the fourth press conference at the multi-function hall on the second floor of the Media
+							Center, and the deputy director of the National Development and Reform Commission, zhu zhixin, deputy secretary of
+							the party group, said that the reform of the medical and health system has a bearing on the vital interests of every
+							member of society and is also a worldwide problem. In April 2009, the Chinese government launched a new round of medical
+							reform, under the strong leadership of the CPC.
+
+						</p>
+					</div>
+					<div class="right2_1">
+						<div style="width:100%;height: 400px;margin: 50px auto;position: relative;border-bottom:#8B0000 dashed 1px ;">
+							<a href="javascript:void(0)" class="slow1-2-text">
+								<span></span>Strengthening quality consc
+							</a>
+							<a href="javascript:void(0)" class="slow2-2-text">
+								Keywords
+							</a>
+							<a href="javascript:void(0)" class="slow3-2-text">
+								<span></span>Deepening the reform
+								<br>
+								<br>guarantee</a>
+							<a href="javascript:void(0)" class="slow4-2-text">
+								<span></span>Primary health care
+								<br>
+								<br>public welfare</a>
+							<a href="javascript:void(0)" class="slow5-2-text">
+								<span></span>Deepening the reform
+								<br>
+								<br>the new national medicalreform and thoroughly eliminating</a>
+							<a href="javascript:void(0)" class="slow6-2-text">
+								<span></span>Implementing the spirit
+								<br>
+								<br>Thoroughly eradicate</a>
+							<a href="javascript:void(0)" class="slow7-2-text">
+								<span></span>Implementation
+								<br>
+								<br>Ensuring drug safety for the masses</a>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div style="overflow: hidden;margin-bottom: 50px; ">
+					<h5>Journalism
+						<span>Broadcast</span>
+					</h5>
+					<div class="tab3">
+						<div class="tab3-top" style="height: 171px;">
+							<div class="tab3-sml-1 active" id="sml1-1"></div>
+							<div class="tab3-sml-1" id="sml2-1"></div>
+							<div class="tab3-sml-1" id="sml3-1"></div>
+							<div class="tab3-sml-1" id="sml4-1"></div>
+							<div class="tab3-sml-1" id="sml5-1"></div>
+						</div>
+						<div class="tab3-content selected">
+							<div class="tb">
+								<h1>Medical reform 900 th</h1>
+								<p>In January 2009, the new rural cooperative medical insurance system in Zhanjiang was put into operation in parallel
+									with the medical insurance system for urban residents, which solved the problems caused by the disparity of payment
+									standards between the two medical insurance systems, the low enthusiasm of participating in insurance and the weak
+									ability of fund allocation.</p>
+								<p>Although the integration of commercial insurance into the social security system has a long way to go, but the "Zhanjiang
+									model" has taken the first step with demonstrative effect. This new cooperative mode of "unified policy, unified
+									accounting.
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="tab3-content">
+							<div class="tb">
+								<h1>An expanded in-depth reform agenda</h1>
+								<p> Wenzhou citizen card will be the health planning commission, medical insurance bureau, the financial bureau, the
+									services of the three departments, completely unified on a platform, this is Wenzhou citizen card unique medical
+									reform characteristics. With this citizen card, patients can register not only with cases, but also on the Internet.
+									All the inspection and laboratory results are managed informationally by this card, and even if the fee is paid,
+									it can be solved by one card. The most valuable thing about Wenzhou citizen card is that its scalpel moves </p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="tab3-content">
+							<div class="tb">
+								<h1>Health insurance reform</h1>
+								<p> In promoting the reform of the social system, Li Keqiang said: "Deepen the reform of the old-age insurance system,
+									the establishment of enterprise workers'basic old-age insurance fund central adjustment system. We will deepen the
+									comprehensive reform of public hospitals, coordinate the reform of medical prices, personnel remuneration, drug
+									circulation and medical insurance payment, improve the quality of medical and health services, and make great efforts
+									to solve .
+								</p>
+								<p>Li Keqiang said that in the future, we will strengthen the construction of general practitioner team and promote
+									grading diagnosis and treatment. We will continue to raise the standard of per capita financial subsidy for basic
+									public health services. Improve maternal and child health care
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="tab3-content">
+							<div class="tb">
+								<h1>Plan for health care reform</h1>
+								<p> On June 23, 2011, more than 30 experts from home and abroad went to Zhongnanhai to attend the first plenary meeting
+									of the Advisory Committee on Medical Reform of the State Council. </p>
+								<p>He stressed that the momentum of current medical reform is good, to consolidate the results of reform, continue to
+									overcome difficulties, highlight the key and difficult issues, plan a good "Twelfth Five-Year Plan" of medical reform,
+									and constantly push the reform to depth.</p>
+								<p>However, in our country with a population of 1.3 billion, with the growing health needs of urban and rural residents,
+									health care reform is still facing many difficulties and challenges, institutional and institutional </p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="tab3-content">
+							<div class="tb">
+								<h1>Health care reform is advancing</h1>
+								<p> "Medical reform has entered a critical period of overcoming difficulties," Zhu Zhixin, deputy director of the National
+									Development and Reform Commission, said at the </p>
+								<p>The universal medical insurance system has expanded</p>
+								<p>In August 2012, the Development and Reform Commission, the former Ministry of Health and other six departments issued
+									the "Guiding </p>
+								<p>—protecting the basic, strengthening the grass-roots level, building</p>
+								<p>On the basis of the implementation of the essential drug system in all grass-roots medical and health institutions
+									run by the government, six provinces, including Shanxi, Jiangsu, Anhui and Shaanxi, have </p>
+								<p>——Public hospital reform</p>
+								<p>2In June 2012, the General Office of the State Council issued Opinions on the Pilot Reform of County-level Public
+									Hospitals. At present, 311 pilot
+								</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="right3">
+					<div class="Box">
+						<div class="content">
+							<div class="Box_con clearfix">
+								<span class="btnl btn" id="btnl"></span>
+								<span class="btnr btn" id="btnr"></span>
+
+								<div class="conbox" id="BoxUl">
+									<ul>
+										<li class="cur">
+											<img src="../images/jd1.png" alt="">
+										</li>
+
+										<li class="cur">
+											<img src="../images/jd2.png" alt="">
+										</li>
+
+										<li class="cur">
+											<img src="../images/jd3.png" alt="">
+										</li>
+
+										<li class="cur">
+											<img src="../images/jd4.png" alt="">
+										</li>
+
+										<li class="cur">
+											<img src="../images/jd5.png" alt="">
+										</li>
+										<li class="cur">
+											<img src="../images/jd6.png" alt="">
+										</li>
+									</ul>
+								</div>
+
+								<p class="BoxSwitch" id="BoxSwitch">
+									<span class="cur"></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</p>
+
+							</div>
+
+						</div>
+					</div>
+
+					<script type="text/javascript">
+						LbMove('BoxUl', 'btnl', 'btnr', 'BoxSwitch', true, 'left', true, 205, 1000, 5000, 4);
+					</script>
+				</div>
+
+				<div class="right4" style="padding: 0;">
+					<h1>Illustration of health <span style="color: #333333;">care reform policy</span></h1>
+					<div class="box2" >
+						<div class="hot_role">
+							<ul id="centerwell">
+								<li>
+									<h3>
+										<p class="h31">1</p> <br>
+									</h3>
+									<div class="hot_content">
+										<img src="../images/tj1-e.png">
+									</div>
+								</li>
+								<li>
+									<h3>
+										<p class="h31">2</p> <br>
+									</h3>
+									<div class="hot_content">
+										<img src="../images/tj2-e.png">
+									</div>
+								</li>
+								<li>
+									<h3>
+										<p class="h31">3</p> <br>
+									</h3>
+									<div class="hot_content">
+										<img src="../images/tj3-e.png">
+									</div>
+								</li>
+								<li>
+									<h3>
+										<p class="h31">4</p> <br>
+									</h3>
+									<div class="hot_content">
+										<img src="../images/tj4-e.png">
+									</div>
+								</li>
+								<li>
+									<h3>
+										<p class="h31">5</p> <br>
+									</h3>
+									<div class="hot_content">
+										<img src="../images/tj5-e.png">
+									</div>
+								</li>
+								<li>
+									<h3>
+										<p class="h31">6</p> <br>
+									</h3>
+									<div class="hot_content">
+										<img src="../images/tj6-e.png">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>Guangxi industrial and commercial Career Technical College</p>
+	</div>
+			<button class="back_to_top"><img src="../images/backtop.gif" ></button>
+
+	</div>
+	<!-- 背景特效 -->
+	<script src="../js/bg.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

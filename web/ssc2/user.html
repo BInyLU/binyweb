@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>个人中心</title>
+		<link rel="icon" type="image/x-icon" href="lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="lib/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/app.css" />
+	</head>
+
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 底部固定菜单 -->
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item" href="index.html">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item" href="game.html">
+						<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+						<span class="mui-tab-label">购彩</span>
+					</a>
+					<a class="mui-tab-item" href="prize.html">
+						<span class="mui-icon mui-icon-extra mui-icon-extra-gift"></span>
+						<span class="mui-tab-label">开奖</span>
+					</a>
+					<a class="mui-tab-item mui-active" href="user.html">
+						<span class="mui-icon mui-icon-contact"></span>
+						<span class="mui-tab-label">我的</span>
+					</a>
+				</nav>
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<div class="title">
+							<img src="lib/img/user.jpg">
+							<p style="display: inline-block;">当前用户：<span>admin</span></p>
+						</div>
+						<!-- 余额 -->
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell" style="border-bottom: 1px solid #eee;">余额：<span>999.00</span>
+								<button type="button" class="mui-btn mui-btn-danger">刷新余额</button>
+							</li>
+						</ul>
+						<!-- 充值提款 -->
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="pay/recharge.html">
+									<span><img src="lib/img/cz.png" width="40" style="transform: scale(1.5);"></span>
+									<div class="mui-media-body">充值</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="pay/drawing.html">
+									<span><img src="lib/img/tk.png" width="40" style="transform: scale(1.5);"></span>
+									<div class="mui-media-body">提款</div>
+								</a>
+							</li>
+						</ul>
+						<!-- 多列表栏目菜单 -->
+						<div class="listuser">
+							<ul>
+								<li>
+									<a href="betting/touzhu.html">
+										<span><img src="lib/img/tzjl.png"></span>
+										<div>投注记录</div>
+										<p>查看游戏投注记录</p>
+									</a>
+								</li>
+								<li>
+									<a href="pay/record.html">
+										<span><img src="lib/img/tzjl.png"></span>
+										<div>交易记录</div>
+										<p>查看充值提款记录</p>
+									</a>
+								</li>
+<!-- 								<li>
+									<a href="activity/zxyh.html">
+										<span><img src="lib/img/fl.png" ></span>
+										<div>优惠活动</div>
+										<p>优惠和返利</p>
+									</a>
+								</li> -->
+							</ul>
+						</div>
+						<div class="listuser">
+							<ul>
+								<li>
+									<a href="user/users.html">
+										<span><img src="lib/img/grxx.png" ></span>
+										<div>个人信息</div>
+										<p>查看和编辑资料</p>
+									</a>
+								</li>
+								<li>
+									<a href="user/safe.html">
+										<span><img src="lib/img/aqgl.png" alt=""></span>
+										<div>安全管理</div>
+										<p>密码/银行卡管理</p>
+									</a>
+								</li>
+								<li>
+									<a href="message.html">
+										<span><img src="lib/img/wdxx.png" alt=""></span>
+										<div>我的消息</div>
+										<p>查看系统消息</p>
+									</a>
+								</li>
+								<li>
+									<a href="agency.html">
+										<span><img src="lib/img/dlzx.png" alt=""></span>
+										<div>代理中心</div>
+										<p>代理中心的内容</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="listuser">
+							<ul>
+								<li>
+									<a href="tencent://message/?uin=1416744596&Menu=yes">
+										<span><img src="lib/img/zxkf.png" alt=""></span>
+										<div>在线客服</div>
+										<p>在线咨询客服</p>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:mui.toast('暂未开放下载');">
+										<span><img src="lib/img/applq.png" ></span>
+										<div>APP下载</div>
+										<p>体验手机乐趣</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<span style="font-size: 12px;"></span>
+								<div class="mui-switch mui-active">
+									<div class="mui-switch-handle"></div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell" style="text-align: center;">
+								<a id='exit' href="login/login.html">退出当前账号</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+
+	</body>
+	<script src="lib/js/mui.min.js "></script>
+
+	<div style="display: none;">
+		<style type="text/css">
+			.title {
+				padding: 20px;
+				text-align: left;
+				position: relative;
+				background: url(lib/img/bguser.png) 100%;
+			}
+
+			.title img {
+				border-radius: 50%;
+				display: inline-block;
+				margin: 10px;
+				height: 50px;
+			}
+
+			.title p {
+				position: absolute;
+				top: 50px;
+				left: 120px;
+				color: #fff;
+			}
+			.mui-col-sm-3{
+				background: #fff !important;
+				width: 50%;
+			}
+			.mui-grid-view.mui-grid-9{
+				border: none;
+			}
+
+		</style>
+		<!-- 初始化MUI框架 -->
+		<script type="text/javascript">
+			mui.init();
+			//内容允许滚动
+			(function($) {
+				$(".mui-scroll-wrapper").scroll({
+					bounce: true, //滚动条是否有弹力默认是true
+					indicators: true, //是否显示滚动条,默认是true
+				});
+			})(mui);
+		</script>
+		<!-- 跳转起效 -->
+		<script type="text/javascript">
+			mui('body').on('tap', 'a', function() {
+				window.top.location.href = this.href;
+			});
+		</script>
+		<!-- 提示声音 -->
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			mui('.mui-switch').each(function() { //循环所有toggle
+				this.parentNode.querySelector('span').innerText = '提示声音：' + (this.classList.contains('mui-active') ? '开' : '关');
+				this.addEventListener('toggle', function(event) {
+					this.parentNode.querySelector('span').innerText = '提示声音：' + (event.detail.isActive ? '开' : '关');
+				});
+			});
+		</script>
+	</div>
+</html>

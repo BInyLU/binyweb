@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<title>投注记录</title>
+ 		<link rel="icon" type="image/x-icon" href="../lib/img/favicon.ico" />
+ 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+ 		<meta name="apple-mobile-web-app-capable" content="yes">
+ 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 		<link rel="stylesheet" href="../lib/css/mui.min.css">
+ 		<link rel="stylesheet" type="text/css" href="../lib/css/app.css" />
+		<script src="../lib/js/mui.min.js "></script>
+		<script src="../lib/js/jq.js" type="text/javascript" charset="utf-8"></script>
+ 	</head>
+ 	<body>
+ 		<div class="mui-off-canvas-wrap mui-draggable">
+ 			<!-- 主页面容器 -->
+ 			<div class="mui-inner-wrap">
+ 				<!-- 主页面标题 -->
+ 				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-left-nav" href="javascript:history.back(-1)"></a>
+ 					<h1 class="mui-title">投注记录</h1>
+ 				</header>
+ 				<!-- 主页面内容容器 -->
+ 				<div class="mui-content mui-scroll-wrapper">
+ 					<div class="mui-scroll">
+ 						<!-- 主界面具体展示内容 -->
+						<a class="mui-card" href="touzhus.html">
+							<div class="mui-card-content">
+								<div class="mui-card-content-inner">
+									<p>彩种：北京赛车PK10</p>
+									<p>号码：165465156216</p>
+									<p>期号：165465156216</p>
+									<p>投注金额：165465156216</p>
+									<p>时间：2018-11-17</p>
+								</div>
+							</div>
+							<div class="mui-card-footer">
+								<p class="green">已中奖</p>
+								<span>详细 ></span>
+							</div>
+						</a>
+						<a class="mui-card" href="touzhus.html">
+							<div class="mui-card-content">
+								<div class="mui-card-content-inner">
+									<p>彩种：北京赛车PK10</p>
+									<p>号码：165465156216</p>
+									<p>期号：165465156216</p>
+									<p>投注金额：165465156216</p>
+									<p>时间：2018-11-17</p>
+								</div>
+							</div>
+							<div class="mui-card-footer">
+								<p class="red">已中奖</p>
+								<span>详细 ></span>
+							</div>
+						</a>
+ 					</div>
+ 				</div>
+ 				<div class="mui-off-canvas-backdrop"></div>
+ 			</div>
+ 		</div>
+ 	</body>
+	<style type="text/css">
+		.mui-card{
+			display: block;
+			overflow: auto;
+			_zoom:1;
+		}
+		.mui-card p{
+			margin-bottom: 0;
+		}
+		.green{
+			color: #008000;
+		}
+		.red{
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		mui.init();
+		//内容允许滚动
+		(function($) {
+			$(".mui-scroll-wrapper").scroll({
+				bounce: true, //滚动条是否有弹力默认是true
+				indicators: true, //是否显示滚动条,默认是true
+			});
+		})(mui);
+	</script>
+	<!-- tap方法等于click -->
+	<script type="text/javascript">
+		$("body").on('tap', 'a', function(event) {
+			this.click();
+		});
+	</script>
+ </html>

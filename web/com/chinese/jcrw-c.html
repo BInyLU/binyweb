@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>杰出人物</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/move.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css" />
+	<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../js/style.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/tab.css" />
+	<link rel="stylesheet" type="text/css" href="../css/lunbo.css" />
+	<link rel="stylesheet" type="text/css" href="../css/media.css" />
+	<script src="../js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		.right1_1 {
+			animation: jackInTheBox .8s linear 1;
+		}
+
+		.left1 {
+			animation: fadeInLeft .5s linear 1;
+		}
+
+		.botline1 {
+			top: 250px !important;
+		}
+
+		.rightline1 {
+			top: 180px !important;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div class="all">
+		<div class="line"></div>
+		<span class="opennav" id="opennav">
+			<a href="#" onclick="opennav()">
+				<svg width="30" height="30">
+					<path d="M0,5 30,5" stroke="#C8605E" stroke-width="4" />
+					<path d="M0,14 30,14" stroke="#C8605E" stroke-width="4" />
+					<path d="M0,23 30,23" stroke="#C8605E" stroke-width="4" />
+				</svg>
+			</a>
+		</span>
+		<div class="smnav" id="smnav">
+			<a href="#" class="btn-close" onclick="closenav()">
+				<img src="data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiDnn6Lph4/lm77moIfkuIvovb0gOiBodHRwOi8vd3d3LnNmb250LmNuLyA8L21ldGFkYXRhPjxnPjxwYXRoIGQ9Ik0xMCw3OS4zTDc5LjMsMTBMOTkwLDkyMC43TDkyMC43LDk5MEwxMCw3OS4zTDEwLDc5LjN6IiBzdHlsZT0iZmlsbDojRkZGRkZGIj48L3BhdGg+PHBhdGggZD0iTTc5LjMsOTkwTDEwLDkyMC43TDkyMC43LDEwTDk5MCw3OS4zTDc5LjMsOTkweiIgc3R5bGU9ImZpbGw6I0ZGRkZGRiI+PC9wYXRoPjwvZz48L3N2Zz4gIA=="
+				    width="10" height="10">
+			</a>
+			<li class="smnvatop">
+				<img src="../images/yd7.png" style="width: 100%;">
+				<img src="../images/yd1.png" style="width: 90%;margin:-70px 0 20px 10px">
+			</li>
+			<li>
+				<a href="jdbg-c.html">解读报告</a>
+			</li>
+			<li class="activeli">
+				<a href="jcrw-c.html">杰出人物</a>
+			</li>
+			<li>
+				<a href="kjgj-c.html">科技攻坚</a>
+			</li>
+			<li>
+				<a href="tpgj-c.html">脱贫攻坚</a>
+			</li>
+			<li>
+				<a href="yggj-c.html">医改攻坚</a>
+			</li>
+			<li>
+				<a href="stgj-c.html">生态攻坚</a>
+			</li>
+			<li>
+				<a href="qmsg-c.html">全面深改</a>
+			</li>
+			<li class="activeli">
+				<a href="../english/e.html" style="padding: 0;">
+					<p id="lgg">切换英文</p>
+					<img src="../images/EN.png" style="height: 50px;float: right;">
+				</a>
+			</li>
+		</div>
+		<script type="text/javascript">
+			function opennav() {
+				document.getElementById('smnav').style.left = '0';
+				document.getElementById('smnav').style.opacity = '1';
+			}
+
+			function closenav() {
+				document.getElementById('smnav').style.left = '-250px';
+				document.getElementById('smnav').style.opacity = '0';
+			}
+		</script>
+		<div class="tops">
+			<div class="top">
+				<div class="logo">
+					<img src="../images/yd1.png">
+				</div>
+				<div class="nav">
+					<ul>
+						<li>
+							<a href="../index.html" style="animation: lightSpeedIn .4s linear 1;">首页</a>
+						</li>
+						<li>
+							<a href="jdbg-c.html" style="animation: lightSpeedIn .5s linear 1;">解读报告</a>
+						</li>
+						<li id="corlored">
+							<a href="jcrw-c.html" style="animation: lightSpeedIn .6s linear 1;">杰出人物</a>
+						</li>
+						<li>
+							<a href="kjgj-c.html" style="animation: lightSpeedIn .7s linear 1;">科技攻坚</a>
+						</li>
+						<li>
+							<a href="tpgj-c.html" style="animation: lightSpeedIn .8s linear 1;">脱贫攻坚</a>
+						</li>
+						<li>
+							<a href="yggj-c.html" style="animation: lightSpeedIn .9s linear 1;">医改攻坚</a>
+						</li>
+						<li>
+							<a href="stgj-c.html" style="animation: lightSpeedIn 1s linear 1;">生态攻坚</a>
+						</li>
+						<li>
+							<a href="qmsg-c.html" style="animation: lightSpeedIn 1.1s linear 1;">全面深改</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="change">
+				<a href="../english/jcrw-e.html">
+					<img src="../images/EN.png">
+				</a>
+			</div>
+		</div>
+		<!-- banner -->
+		<div class="container">
+			<div class="dowebok" style="width: 1000px;margin: 0 auto;">
+				<div class="pogoSlider" id="dowebok">
+					<div class="pogoSlider-slide" data-transition="slide" style="background-image:url(../images/1.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="fade" style="background-image:url(../images/2.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="verticalSlide" style="background-image:url(../images/3.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealLeft" style="background-image:url(../images/4.jpg);"></div>
+					<div class="pogoSlider-slide" data-transition="slideRevealRight" style="background-image:url(../images/5.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function () {
+				$('#dowebok').pogoSlider();
+			});
+		</script>
+		<div class="content_1">
+			<div class="con">
+				<div class="sml1"></div>
+				<div class="sml2"></div>
+				<div class="sml3"></div>
+				<div class="sml4"></div>
+				<div class="left1">
+					<img src="../images/left2.png" id="moveimg">
+				</div>
+				<div class="right1">
+					<div class="right1_1">
+						<div class="topline1"></div>
+						<div class="leftline1"></div>
+						<div class="botline1"></div>
+						<div class="rightline1"></div>
+						<p id="p1"> 每年辞旧迎新之际,国家科学技术奖励大会都会在北京举行。十八大以来,习近平的身影从未在国家科学技术奖励大会上缺席。在历届大会上,习近平总是亲切为获奖科学家颁奖,并同他们热情握手表达崇高敬意和诚挚问候。 我国要在科技创新方面走在世界前列，必须把人才资源开发放在科技创新最优先的位置，改革人才培养、引进、使用等机制，努力造就一批世界水平的科学家、科技领军人才、工程师和高水平创新团队，注重培养一线创新人才和青年科技人才。近年来，许多科学家长期工作在第一线，不忘初心，牢记使命，开拓创新，创造出了一项项领先世界的科学奇迹，实现了梦想。
+						</p>
+					</div>
+					<div class="right2_1">
+						<div style="width:360px;height: 300px;margin: 0 auto;position: relative;" id="r21">
+							<div class="slow1">
+								<div class="ttp">
+									<img src="../images/ttp4.png" alt="">
+								</div>
+							</div>
+							<div class="slow2">
+								<div class="ttp">
+									<img src="../images/ttp5.png" alt="">
+								</div>
+							</div>
+							<div class="slow3">
+								<div class="ttp">
+									<img src="../images/ttp3.png" alt="">
+								</div>
+							</div>
+							<div class="slow4">
+								<div class="ttp">
+									<img src="../images/ttp1.png" alt="">
+								</div>
+							</div>
+							<div class="slow5">
+								<div class="ttp">
+									<img src="../images/ttp2.png" alt="">
+								</div>
+							</div>
+							<div class="slow6">
+								<div class="ttp">
+									<p style="font-size: 12px;left: 22px;">杰出人物</p>
+								</div>
+							</div>
+						</div>
+						<a href="javascript:void(0)" class="slow1-text">南仁东</a>
+						<a href="javascript:void(0)" class="slow2-text">王曙群</a>
+						<a href="javascript:void(0)" class="slow3-text">钱学森</a>
+						<a href="javascript:void(0)" class="slow4-text">屠呦呦</a>
+						<a href="javascript:void(0)" class="slow5-text">袁隆平</a>
+						<div class="bg2">
+							<div class="bg2solid"></div>
+							<img src="../images/yuan.png" class="moveyuan">
+						</div>
+					</div>
+					<div style="height: 600px;overflow: hidden;" id="r31">
+						<div class="tab">
+							<ul class="tabs">
+								<li>
+									<a href="javascript:void(0)">袁隆平</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">屠呦呦</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">钱学森</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">王曙群</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">南仁东</a>
+								</li>
+							</ul>
+
+							<div class="tab_content">
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/ylp.png">
+									<h4>袁隆平：从未放弃努力，一次次攻坚克难，领跑世界</h4>
+									<p>袁隆平是杂交水稻研究领域的开创者和带头人，致力于杂交水稻的研究，先后成功研发出“三系法”杂交水稻、“两系法”杂交水稻、超级杂交稻一期、二期。</p>
+									<p>与此同时，袁隆平提出并实施“种三产四丰产工程”，运用超级杂交稻的技术成果，50多年来，始终在农业科研第一线辛勤耕耘、不懈探索，为人类运用科技手段战胜饥饿带来绿色的希望和金色的收获。</p>
+									<p class="tab_text">他的卓越成就，不仅为解决中国人民的温饱和保障国家粮食安全做出了贡献，更为世界和平和社会进步树立了丰碑。</p>
+								</div>
+
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/tyy.png">
+									<h4>屠呦呦：追求不忘初心科研自有灵魂</h4>
+									<p>1968年，中药研究所开始抗疟中药研究，39岁的屠呦呦担任该项目的组长。</p>
+									<P>经过两年的研究对象筛选，并受到中国古代药典《肘后备急方》的启发，项目组将重点放在了对青蒿的研究上。</P>
+									<P>1971年，在失败了190次之后，项目组终于通过低温提取、乙醚冷浸等方法，成功提取出青蒿素，并在接下来的反复试验中得出了青蒿素对疟疾抑制率达到100%的结果。</P>
+									<p class="tab_text">在没有先进实验设备、科研条件艰苦的情况下，屠呦呦带领着团队攻坚克难，面对失败不退缩，终于胜利完成科研任务。青蒿素问世44年来，共使超过600万人逃离疟疾的魔掌。未来，屠呦呦希望通过研究，让青蒿素应用于更多地方，为更多人带来福音。</p>
+								</div>
+
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/qxs.png">
+									<h4>钱学森：热血铸春秋殷殷报国魂</h4>
+									<p>钱学森在火箭与航天领域提出了若干概念，主持完成了“喷气和火箭技术的建立”规划，将中国航天系统工程的实践提炼成航天系统工程理论。</p>
+									<p>钱学森在20世纪40年代就已经成为航空航天领域内最为杰出的代表人物之一，成为二十世纪众多学科领域的科学群星中极少数的巨星之一。</p>
+									<p class="tab_text">钱学森也是为新中国的成长做出无可估量贡献的老一辈科学家团体之中，影响最大、功勋最为卓著的杰出代表人物，是新中国爱国留学归国人员中最具代表性的国家建设者，是新中国历史上伟大的人民科学家。</p>
+								</div>
+
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/wsq.png">
+									<h4>王曙群：他用16年坚守缔造“太空之吻”</h4>
+									<p>1995年，技校毕业六年的王曙群，在全厂技能比武大赛中取得第二名的好成绩，出色的表现，让正在组建的对接机构产品的研制团队向他敞开了大门。</p>
+									<P>然而，现实却远非王曙群想象的这么简单，由于国外对航天领域严格封锁，没有任何技术、经验可以借鉴，王曙群和团队参照一台简单的原理机，用了9年时间才打造出了我国第一台工程化的对接机构。</P>
+									<p class="tab_text">2011年11月3日，王曙群团队十六年的努力迎来了最终的大考，凌晨1时36分，天宫一号目标飞行器与神舟八号飞船顺利完成首次交会对接，被称为美丽的“太空之吻”。这个“太空穿针引线”的超高难度动作，使中国成为世界上第三个掌握空间交会对接技术的国家。</p>
+								</div>
+
+								<div class="tabs_item">
+									<div class="topline"></div>
+									<div class="leftline"></div>
+									<div class="botline"></div>
+									<div class="rightline"></div>
+									<img src="../images/nrd.png">
+									<h4>南仁东：牢记使命倾情天眼</h4>
+									<p>南仁东1945年出生，一生极富传奇色彩。</p>
+									<p>他从清华大学毕业后，曾在东北一无线电厂工作十年。</p>
+									<p>改革开放后，他曾在国外著名大学任客座教授、访问学者，他还参加过十国大射电望远镜计划。这位驰骋于国际天文界的归侨科学家，在上世纪90年代中期毅然舍弃高薪，回国就任中科院北京天文台副台长。当时他一年的工资，只等于国外一天的工资。</p>
+									<p class="tab_text">23年时间里，他从壮年走到暮年，把一个朴素的想法变成了国之重器，成就了中国在世界上独一无二的项目。</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<button class="back_to_top">
+			<img src="../images/backtop.gif">
+		</button>
+		<div class="footer">
+			<p>版权所有：广西工商职业技术学院</p>
+		</div>
+	</div>
+
+</body>
+
+</html>

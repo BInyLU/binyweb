@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link rel="icon" type="image/x-icon" href="../lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../lib/css/mui.min.css" rel="stylesheet" />
+		<link href="../lib/css/app.css" rel="stylesheet" />
+		<script src="../lib/js/mui.min.js"></script>
+		<script src="../lib/js/jq.js"></script>
+	</head>
+
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-left-nav" href="javascript:history.back(-1)"></a>
+					<h1 class="mui-title">注册</h1>
+				</header>
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<form class="mui-input-group" style="margin-top: 20px;">
+						<div class="mui-input-row">
+							<label>账号</label>
+							<input id="user" type="text" required="required" class="mui-input-clear mui-input" placeholder="请输入账号" >
+							<span class="mui-icon mui-icon-clear mui-hidden"></span>
+						</div>
+						<div class="mui-input-row">
+							<label>手机号码</label>
+							<input id="phone" type="number" required="required" class="mui-input-clear mui-input" placeholder="请输入手机号码" >
+							<span class="mui-icon mui-icon-clear mui-hidden"></span>
+						</div>
+						<div class="mui-input-row">
+							<label></label>
+							<input id="yzm" type="number" required="required" class="mui-input-clear mui-input" placeholder="验证码" style="width: 20%;float: left;">
+							<button type="button"  onclick="return false;" style="margin: 2px 2px 0 15px;float: right;">发送验证码</button>
+							<span class="mui-icon mui-icon-clear mui-hidden"></span>
+						</div>
+						<div class="mui-input-row">
+							<label>邮箱</label>
+							<input id="email" type="text" required="required" class="mui-input-clear mui-input" placeholder="请输入邮箱"><span class="mui-icon mui-icon-clear mui-hidden"></span>
+						</div>
+						<div class="mui-input-row">
+							<label>取款密码</label>
+							<input id="qkpsw" required="required" type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+							<span class="mui-icon mui-icon-clear mui-hidden"></span>
+						</div>
+						<div class="mui-input-row">
+							<label>密码</label>
+							<input id="password" required="required" type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+							<span class="mui-icon mui-icon-clear mui-hidden"></span>
+						</div>
+						<div class="mui-input-row">
+							<label>确认密码</label>
+							<input id="password2" required="required" type="password" class="mui-input-clear mui-input" placeholder="请确认密码">
+							<span class="mui-icon mui-icon-clear mui-hidden"></span>
+						</div>
+						<div class="mui-content-padded">
+							<button id="login" class="mui-btn mui-btn-block mui-btn-primary">注册</button>
+						</div>
+					</form>
+					<div class="mui-content-padded">
+						<a href="../index.html">回到首页</a>
+						<a href="login.html">已有账号，立即登录</a>
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+
+		<div style="display: none;">
+			<style type="text/css">
+				body{
+					font-size: 16px;
+				}
+				.mui-content-padded {
+					padding: 10px;
+				}
+
+				.mui-content-padded button {
+					padding: 5px;
+				}
+
+				.mui-content-padded a {
+					font-size: 12px;
+					color: #666;
+					padding-right: 20px;
+					text-align: right;
+				}
+				
+			</style>
+			<!-- 初始化MUI框架 -->
+			<script type="text/javascript">
+				mui.init();
+				//内容允许滚动
+				(function($) {
+					$(".mui-scroll-wrapper").scroll({
+						bounce: true, //滚动条是否有弹力默认是true
+						indicators: true, //是否显示滚动条,默认是true
+					});
+				})(mui);
+			</script>
+
+			<!-- 跳转起效 -->
+			<script type="text/javascript">
+				mui('body').on('tap', 'a', function() {
+					window.top.location.href = this.href;
+				});
+			</script>
+
+			<!-- input不允许打空格 -->
+			<script type="text/javascript">
+				$('input').keydown(function(e) {
+					if (e.keyCode == 32) {
+						return false;
+					}
+				});
+			</script>
+			<!-- 判断登陆 -->
+			<script type="text/javascript">
+				
+				$('#user').blur(function() {
+					if ($('#user').val() == '') {
+						mui.toast('账号不能为空！'); 
+						//强制重新获得焦点 
+						$('#user').focus(); 
+					}
+				})
+				
+				$('#password').blur(function() {
+					if ($('#password').val() == '') {
+						mui.toast('密码不能为空！'); 
+					}
+				})
+				
+				$('#password2').blur(function() {
+					if ($('#password2').val() == '') {
+						mui.toast('密码不能为空！'); 
+					}
+				})
+				
+				$('#yzm').blur(function() {
+					if ($('#yzm').val() == '') {
+						mui.toast('验证码不能为空！'); 
+					}
+				})
+				
+				$('#email').blur(function() {
+					if ($('#email').val() == '') {
+						mui.toast('email不能为空！'); 
+					}
+				})
+				
+				$('#phone').blur(function() {
+					if ($('#phone').val() == '') {
+						mui.toast('手机号码不能为空！'); 
+					}
+				})
+				$('#qkpsw').blur(function() {
+					if ($('#qkpsw').val() == '') {
+						mui.toast('取款密码不能为空！'); 
+					}
+				})
+
+			</script>
+		</div>
+
+	</body>
+
+</html>

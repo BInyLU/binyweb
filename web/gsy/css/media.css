@@ -1,0 +1,18 @@
+@media screen and (max-width: 980px) {
+    body,.content,.sml-nav,.header-left,.main-con, .main-left, .main-right{
+		min-width: 100%;
+        width: 100%;
+    }
+	.ad,.nav,.header-right{
+		display: none;
+	}
+	.header{
+		padding: 10px 0;
+	}
+	.header-left,.main-con, .main-left, .main-right{
+		float: none;
+	}
+	.main{
+		border: none;
+	}
+}

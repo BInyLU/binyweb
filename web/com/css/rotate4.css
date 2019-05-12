@@ -1,0 +1,137 @@
+.slow1-2-text span,
+.slow2-2-text span,
+.slow3-2-text span,
+.slow4-2-text span,
+.slow5-2-text span,
+.slow6-2-text span,
+.slow7-2-text span,
+.slow8-2-text span,
+.slow9-2-text span,
+.slow10-2-text span {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #8B0000;
+	margin-left: -20px;
+	margin-right: 10px;
+}
+
+.slow1-2-text {
+	position: absolute;
+	left: 90px;
+	top: 100px;
+	opacity: 0;
+	font-size: 13px;
+	animation: fadeInDown 1s .5s linear 1 forwards;
+}
+
+.slow2-2-text {
+	position: absolute;
+	left: 305px;
+	top: 30px;
+	opacity: 0;
+	font-size: 18px;
+	animation: fadeInDown 1s .7s linear 1 forwards;
+}
+
+
+.slow3-2-text {
+	position: absolute;
+	left: 540px;
+	top: 90px;
+	opacity: 0;
+	font-size: 13px;
+	animation: fadeInDown 1s .9s linear 1 forwards;
+}
+
+.slow4-2-text {
+	position: absolute;
+	left: 100px;
+	top: 180px;
+	opacity: 0;
+	font-size: 13px;
+	animation: fadeInDown 1s 1.1s linear 1 forwards;
+}
+
+.slow5-2-text {
+	position: absolute;
+	left: 600px;
+	top: 190px;
+	opacity: 0;
+	font-size: 13px;
+	animation: fadeInDown 1s 1.3s linear 1 forwards;
+}
+
+.slow6-2-text {
+	position: absolute;
+	left: 120px;
+	top: 300px;
+	opacity: 0;
+	font-size: 13px;
+	animation: fadeInDown 1s 1.5s linear 1 forwards;
+}
+
+.slow7-2-text {
+	position: absolute;
+	left: 570px;
+	top: 300px;
+	opacity: 0;
+	font-size: 13px;
+	animation: fadeInDown 1s 1.5s linear 1 forwards;
+}
+
+.slow8-2-text {
+	position: absolute;
+	left: 345px;
+	top: 180px;
+	border-bottom: dashed 1px #8B0000;
+	opacity: 0;
+	font-size: 14px;
+	animation: fadeInDown 1s .7s linear 1 forwards;
+}
+
+.slow9-2-text {
+	position: absolute;
+	left: 345px;
+	top: 225px;
+	border-bottom: dashed 1px #8B0000;
+	opacity: 0;
+	font-size: 14px;
+	animation: fadeInDown 1s .7s linear 1 forwards;
+}
+
+.slow10-2-text {
+	position: absolute;
+	left: 345px;
+	top: 270px;
+	border-bottom: dashed 1px #8B0000;
+	opacity: 0;
+	font-size: 14px;
+	animation: fadeInDown 1s .7s linear 1 forwards;
+}
+
+a:hover {
+	color: #8B0000;
+}
+.wgyp{
+	position: relative;
+}
+.wgyp-left2-text {
+	position: absolute;
+	width: 90px;
+	height: 100px;
+	font-size: 12px;
+	top: 230px;
+	left: -55px;
+	line-height: 150%;
+}
+.wgyp-left2-text2 {
+	position: absolute;
+	width: 90px;
+	height: 100px;
+	font-size: 12px;
+	top: 230px;
+	right: 60px;
+	line-height: 150%;
+}

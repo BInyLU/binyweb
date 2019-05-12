@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>北京快乐8</title>
+		<link rel="icon" type="image/x-icon" href="lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../lib/css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../lib/css/app.css" />
+		<script src="../lib/js/mui.min.js "></script>
+		<script src="../lib/js/jq.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-left-nav" href="../game.html"></a>
+					<h1 class="mui-title">北京快乐8</h1>
+					<!-- 顶部固定导航菜单 -->
+					<div style="float: right;">
+						<a class="mui-icon mui-icon-bars mui-pull-right" href="#Popover_0" style="padding: 12px 10px 0 0;"></a>
+					</div>
+					<div class="select">
+						<select id="selectid" onchange="role()" class="mui-btn" style="width: 80%;">
+							<option value="1">整合</option>
+							<option value="2">正码</option>
+						</select>
+					</div>
+				</header>
+
+				<!-- 表单 -->
+				<form action="" method="">
+
+					<!-- 底部固定菜单 -->
+					<nav class="mui-bar mui-bar-tab">
+						<div class="kjxz"><input type="number" placeholder="请输入快捷金额" /></div>
+						<div class="navfoot1">
+							<!-- <p>共<span>0</span>注</p> -->
+							<p>共<input id="zj" value="0">元</p>
+						</div>
+						<div class="navfoot2">
+							<button type="reset" class="mui-btn mui-btn-warning" id="empty">清空</button>
+							<button type="button" id="tzbtn" class="mui-btn mui-btn-danger">投注</button>
+						</div>
+					</nav>
+					<!-- 下注结算窗口 -->
+					<div id="tzbtns" class="tzbtns" style="display: none;">
+						<p>下注金额共<input id="tzp" value="" disabled="disabled" />元</p>
+						<div style="width: 90%;text-align: center;position: absolute;bottom: 20px;">
+							<button type="button" class="mui-btn mui-btn-danger close">取消</button>
+							<button type="button" class="mui-btn mui-btn-danger quedin">确定</button>
+						</div>
+					</div>
+					<!-- 主页面内容容器 -->
+					<div class="mui-content mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<!-- 主界面具体展示内容 -->
+							<div class="play-title">
+								<div class="play-title-left">
+									<p><span>715807</span>期：</p>
+									<div>
+										<i class="text">1</i>
+										<i class="text">2</i>
+										<i class="text">3</i>
+										<i class="text">4</i>
+										<i class="text">5</i>
+										<i class="text">6</i>
+										<i class="text">7</i>
+										<i class="text">8</i>
+										<i class="text">9</i>
+										<i class="text">10</i>
+										<i class="text">11</i>
+										<i class="text">12</i>
+										<i class="text">13</i>
+										<i class="text">14</i>
+										<i class="text">15</i>
+										<i class="text">16</i>
+										<i class="text">17</i>
+										<i class="text">18</i>
+										<i class="text">19</i>
+										<i class="text">20</i>
+										<i class="text">21</i>
+									</div>
+								</div>
+								<div class="play-title-right">
+									<p>距离下一期截止：</p>
+									<div class="time-item">
+										<!-- <span id="day_show">0天</span> -->
+										<strong id="hour_show">0时</strong>
+										<strong id="minute_show">0分</strong>
+										<strong id="second_show">0秒</strong>
+									</div>
+								</div>
+							</div>
+							<div class="balance">
+								<p style="margin-top: 10px;">余额：<span>999999.99</span>元</p>
+								<div style="float: right;">
+									<button id="alertBtn" type="button" class="mui-btn mui-btn-block mui-btn-outlined shuying">今日输赢</button>
+								</div>
+							</div>
+							<div class="mui-content">
+								<div class="closenav">
+									<p>点击显示/隐藏信息</p>
+								</div>
+								<div style="padding: 10px 10px;">
+									<div id="segmentedControl" class="mui-segmented-control">
+										<a class="mui-control-item mui-active" href="javascript:void(0)" id="ptxz">普通下注</a>
+										<a class="mui-control-item" href="javascript:void(0)" id="kjxz">快捷下注</a>
+									</div>
+								</div>
+								<!--------------------------------------------------------------------------------------------- 彩种分界线 ------------------------------------------------------------------------------------------------------>
+								<div style="padding: 10px;">
+									<!-- 以下为投注 -->
+									<div id="item" class="mui-control-content mui-active">
+										<div id="zh">
+											<div id="xingyun28_12219">
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">总和</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="0" class="name"><span>总和大</span></td>
+															<td data-current="0" class="odds">1.96</td>
+															<td data-current="0" class="amount"><input type="text" odds="1.96" data-id="25750" num="大" max="50000"
+																 min="1" value="">
+															</td></tr>
+															<tr>
+															<td data-current="1" class="name"><span>总和小</span></td>
+															<td data-current="1" class="odds">1.96</td>
+															<td data-current="1" class="amount"><input type="text" odds="1.96" data-id="25751" num="小" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="4" class="name"><span>总和单</span></td>
+															<td data-current="4" class="odds">1.96</td>
+															<td data-current="4" class="amount"><input type="text" odds="1.96" data-id="25752" num="单" max="50000"
+																 min="1" value="">
+															</td></tr>
+															<tr>
+															<td data-current="6" class="name"><span>总和双</span></td>
+															<td data-current="6" class="odds">1.96</td>
+															<td data-current="6" class="amount"><input type="text" odds="1.96" data-id="25753" num="双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="12" class="name"><span>总大单</span></td>
+															<td data-current="12" class="odds">3.94</td>
+															<td data-current="12" class="amount"><input type="text" odds="3.94" data-id="25754" num="大单" max="50000"
+																 min="1" value="">
+															</td></tr>
+															<tr>
+															<td data-current="15" class="name"><span>总小单</span></td>
+															<td data-current="15" class="odds">3.94</td>
+															<td data-current="15" class="amount"><input type="text" odds="3.94" data-id="25755" num="小单" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="24" class="name"><span>总大双</span></td>
+															<td data-current="24" class="odds">3.94</td>
+															<td data-current="24" class="amount"><input type="text" odds="3.94" data-id="25756" num="大双" max="50000"
+																 min="1" value="">
+															</td></tr>
+															<tr>
+															<td data-current="28" class="name"><span>总小双</span></td>
+															<td data-current="28" class="odds">3.94</td>
+															<td data-current="28" class="amount"><input type="text" odds="3.94" data-id="25757" num="小双" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="40" class="name"><span>总和810</span></td>
+															<td data-current="40" class="odds">108</td>
+															<td data-current="40" class="amount"><input type="text" odds="10" data-id="25758" num="极大" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">前后和</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="10" class="name"><span>前（多）</span></td>
+															<td data-current="10" class="odds">2.94</td>
+															<td data-current="10" class="amount"><input type="text" odds="2.94" data-id="25760" num="红波" max="50000"
+																 min="1" value="">
+															</td></tr>
+															<tr>
+															<td data-current="11" class="name"><span>后（多）</span></td>
+															<td data-current="11" class="odds">2.94</td>
+															<td data-current="11" class="amount"><input type="text" odds="2.94" data-id="25761" num="绿波" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="24" class="name"><span>前后（和）</span></td>
+															<td data-current="24" class="odds">5.88</td>
+															<td data-current="24" class="amount"><input type="text" odds="2.94" data-id="25762" num="蓝波" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">单双和</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="10" class="name"><span>单（多）</span></td>
+															<td data-current="10" class="odds">2.94</td>
+															<td data-current="10" class="amount"><input type="text" odds="2.94" data-id="25760" num="红波" max="50000"
+																 min="1" value="">
+															</td></tr>
+															<tr>
+															<td data-current="11" class="name"><span>双（多）</span></td>
+															<td data-current="11" class="odds">2.94</td>
+															<td data-current="11" class="amount"><input type="text" odds="2.94" data-id="25761" num="绿波" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="24" class="name"><span>单双（和）</span></td>
+															<td data-current="24" class="odds">5.88</td>
+															<td data-current="24" class="amount"><input type="text" odds="2.94" data-id="25762" num="蓝波" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table class="table_ball table_zh2">
+													<thead>
+														<tr class="head">
+															<th colspan="6">五行</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td data-current="10" class="name"><span>金</span></td>
+															<td data-current="10" class="odds">9.14</td>
+															<td data-current="10" class="amount"><input type="text" odds="2.94" data-id="25760" num="红波" max="50000"
+																 min="1" value="">
+															</td></tr>
+															<tr>
+															<td data-current="11" class="name"><span>木</span></td>
+															<td data-current="11" class="odds">4.04</td>
+															<td data-current="11" class="amount"><input type="text" odds="2.94" data-id="25761" num="绿波" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="24" class="name"><span>水</span></td>
+															<td data-current="24" class="odds">2.04</td>
+															<td data-current="24" class="amount"><input type="text" odds="2.94" data-id="25762" num="蓝波" max="50000"
+																 min="1" value="">
+															</td></tr>
+															<tr>
+															<td data-current="24" class="name"><span>火</span></td>
+															<td data-current="24" class="odds">4.04</td>
+															<td data-current="24" class="amount"><input type="text" odds="2.94" data-id="25762" num="蓝波" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+														<tr>
+															<td data-current="24" class="name"><span>土</span></td>
+															<td data-current="24" class="odds">9.14</td>
+															<td data-current="24" class="amount"><input type="text" odds="2.94" data-id="25762" num="蓝波" max="50000"
+																 min="1" value="">
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div id="zm" style="display: none;">
+											<table class="table_ball table_zh2">
+												<thead>
+													<tr class="head">
+														<th colspan="6">正码</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td data-current="1" class="name"><span class="ssc_img">1</span></td>
+														<td data-current="1" class="odds" width="40">3.51</td>
+														<td data-current="1" class="amount"><input type="text" odds="3.51" data-id="24675" num="1" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="2" class="name"><span class="ssc_img">2</span></td>
+														<td data-current="2" class="odds" width="40">3.51</td>
+														<td data-current="2" class="amount"><input type="text" odds="3.51" data-id="24675" num="2" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="3" class="name"><span class="ssc_img">3</span></td>
+														<td data-current="3" class="odds" width="40">3.51</td>
+														<td data-current="3" class="amount"><input type="text" odds="3.51" data-id="24675" num="3" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="4" class="name"><span class="ssc_img">4</span></td>
+														<td data-current="4" class="odds" width="40">3.51</td>
+														<td data-current="4" class="amount"><input type="text" odds="3.51" data-id="24675" num="4" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="5" class="name"><span class="ssc_img">5</span></td>
+														<td data-current="5" class="odds" width="40">3.51</td>
+														<td data-current="5" class="amount"><input type="text" odds="3.51" data-id="24675" num="5" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="6" class="name"><span class="ssc_img">6</span></td>
+														<td data-current="6" class="odds" width="40">3.51</td>
+														<td data-current="6" class="amount"><input type="text" odds="3.51" data-id="24675" num="6" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="7" class="name"><span class="ssc_img">7</span></td>
+														<td data-current="7" class="odds" width="40">3.51</td>
+														<td data-current="7" class="amount"><input type="text" odds="3.51" data-id="24675" num="7" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="8" class="name"><span class="ssc_img">8</span></td>
+														<td data-current="8" class="odds" width="40">3.51</td>
+														<td data-current="8" class="amount"><input type="text" odds="3.51" data-id="24675" num="8" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">9</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">10</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="1" class="name"><span class="ssc_img">11</span></td>
+														<td data-current="1" class="odds" width="40">3.51</td>
+														<td data-current="1" class="amount"><input type="text" odds="3.51" data-id="24675" num="1" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="2" class="name"><span class="ssc_img">12</span></td>
+														<td data-current="2" class="odds" width="40">3.51</td>
+														<td data-current="2" class="amount"><input type="text" odds="3.51" data-id="24675" num="2" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="3" class="name"><span class="ssc_img">13</span></td>
+														<td data-current="3" class="odds" width="40">3.51</td>
+														<td data-current="3" class="amount"><input type="text" odds="3.51" data-id="24675" num="3" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="4" class="name"><span class="ssc_img">14</span></td>
+														<td data-current="4" class="odds" width="40">3.51</td>
+														<td data-current="4" class="amount"><input type="text" odds="3.51" data-id="24675" num="4" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="5" class="name"><span class="ssc_img">15</span></td>
+														<td data-current="5" class="odds" width="40">3.51</td>
+														<td data-current="5" class="amount"><input type="text" odds="3.51" data-id="24675" num="5" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="6" class="name"><span class="ssc_img">16</span></td>
+														<td data-current="6" class="odds" width="40">3.51</td>
+														<td data-current="6" class="amount"><input type="text" odds="3.51" data-id="24675" num="6" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="7" class="name"><span class="ssc_img">17</span></td>
+														<td data-current="7" class="odds" width="40">3.51</td>
+														<td data-current="7" class="amount"><input type="text" odds="3.51" data-id="24675" num="7" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="8" class="name"><span class="ssc_img">18</span></td>
+														<td data-current="8" class="odds" width="40">3.51</td>
+														<td data-current="8" class="amount"><input type="text" odds="3.51" data-id="24675" num="8" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">19</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">20</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">21</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">22</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">23</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">24</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">25</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">26</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">27</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">28</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">29</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">30</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">31</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">32</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">33</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">34</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">35</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">36</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">37</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">38</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">39</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">40</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="1" class="name"><span class="ssc_img">41</span></td>
+														<td data-current="1" class="odds" width="40">3.51</td>
+														<td data-current="1" class="amount"><input type="text" odds="3.51" data-id="24675" num="1" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="2" class="name"><span class="ssc_img">42</span></td>
+														<td data-current="2" class="odds" width="40">3.51</td>
+														<td data-current="2" class="amount"><input type="text" odds="3.51" data-id="24675" num="2" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="3" class="name"><span class="ssc_img">43</span></td>
+														<td data-current="3" class="odds" width="40">3.51</td>
+														<td data-current="3" class="amount"><input type="text" odds="3.51" data-id="24675" num="3" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="4" class="name"><span class="ssc_img">44</span></td>
+														<td data-current="4" class="odds" width="40">3.51</td>
+														<td data-current="4" class="amount"><input type="text" odds="3.51" data-id="24675" num="4" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="5" class="name"><span class="ssc_img">45</span></td>
+														<td data-current="5" class="odds" width="40">3.51</td>
+														<td data-current="5" class="amount"><input type="text" odds="3.51" data-id="24675" num="5" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="6" class="name"><span class="ssc_img">46</span></td>
+														<td data-current="6" class="odds" width="40">3.51</td>
+														<td data-current="6" class="amount"><input type="text" odds="3.51" data-id="24675" num="6" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="7" class="name"><span class="ssc_img">47</span></td>
+														<td data-current="7" class="odds" width="40">3.51</td>
+														<td data-current="7" class="amount"><input type="text" odds="3.51" data-id="24675" num="7" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="8" class="name"><span class="ssc_img">48</span></td>
+														<td data-current="8" class="odds" width="40">3.51</td>
+														<td data-current="8" class="amount"><input type="text" odds="3.51" data-id="24675" num="8" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">49</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">50</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="1" class="name"><span class="ssc_img">51</span></td>
+														<td data-current="1" class="odds" width="40">3.51</td>
+														<td data-current="1" class="amount"><input type="text" odds="3.51" data-id="24675" num="1" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="2" class="name"><span class="ssc_img">52</span></td>
+														<td data-current="2" class="odds" width="40">3.51</td>
+														<td data-current="2" class="amount"><input type="text" odds="3.51" data-id="24675" num="2" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="3" class="name"><span class="ssc_img">53</span></td>
+														<td data-current="3" class="odds" width="40">3.51</td>
+														<td data-current="3" class="amount"><input type="text" odds="3.51" data-id="24675" num="3" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="4" class="name"><span class="ssc_img">54</span></td>
+														<td data-current="4" class="odds" width="40">3.51</td>
+														<td data-current="4" class="amount"><input type="text" odds="3.51" data-id="24675" num="4" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="5" class="name"><span class="ssc_img">55</span></td>
+														<td data-current="5" class="odds" width="40">3.51</td>
+														<td data-current="5" class="amount"><input type="text" odds="3.51" data-id="24675" num="5" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="6" class="name"><span class="ssc_img">56</span></td>
+														<td data-current="6" class="odds" width="40">3.51</td>
+														<td data-current="6" class="amount"><input type="text" odds="3.51" data-id="24675" num="6" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="7" class="name"><span class="ssc_img">57</span></td>
+														<td data-current="7" class="odds" width="40">3.51</td>
+														<td data-current="7" class="amount"><input type="text" odds="3.51" data-id="24675" num="7" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+
+														<td data-current="8" class="name"><span class="ssc_img">58</span></td>
+														<td data-current="8" class="odds" width="40">3.51</td>
+														<td data-current="8" class="amount"><input type="text" odds="3.51" data-id="24675" num="8" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">59</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">60</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">61</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">62</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">63</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">64</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">65</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">66</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">67</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">68</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">69</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">70</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">71</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">72</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">73</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">74</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">75</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">76</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">77</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">78</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+													<tr>
+														<td data-current="9" class="name"><span class="ssc_img">79</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td></tr>
+															<tr>
+														<td data-current="9" class="name"><span class="ssc_img">80</span></td>
+														<td data-current="9" class="odds" width="40">3.51</td>
+														<td data-current="9" class="amount"><input type="text" odds="3.51" data-id="24675" num="9" max="50000"
+															 min="1" value="" id="in">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--------------------------------------------------------------------------------------------- 彩种分界线 ------------------------------------------------------------------------------------------------------>
+						</div>
+					</div>
+			</div>
+			</form>
+			<div class="mui-off-canvas-backdrop"></div>
+		</div>
+		</div>
+		<!-- 顶部固定导航内容 -->
+		<div id="Popover_0" class="mui-popover mui-bar-popover" style="width: 100px;">
+			<div class="mui-popover-arrow"></div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell"><a href="../betting/touzhu.html">投注记录</a></li>
+				<li class="mui-table-view-cell"><a href="../prizes/bjkl8.html">历史开奖</a></li>
+				<!-- <li class="mui-table-view-cell"><a href="#">游戏玩法</a></li> -->
+			</ul>
+		</div>
+
+		<div style="display: none;">
+			<style type="text/css">
+				.select {
+					width: 50%;
+					float: right;
+					position: relative;
+				}
+
+				.mui-btn {
+					font-size: 14px;
+					padding: 8px;
+					border: #eee 1px solid !important;
+				}
+
+				.mui-title {
+					font-size: 14px;
+					text-align: left;
+				}
+
+				input[type=text] {
+					margin-bottom: 0;
+					font-size: 12px;
+					border-radius: 0;
+				}
+
+				.mui-scroll-wrapper {
+					top: 40px;
+				}
+				.tzbtns {
+					position: fixed;
+					z-index: 99999;
+					width: 200px;
+					height: 200px;
+					background: #fff;
+					border: 1px solid darkred;
+					margin: 40% 25%;
+					border-radius: 10px;
+					box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+					padding: 10px;
+				}
+
+				#tzp {
+					outline: none;
+					border: 0;
+					background: none;
+					width: 50%;
+					color: darkred;
+					text-align: center;
+				}
+
+				.tzbtns p {
+					color: #333;
+				}
+
+				.blocks {
+					display: block;
+				}
+			</style>
+			<!-- tap方法等于click -->
+			<script type="text/javascript">
+				$("body").on('tap', 'a', function(event) {
+					this.click();
+				});
+			</script>
+			<!-- 初始化MUI框架 -->
+			<script type="text/javascript">
+				mui.init();
+				//内容允许滚动
+				(function($) {
+					$(".mui-scroll-wrapper").scroll({
+						bounce: true, //滚动条是否有弹力默认是true
+						indicators: true, //是否显示滚动条,默认是true
+					});
+				})(mui);
+			</script>
+
+			<!-- 加载自定义JS -->
+			<script src="../lib/js/app.js" type="text/javascript" charset="utf-8"></script>
+			<!-- 今日输赢 -->
+			<script>
+				document.getElementById("alertBtn").addEventListener('tap', function() {
+					mui.alert('今日消费：0.00</br>今日中奖：0.00</br>今日盈亏：0.00', '今日输赢<hr>');
+				})
+			</script>
+			<!-- bjkl8切换盘 -->
+			<script type="text/javascript">
+				function role() {
+					var sel1 = document.getElementById('selectid');
+					var index = sel1.selectedIndex;
+					var value = sel1.options[index].value;
+					console.log(value);
+					if (value == 1) {
+						document.getElementById("zh").style.display = "block";
+						document.getElementById("zm").style.display = "none";
+					} else if (value == 2) {
+						document.getElementById("zh").style.display = "none";
+						document.getElementById("zm").style.display = "block";
+					} else {
+						document.getElementById("zh").style.display = "block";
+						document.getElementById("zm").style.display = "none";
+					}
+				};
+			</script>
+		</div>
+
+	</body>
+</html>

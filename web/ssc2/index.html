@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>精彩网</title>
+		<link rel="icon" type="image/x-icon" href="lib/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="lib/css/mui.min.css" rel="stylesheet" />
+		<link href="lib/css/app.css" rel="stylesheet" />
+		<script src="lib/js/mui.min.js"></script>
+		<script src="lib/js/jq.js"></script>
+
+	</head>
+	<body>
+
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-pull-left" href="login/register.html">注册</a>
+					<a class="mui-pull-right" href="login/login.html">登录</a>
+					<h1 class="mui-title" style="line-height: 0;"><img src="lib/img/logo.png" height="40"></h1>
+				</header>
+				<!-- 底部固定菜单 -->
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item mui-active" href="index.html">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item" href="game.html">
+						<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+						<span class="mui-tab-label">购彩</span>
+					</a>
+					<a class="mui-tab-item" href="prize.html">
+						<span class="mui-icon mui-icon-extra mui-icon-extra-gift"></span>
+						<span class="mui-tab-label">开奖</span>
+					</a>
+					<a class="mui-tab-item" href="user.html">
+						<span class="mui-icon mui-icon-contact"></span>
+						<span class="mui-tab-label">我的</span>
+					</a>
+				</nav>
+				<!-- 底部固定下载app广告 -->
+				<div class="app">
+					<img src="lib/img/gb.png">
+					<p>下载APP，体验更多购彩乐趣</p>
+					<button type="button" class="mui-btn mui-btn-danger">下载</button>
+				</div>
+				<!-- 主页面内容容器 -->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<div id="slider" class="mui-slider">
+							<div class="mui-slider-group mui-slider-loop">
+								<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+								<div class="mui-slider-item mui-slider-item-duplicate">
+									<a href="#">
+										<img src="lib/img/banner2.png">
+									</a>
+								</div>
+								<!-- 第一张 -->
+								<div class="mui-slider-item">
+									<a href="#">
+										<img src="lib/img/banner1.png">
+									</a>
+								</div>
+								<!-- 第二张 -->
+								<div class="mui-slider-item">
+									<a href="#">
+										<img src="lib/img/banner2.png">
+									</a>
+								</div>
+								<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+								<div class="mui-slider-item mui-slider-item-duplicate">
+									<a href="#">
+										<img src="lib/img/banner1.png">
+									</a>
+								</div>
+							</div>
+							<div class="mui-slider-indicator">
+								<div class="mui-indicator mui-active"></div>
+								<div class="mui-indicator"></div>
+							</div>
+						</div>
+						<div class="box">
+							<p>公告：</p>
+							<div class="winBox">
+								<div class="scroll">
+									<span><a href="#">统一退水时间：北京时间每天晚上12点。</a></span>
+									<span><a href="#">公告二</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="list4">
+							<ul>
+								<li>
+									<a href="user.html">
+										<span><img src="lib/img/index_access.png" height="60"></span>
+										<div>充值/提款</div>
+									</a>
+								</li>
+								<li>
+									<a href="betting/touzhu.html">
+										<span><img src="lib/img/index_order.png" height="60"></span>
+										<div>投注记录</div>
+									</a>
+								</li>
+								<li>
+									<a href="activity/zxyh.html">
+										<span><img src="lib/img/index_youhui.png" height="60"></span>
+										<div>优惠活动</div>
+									</a>
+								</li>
+								<li>
+									<a href="tencent://message/?uin=1416744596&Menu=yes">
+										<span><img src="lib/img/index_kefu.png" height="60"></span>
+										<div>在线客服</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="box2">
+							<p>热门彩种：</p>
+						</div>
+						<div class="list2">
+							<ul>
+								<li>
+									<a href="game/bjpk10.html">
+										<span><img src="lib/img/bj_pk10.png" height="60"></span>
+										<div>北京赛车PK10</div>
+										<p>北京赛车PK10</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/xyft.html">
+										<span><img src="lib/img/xy_ft.png" height="60"></span>
+										<div>幸运飞艇</div>
+										<p>幸运飞艇</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/pcdd.html">
+										<span><img src="lib/img/pc_dd.png" height="60"></span>
+										<div>PC蛋蛋</div>
+										<p>PC蛋蛋</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/xglhc.html">
+										<span><img src="lib/img/xg_lhc.png" height="60"></span>
+										<div>香港六合彩</div>
+										<p>香港六合彩</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="box2">
+							<p>彩种推荐：</p>
+						</div>
+						<div class="list2">
+							<ul>
+								<li>
+									<a href="game/gxk3.html">
+										<span><img src="lib/img/gx_k3.png" height="60"></span>
+										<div>广西快三</div>
+										<p>广西快三</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/gxklsf.html">
+										<span><img src="lib/img/gxklsf.png" height="60"></span>
+										<div>广西快乐十分</div>
+										<p>广西快乐十分</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/pcdd.html">
+										<span><img src="lib/img/pc_dd.png" height="60"></span>
+										<div>PC蛋蛋</div>
+										<p>PC蛋蛋</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/xglhc.html">
+										<span><img src="lib/img/xg_lhc.png" height="60"></span>
+										<div>香港六合彩</div>
+										<p>香港六合彩</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/gdklsf.html">
+										<span><img src="lib/img/gd_kl10f.png" height="60"></span>
+										<div>广东快乐十分</div>
+										<p>广东快乐十分</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/cqssc.html">
+										<span><img src="lib/img/cq_ssc.png" height="60"></span>
+										<div>重庆时时彩</div>
+										<p>重庆时时彩</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/bjpk10.html">
+										<span><img src="lib/img/bj_pk10.png" height="60"></span>
+										<div>北京赛车PK10</div>
+										<p>北京赛车PK10</p>
+									</a>
+								</li>
+								<li>
+									<a href="game/cqxync.html">
+										<span><img src="lib/img/cqxync.png" height="60"></span>
+										<div>重庆幸运农场</div>
+										<p>重庆幸运农场</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+<!-- 						<div class="box2">
+							<p>电子游艺：</p>
+						</div>
+						<div class="list2">
+							<ul>
+								<li>
+									<a href=" ">
+										<span><img src="lib/img/2f_k3.png" height="60"></span>
+										<div>我是文字</div>
+										<p>我是文字我是文字</p>
+									</a>
+								</li>
+								<li>
+									<a href=" ">
+										<span><img src="lib/img/2f_pk10.png" height="60"></span>
+										<div>我是文字</div>
+										<p>我是文字我是文字</p>
+									</a>
+								</li>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+
+		<div style="display: none;">
+			<style type="text/css">
+				.mui-bar .mui-title{
+					left: 80px;
+					right: 80px;
+				}
+			</style>
+			<!-- 内容滚动起效 -->
+			<script type="text/javascript">
+				//先初始化一下
+				mui.init();
+				(function($) {
+					$(".mui-scroll-wrapper").scroll({
+						bounce: true, //滚动条是否有弹力默认是true
+						indicators: true, //是否显示滚动条,默认是true
+					});
+				})(mui);
+			</script>
+			<!-- 公告 -->
+			<script type="text/javascript">
+				$(function() {
+					var num = 0;
+
+					function goLeft() {
+						if (num == -700) {
+							num = 0;
+						}
+						num -= 1;
+						$(".scroll").css({
+							left: num
+						})
+					}
+					//设置滚动速度
+					var timer = setInterval(goLeft, 50);
+					//设置鼠标经过时滚动停止
+					$(".box").hover(function() {
+							clearInterval(timer);
+						},
+						function() {
+							timer = setInterval(goLeft, 20);
+						})
+				})
+			</script>
+			<!-- 轮播图 -->
+			<script type="text/javascript">
+				//获得slider插件对象
+				var gallery = mui('.mui-slider');
+				gallery.slider({
+					interval: 3000 //自动轮播周期，若为0则不自动播放，默认为0；
+				});
+			</script>
+
+			<!-- a标签跳转起效 -->
+			<script type="text/javascript">
+				mui('body').on('tap', 'a', function() {
+					window.top.location.href = this.href;
+				});
+			</script>
+			<!-- 写入tap方法等于click -->
+			<script type="text/javascript">
+				$(".gg_btn").on('tap', 'a', function(event) {
+					this.click();
+				});
+				$(".app img").on('tap', function(event) {
+					this.click();
+					$(".app").toggleClass("closeapp");
+				});
+			</script>
+			<!-- 弹窗 -->
+			<script type="text/javascript" charset="utf-8">
+				mui.alert('1、统一退水时间：</br>北京时间每天晚上12点。</br></br>2、这是第二条公告。', '公告');
+			</script>
+<!-- 			<script type="text/javascript">
+				mui.confirm('MUI是个好框架，确认？', 'Hello MUI');
+			</script> -->
+		</div>
+	</body>
+
+</html>
